@@ -1,0 +1,10 @@
+family,n_cases,n_oracle_match,n_episodeaudit_violation,n_hash_only_cross_split,n_group_only_cross_split
+clean,20,20,0,0,0
+clean_collection_local_names,20,20,0,0,0
+contradictory_group_kind,20,20,20,0,20
+episode_cross_split,20,20,20,0,20
+exact_cross_split,20,20,20,20,0
+identity_cross_split,20,20,20,0,20
+membership_cross_split,20,20,20,0,0
+unknown_group_identity,20,20,0,0,0
+unknown_partial_digest,20,20,0,0,0

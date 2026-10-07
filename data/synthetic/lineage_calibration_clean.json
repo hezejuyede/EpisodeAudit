@@ -1,0 +1,17 @@
+{
+  "allowed_source_collections": [
+    "source"
+  ],
+  "stages": [
+    {
+      "name": "tested_stage",
+      "purpose": "calibration",
+      "fit_sample_ids": [
+        {
+          "collection_id": "source",
+          "sample_id": "s0"
+        }
+      ]
+    }
+  ]
+}

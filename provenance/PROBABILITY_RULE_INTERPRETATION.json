@@ -1,0 +1,8 @@
+{
+  "boundary": "This explanation does not independently certify historical model execution, calibration quality, class-label truth or target independence. The software only rejects argmax disagreement when the user declares that rule.",
+  "correction": "The archive does not declare a probability-argmax decision rule. Retain original predictions and metrics; validate explicit class-to-column probability numerical consistency with decision_rule=None.",
+  "date": "2026-10-07",
+  "first_probe": "Validation attempted to require decision_rule=argmax for archived SVC.predict output. It correctly raised AuditInputError at a row where calibrated predict_proba argmax differed.",
+  "reason": "SVC probability estimates are Platt-calibrated and may be inconsistent with prediction decision scores; this behavior is documented by the original scikit-learn project.",
+  "source": "https://scikit-learn.org/stable/modules/svm.html#scores-and-probabilities"
+}

@@ -1,0 +1,4 @@
+sample_id,collection_id,split,label
+s0,source,train,healthy
+s1,source,validation,disease
+t0,target,test,healthy

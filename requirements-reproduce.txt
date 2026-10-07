@@ -1,0 +1,3 @@
+# Tested local reference environment: CPython 3.12.14 on Windows.
+# This numerical pin records the local run; the package supports numpy>=1.24,<3.
+numpy==2.3.5

@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "audit": "predictions",
+  "metrics": {
+    "n_predictions": 709,
+    "accuracy": 0.3906911142454161,
+    "balanced_accuracy": 0.5067105654251549,
+    "macro_f1_observed_truth_classes": 0.34432913709687,
+    "classes": [
+      "healthy",
+      "septoria",
+      "stripe_rust"
+    ],
+    "confusion_matrix": [
+      [
+        90,
+        0,
+        32
+      ],
+      [
+        87,
+        0,
+        261
+      ],
+      [
+        52,
+        0,
+        187
+      ]
+    ],
+    "observed_truth_classes": [
+      "healthy",
+      "septoria",
+      "stripe_rust"
+    ],
+    "per_class": [
+      {
+        "label": "healthy",
+        "n_true": 122,
+        "n_predicted": 229,
+        "n_correct": 90,
+        "recall": 0.7377049180327869,
+        "precision": 0.3930131004366812,
+        "f1": 0.5128205128205128,
+        "n_provided_groups_with_true_class": null
+      },
+      {
+        "label": "septoria",
+        "n_true": 348,
+        "n_predicted": 0,
+        "n_correct": 0,
+        "recall": 0.0,
+        "precision": null,
+        "f1": 0.0,
+        "n_provided_groups_with_true_class": null
+      },
+      {
+        "label": "stripe_rust",
+        "n_true": 239,
+        "n_predicted": 480,
+        "n_correct": 187,
+        "recall": 0.7824267782426778,
+        "precision": 0.38958333333333334,
+        "f1": 0.5201668984700973,
+        "n_provided_groups_with_true_class": null
+      }
+    ],
+    "balanced_accuracy_definition": "Mean recall over classes present in y_true; absent-class recalls are undefined."
+  },
+  "group_evidence_status": "UNKNOWN",
+  "n_provided_groups": 0,
+  "n_predictions_missing_group": 709,
+  "group_metrics": [],
+  "probability_evidence": {
+    "status": "UNKNOWN",
+    "basis": "no_explicit_probability_class_mapping",
+    "decision_rule_verification": "UNKNOWN",
+    "calibration": "not_assessed"
+  },
+  "bootstrap": {
+    "performed": true,
+    "unit": "image",
+    "n_units": 709,
+    "n_replicates": 2000,
+    "seed": 41017,
+    "confidence": 0.95,
+    "method": "percentile",
+    "class_stratified": true,
+    "intervals": {
+      "accuracy": {
+        "lower": 0.36812411847672777,
+        "upper": 0.4132581100141044,
+        "n_valid_replicates": 2000
+      },
+      "balanced_accuracy": {
+        "lower": 0.4748025127466447,
+        "upper": 0.538504298420102,
+        "n_valid_replicates": 2000
+      },
+      "macro_f1_observed_truth_classes": {
+        "lower": 0.32191389192791736,
+        "upper": 0.367012233719355,
+        "n_valid_replicates": 2000
+      }
+    },
+    "n_replicates_missing_original_truth_classes": 0,
+    "class_metric_interval_conditioning": "Replicates retaining all originally observed truth classes; missing-class replicates are explicitly excluded.",
+    "inference_boundary": "Individual prediction rows; biological/specimen and collection-level uncertainty is not estimated.",
+    "warnings": []
+  },
+  "limitations": [
+    "Predictions and labels are supplied; pathology and label truth are not verified.",
+    "Group labels do not by themselves establish specimen independence.",
+    "Confidence intervals are conditional on the recorded rows/groups and fixed model predictions.",
+    "Seeds, views, groups, specimens, and independently collected datasets are different units.",
+    "No causal collection-shift mechanism or future-domain generalization is inferred."
+  ]
+}

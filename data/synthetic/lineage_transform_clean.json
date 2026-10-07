@@ -1,0 +1,18 @@
+{
+  "allowed_source_collections": [
+    "source"
+  ],
+  "stages": [
+    {
+      "name": "target_transform",
+      "purpose": "transform",
+      "sample_ids": [
+        {
+          "collection_id": "target",
+          "sample_id": "t0"
+        }
+      ],
+      "uses_labels": false
+    }
+  ]
+}

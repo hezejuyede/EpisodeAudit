@@ -1,0 +1,3 @@
+# Optional article artwork; not part of the core runtime.
+matplotlib>=3.10,<4
+numpy>=1.24,<3

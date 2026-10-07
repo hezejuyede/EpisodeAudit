@@ -1,0 +1,12 @@
+{
+  "software_name": "EpisodeAudit",
+  "software_version": "1.0.0",
+  "status": "LOCAL_PUBLIC_RELEASE_CANDIDATE",
+  "public_repository_created": false,
+  "public_release_tag_created": false,
+  "archival_doi_created": false,
+  "code_license": "MIT",
+  "data_license_boundaries": "DATA_RIGHTS.md",
+  "required_final_action": "Author review and explicit user authorization before creating or pushing a remote release.",
+  "scientific_boundary": "Software checks and retrospective fixed-output replay; no independent pathology or prospective field validation is asserted."
+}

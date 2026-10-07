@@ -1,0 +1,10 @@
+family,n_cases,n_Deepchecks_samples_mix_overlap,n_Deepchecks_group_index_overlap,n_Deepchecks_group_not_run_missing_evidence,n_Deepchecks_membership_index_overlap,n_EpisodeAudit_hash_FAIL,n_EpisodeAudit_group_FAIL_declared_disjoint,n_EpisodeAudit_membership_FAIL
+clean,20,0,0,0,0,0,0,0
+clean_collection_local_names,20,0,0,0,0,0,0,0
+contradictory_group_kind,20,0,20,0,0,0,20,0
+episode_cross_split,20,0,20,0,0,0,20,0
+exact_cross_split,20,20,0,0,0,20,0,0
+identity_cross_split,20,0,20,0,0,0,20,0
+membership_cross_split,20,0,0,0,20,0,0,20
+unknown_group_identity,20,0,0,20,0,0,0,0
+unknown_partial_digest,20,0,0,0,0,0,0,0

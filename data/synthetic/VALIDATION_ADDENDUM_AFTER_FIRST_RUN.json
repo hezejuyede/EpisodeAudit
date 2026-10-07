@@ -1,0 +1,24 @@
+{
+  "original_plan_sha256": "5c9a1c77af36f076719ea0739f9e478811e3c37f5dc392ab4988c31e61bd9d46",
+  "date": "2026-10-07",
+  "timing": "After the first successful API verification, before execution of revised group-policy and explicit probability checks. This is a post-initial-run software validation expansion, not preregistration.",
+  "group_policy_refinement": {
+    "reason": "Shared identity is a property that becomes a protocol violation only when the declared estimand requires disjoint groups. Known-object/new-view recognition legitimately reuses object IDs.",
+    "original_fixture_truth": "Existing group-overlap fault fixtures implicitly require group-disjoint validation. Rerun will explicitly pass group_policy=disjoint without changing fixture bytes.",
+    "additional_real_controls": [
+      "COIL20 pose split with overlap_allowed must retain 20 shared object IDs but not flag them as a group protocol failure",
+      "COIL20 pose split with unspecified group policy must report UNKNOWN rather than infer an unseen-object scientific claim"
+    ]
+  },
+  "probability_validation": {
+    "reason": "Optional prob_* columns were present in archived wheat tables, but the initial API did not claim or validate them. Explicit class-to-column mapping will test finite values, range, simplex and mapping completeness.",
+    "new_fixture_seeds": [51031,51047,51061,51073,51091,51109,51131,51137,51151,51169],
+    "faults": ["NaN", "Infinity", "negative probability", "probability above one", "row sum differs from one", "declared mapping omits a class", "non-numeric probability", "missing declared probability column"],
+    "controls": ["all mapped probabilities finite and in [0,1], row sum one", "unmapped probability columns are explicitly unaudited rather than silently certified"]
+  },
+  "unchanged_limits": [
+    "Probability consistency does not establish calibration, uncertainty accuracy or label truth.",
+    "Group-disjoint metadata does not establish independent physical specimens.",
+    "Declared fitting membership does not certify actual execution or absence of historical target peeking."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "frozen_date": "2026-10-07",
+  "purpose": "Independent software verification. This plan does not establish clinical, pathological, biological, or prospective model validity.",
+  "developer": "softwarex_core agent",
+  "validator": "softwarex_validation agent",
+  "independence": "Separate implementation roles within one assistant team; not an independent laboratory or third-party certification. Fixtures specified before the first benchmark run.",
+  "held_out_fixture_seeds": [41017,41029,41041,41053,41069,41083,41099,41113,41131,41149,41161,41177,41189,41201,41221,41233,41243,41257,41269,41281],
+  "fault_families": [
+    "exact declared content digest shared across train and test",
+    "known identity group shared across train and test without exact duplicate bytes",
+    "heuristic episode shared across train and test, without claiming identity",
+    "conflicting labels within identical content digests",
+    "digest malformed or digest disagrees with actual file bytes",
+    "orphan prediction sample",
+    "prediction label disagrees with manifest label",
+    "duplicate prediction sample"
+  ],
+  "clean_controls": [
+    "unique digests, disjoint groups and train/test members",
+    "same bare group name in different collections, namespaces absent",
+    "same group string with distinct identity versus episode kinds",
+    "identical labels without any duplicate or group overlap",
+    "missing group evidence must be unknown rather than proved clean",
+    "unknown labels must not be replaced by inferred class labels"
+  ],
+  "sampling_oracles": [
+    "draws always index existing input records",
+    "same seed and input reproduce exact index sequence",
+    "all manifest groups represented in exposure diagnostics including zero draw groups",
+    "group exposure CV uses population SD over all eligible groups",
+    "large-draw equal-group sampler tends to uniform group frequency while image sampler follows group sizes"
+  ],
+  "metrics_oracles": [
+    "independently computed confusion matrix and balanced accuracy",
+    "source-collection scoping prevents incorrect joins of duplicate bare sample IDs",
+    "group bootstrap is unavailable without sufficient explicit group evidence",
+    "observed prediction outputs can be replayed without training or target-model selection"
+  ],
+  "real_cases": [
+    "Previously archived JIC/Holeta wheat image inventory and published-model prediction tables; retrospective replay only, no new field collection",
+    "COIL-20 processed original images, 1,440 files with 20 photographed object IDs; object identity audit only, not disease validation or mandatory known-object classification split policy"
+  ],
+  "baselines": [
+    "Self-written exact-digest-only detector, explicitly identified",
+    "Self-written namespace-aware group-only detector, explicitly identified",
+    "Actual scikit-learn ShuffleSplit and GroupShuffleSplit",
+    "Actual Deepchecks TrainTestSamplesMix if import and compatible installation complete; unavailable results must not be represented as executed"
+  ],
+  "comparison_unit": "Property-specific detection and matched clean-control false alarms; not an invented aggregate ML accuracy contest or universal superiority claim",
+  "scaling_rows": [1000,10000,100000],
+  "scaling_repetitions": 3,
+  "unresolved_evidence": [
+    "Dataset label correctness and pathological diagnosis",
+    "Actual plant/leaf identity absent from wheat metadata",
+    "Historical target-result inspection",
+    "Generalization to other laboratories or field cohorts",
+    "Public immutable software release and license authorization"
+  ]
+}

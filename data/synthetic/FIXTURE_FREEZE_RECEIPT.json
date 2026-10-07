@@ -1,0 +1,2007 @@
+{
+  "plan_sha256": "5c9a1c77af36f076719ea0739f9e478811e3c37f5dc392ab4988c31e61bd9d46",
+  "generated_before_first_core_validation_run": true,
+  "note": "Software fixtures only. Same namespace/ID with different group kinds is now treated as contradictory metadata, following clarified API contract before first execution. This is a recorded pre-execution plan amendment, not preregistration.",
+  "cases": [
+    {
+      "seed": 41017,
+      "family": "clean",
+      "file": "seed_41017__clean.csv",
+      "n_rows": 25,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "5e99a746a6429f40d376f130710cc0674f2f2758f9da9434f4efa15574d10302"
+    },
+    {
+      "seed": 41017,
+      "family": "exact_cross_split",
+      "file": "seed_41017__exact_cross_split.csv",
+      "n_rows": 25,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "d41bd8c7761832e6dbb87dfe826f50631691510256711f7eb7b099e2a7d68e7f"
+    },
+    {
+      "seed": 41017,
+      "family": "identity_cross_split",
+      "file": "seed_41017__identity_cross_split.csv",
+      "n_rows": 25,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "ea80f7dbfefef63c6bad49749724dc83e671e94413c652d90925719ce18e2800"
+    },
+    {
+      "seed": 41017,
+      "family": "episode_cross_split",
+      "file": "seed_41017__episode_cross_split.csv",
+      "n_rows": 25,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "6f52687acd3f847cda96167730c6b523e41653e7a062928c1c49eb89eb55c30c"
+    },
+    {
+      "seed": 41017,
+      "family": "membership_cross_split",
+      "file": "seed_41017__membership_cross_split.csv",
+      "n_rows": 25,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "767740474ec884063e53ab2bad9f2f2c0dba2bf1906800fc0aa68ab1a5fe041d"
+    },
+    {
+      "seed": 41017,
+      "family": "clean_collection_local_names",
+      "file": "seed_41017__clean_collection_local_names.csv",
+      "n_rows": 25,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "10772e9291e70169b4efd73dea43540d0b24806e9778298dc203826114109884"
+    },
+    {
+      "seed": 41017,
+      "family": "contradictory_group_kind",
+      "file": "seed_41017__contradictory_group_kind.csv",
+      "n_rows": 25,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "b4bd63df52a1952cdb95503baab1d613a8bddead227df8d4b73baccd94b2edde"
+    },
+    {
+      "seed": 41017,
+      "family": "unknown_group_identity",
+      "file": "seed_41017__unknown_group_identity.csv",
+      "n_rows": 25,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "353033e97412fbb1aafa8cf48e6fa10450e953237f6606c0e8a7db6850be45eb"
+    },
+    {
+      "seed": 41017,
+      "family": "unknown_partial_digest",
+      "file": "seed_41017__unknown_partial_digest.csv",
+      "n_rows": 25,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "b962059c616338965f200ca378d4d9a40d425fa72b901a430a966cba652c18ca"
+    },
+    {
+      "seed": 41029,
+      "family": "clean",
+      "file": "seed_41029__clean.csv",
+      "n_rows": 42,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "5b895fa086a1345ed0470d0004769f19b45985fe2d92f9dbb06dc78297e983b3"
+    },
+    {
+      "seed": 41029,
+      "family": "exact_cross_split",
+      "file": "seed_41029__exact_cross_split.csv",
+      "n_rows": 42,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "92295ed712ac2a088aee0dd62cda2aef094b5774680de98e4af9a678784fbbf0"
+    },
+    {
+      "seed": 41029,
+      "family": "identity_cross_split",
+      "file": "seed_41029__identity_cross_split.csv",
+      "n_rows": 42,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "b204f65faeaa314b798c2830ba3179447b7c9967fcfd188af739903101e680b8"
+    },
+    {
+      "seed": 41029,
+      "family": "episode_cross_split",
+      "file": "seed_41029__episode_cross_split.csv",
+      "n_rows": 42,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "c1df2dbf42cf5f5edb4bc8db462f756b999ba9a12e8649f3ca6cc9226570c386"
+    },
+    {
+      "seed": 41029,
+      "family": "membership_cross_split",
+      "file": "seed_41029__membership_cross_split.csv",
+      "n_rows": 42,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "268b4add23f607346083343f4f53705210a093d6789837825d7c3c9a4f2c48ab"
+    },
+    {
+      "seed": 41029,
+      "family": "clean_collection_local_names",
+      "file": "seed_41029__clean_collection_local_names.csv",
+      "n_rows": 42,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "d21b1013241e79ee5ab7d46bb9bfc1eaea7b357f801086ca9625aedb7af22a15"
+    },
+    {
+      "seed": 41029,
+      "family": "contradictory_group_kind",
+      "file": "seed_41029__contradictory_group_kind.csv",
+      "n_rows": 42,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "8d893d5ef5cf5067407db35a8f15b264ee80e0a98bcfaafa2fa99c8ce3bea886"
+    },
+    {
+      "seed": 41029,
+      "family": "unknown_group_identity",
+      "file": "seed_41029__unknown_group_identity.csv",
+      "n_rows": 42,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "6213c23302665a1916d6cc49f28d84e77ef7c9302053e3e74c0b9df655f98866"
+    },
+    {
+      "seed": 41029,
+      "family": "unknown_partial_digest",
+      "file": "seed_41029__unknown_partial_digest.csv",
+      "n_rows": 42,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "49d4af7ca48784b8bd2e0a9626f73d64deb87b14bdf2a39ffa5a3756e9e144ac"
+    },
+    {
+      "seed": 41041,
+      "family": "clean",
+      "file": "seed_41041__clean.csv",
+      "n_rows": 51,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "89aa45a2dbee3b746e0cecd061e2f9cd886c7350e54cbf4ee5fd9b6a2c250dbe"
+    },
+    {
+      "seed": 41041,
+      "family": "exact_cross_split",
+      "file": "seed_41041__exact_cross_split.csv",
+      "n_rows": 51,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "7ec79855979f9127a27e184063b7c242a546c13c3ca5caed7bca0bf14d82e0e4"
+    },
+    {
+      "seed": 41041,
+      "family": "identity_cross_split",
+      "file": "seed_41041__identity_cross_split.csv",
+      "n_rows": 51,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "a08c580d550a40e3a97e95f599ce9a3db804a0d459883627d3d7c2803b7f39a9"
+    },
+    {
+      "seed": 41041,
+      "family": "episode_cross_split",
+      "file": "seed_41041__episode_cross_split.csv",
+      "n_rows": 51,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "a1ab39a76159f068e82c9218ed5b2efc683a71d428debd810d7de3011d983c2e"
+    },
+    {
+      "seed": 41041,
+      "family": "membership_cross_split",
+      "file": "seed_41041__membership_cross_split.csv",
+      "n_rows": 51,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "38c9406d0b9b81869257467f9752a1412cb68acc65a57b73bfafc88bfc2e35db"
+    },
+    {
+      "seed": 41041,
+      "family": "clean_collection_local_names",
+      "file": "seed_41041__clean_collection_local_names.csv",
+      "n_rows": 51,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "665015ef9e15fba324e1d4ae50d7117ceb858e41af6795e24d0c33cbf3adc9e0"
+    },
+    {
+      "seed": 41041,
+      "family": "contradictory_group_kind",
+      "file": "seed_41041__contradictory_group_kind.csv",
+      "n_rows": 51,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "1a19bd7b1bb2e6ce91db451173ede3db18064dcb1f44ab8aac4e5b4c7b10f91e"
+    },
+    {
+      "seed": 41041,
+      "family": "unknown_group_identity",
+      "file": "seed_41041__unknown_group_identity.csv",
+      "n_rows": 51,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "d5df5867f23ff6c8c7f530269640ed671dd5c09b729803a12b043ac2780e655b"
+    },
+    {
+      "seed": 41041,
+      "family": "unknown_partial_digest",
+      "file": "seed_41041__unknown_partial_digest.csv",
+      "n_rows": 51,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "3305ef6d42fc247cbebe2cc47fd329f22de81d2e53155ed061b961f15b382eb2"
+    },
+    {
+      "seed": 41053,
+      "family": "clean",
+      "file": "seed_41053__clean.csv",
+      "n_rows": 56,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "d4da3259f8302f15619e49fa808597e465dfe1851d08d6fa21d3b8b0776ad7d3"
+    },
+    {
+      "seed": 41053,
+      "family": "exact_cross_split",
+      "file": "seed_41053__exact_cross_split.csv",
+      "n_rows": 56,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "4d0a05fbebea40928e3a349b0f04bf9bc285da4d0e1a127396a3907bcfacf1e5"
+    },
+    {
+      "seed": 41053,
+      "family": "identity_cross_split",
+      "file": "seed_41053__identity_cross_split.csv",
+      "n_rows": 56,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "330e01d35cad9ac128d16384a7d3e875854bce69da4b628bf5588dc5dd69ff8a"
+    },
+    {
+      "seed": 41053,
+      "family": "episode_cross_split",
+      "file": "seed_41053__episode_cross_split.csv",
+      "n_rows": 56,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "2f0321f1360d08a1a4b9be8e5dfb2d838401c464af5d343f2899c8c96201ef3c"
+    },
+    {
+      "seed": 41053,
+      "family": "membership_cross_split",
+      "file": "seed_41053__membership_cross_split.csv",
+      "n_rows": 56,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "643856c4dce083719f44c7867e04d7f36d09c1d12c57694342f24285ae8d9a74"
+    },
+    {
+      "seed": 41053,
+      "family": "clean_collection_local_names",
+      "file": "seed_41053__clean_collection_local_names.csv",
+      "n_rows": 56,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "99549d545649370faf92d9013f68c0dc042149c2a2f02287710dbf684a1d9027"
+    },
+    {
+      "seed": 41053,
+      "family": "contradictory_group_kind",
+      "file": "seed_41053__contradictory_group_kind.csv",
+      "n_rows": 56,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "781679cef1e8686d2b58105ebea1d9e6102d265f9c13b887df8e3a7d14763e60"
+    },
+    {
+      "seed": 41053,
+      "family": "unknown_group_identity",
+      "file": "seed_41053__unknown_group_identity.csv",
+      "n_rows": 56,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "869a2039398808a56073a079a2c89f6256a812cafc9f1970e8e88d259267c277"
+    },
+    {
+      "seed": 41053,
+      "family": "unknown_partial_digest",
+      "file": "seed_41053__unknown_partial_digest.csv",
+      "n_rows": 56,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "8c8e2a379dc4d52043c41e9715dd800cf9c5a4bf9c4c3da32ca2a50fc6cdd76c"
+    },
+    {
+      "seed": 41069,
+      "family": "clean",
+      "file": "seed_41069__clean.csv",
+      "n_rows": 40,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "dca0b8832f670ed1aefb08046862176e4515c40d7c0dd2e933ae715e262b145b"
+    },
+    {
+      "seed": 41069,
+      "family": "exact_cross_split",
+      "file": "seed_41069__exact_cross_split.csv",
+      "n_rows": 40,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "0c8a6ea4f30ac96f368ee79fa27de5fb2a8206361f4d94aa6f057dfa34f7b072"
+    },
+    {
+      "seed": 41069,
+      "family": "identity_cross_split",
+      "file": "seed_41069__identity_cross_split.csv",
+      "n_rows": 40,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "5a07eb6f8c9b57d6baa0eede91136b5304c135b9138445bef6a25d70e2664019"
+    },
+    {
+      "seed": 41069,
+      "family": "episode_cross_split",
+      "file": "seed_41069__episode_cross_split.csv",
+      "n_rows": 40,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "f7e35dc25da11b51178080ee96df3da6eb4dd26019e688549cb59a0176c5235e"
+    },
+    {
+      "seed": 41069,
+      "family": "membership_cross_split",
+      "file": "seed_41069__membership_cross_split.csv",
+      "n_rows": 40,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "f54748d79d820ac670d6ffea8db5e0cfce7f548e609f137399587a9347ecaa1c"
+    },
+    {
+      "seed": 41069,
+      "family": "clean_collection_local_names",
+      "file": "seed_41069__clean_collection_local_names.csv",
+      "n_rows": 40,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "e6fc7ae6b957d2f5ca5cbc735256044dc3fe87e4d5f135df5928036888fdb3d4"
+    },
+    {
+      "seed": 41069,
+      "family": "contradictory_group_kind",
+      "file": "seed_41069__contradictory_group_kind.csv",
+      "n_rows": 40,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "2a774ba22f61f881d18a411d80ced0ea9af515d39878adff5c62ab6f09f423af"
+    },
+    {
+      "seed": 41069,
+      "family": "unknown_group_identity",
+      "file": "seed_41069__unknown_group_identity.csv",
+      "n_rows": 40,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "194a5c51a71685ed802bec32a55803b9ee9a60dc2549077fc0bc20e9b2c9c985"
+    },
+    {
+      "seed": 41069,
+      "family": "unknown_partial_digest",
+      "file": "seed_41069__unknown_partial_digest.csv",
+      "n_rows": 40,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "7e88f55ad39545328e5a87f90b4740d37e3a37beb22455e84671955b91726d90"
+    },
+    {
+      "seed": 41083,
+      "family": "clean",
+      "file": "seed_41083__clean.csv",
+      "n_rows": 60,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "5f5b2e05622852b26c7e3642eebe52df05fa415bb03d6a38d608301041cb55e6"
+    },
+    {
+      "seed": 41083,
+      "family": "exact_cross_split",
+      "file": "seed_41083__exact_cross_split.csv",
+      "n_rows": 60,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "31fc2db034b7ccb2476995bf9531c1c1546f217ba4ff275e27286fa4d21cb2e0"
+    },
+    {
+      "seed": 41083,
+      "family": "identity_cross_split",
+      "file": "seed_41083__identity_cross_split.csv",
+      "n_rows": 60,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "8e1b4432265076231e3395b247e7c004615d2b90dd77d62064c5794ab1b4325e"
+    },
+    {
+      "seed": 41083,
+      "family": "episode_cross_split",
+      "file": "seed_41083__episode_cross_split.csv",
+      "n_rows": 60,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "ecb66e74d1cd09e7becf8fe60f3044d2787c110348fc8f13bb67f994ac6b7e7a"
+    },
+    {
+      "seed": 41083,
+      "family": "membership_cross_split",
+      "file": "seed_41083__membership_cross_split.csv",
+      "n_rows": 60,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "9fccfc2c69d0c7d51974aa36517f5c9a2521bac313b507e54bad7a74fe63cd27"
+    },
+    {
+      "seed": 41083,
+      "family": "clean_collection_local_names",
+      "file": "seed_41083__clean_collection_local_names.csv",
+      "n_rows": 60,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "8bd07e7627b451c91619dd9bdd63140e372f67c9eca83e466a15faf334984134"
+    },
+    {
+      "seed": 41083,
+      "family": "contradictory_group_kind",
+      "file": "seed_41083__contradictory_group_kind.csv",
+      "n_rows": 60,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "95f7e5c4c6da129ecbd4b2bdf4b1b67860d7e7ef9860c303ed4a27d68eb1d5c4"
+    },
+    {
+      "seed": 41083,
+      "family": "unknown_group_identity",
+      "file": "seed_41083__unknown_group_identity.csv",
+      "n_rows": 60,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "758880f790bbf7fb5965a63a445f0cd07db7ed62c6ccd073ef980db3207991b8"
+    },
+    {
+      "seed": 41083,
+      "family": "unknown_partial_digest",
+      "file": "seed_41083__unknown_partial_digest.csv",
+      "n_rows": 60,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "c09320943149ed3cf5d4b77d325f4f3a2ae3fbf2f6ab8c6def30cddb8d27c999"
+    },
+    {
+      "seed": 41099,
+      "family": "clean",
+      "file": "seed_41099__clean.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "02829086bf6bce0fc595901b03e64b8bbb12373a7b0b3693e6b4a4b0efc4b42c"
+    },
+    {
+      "seed": 41099,
+      "family": "exact_cross_split",
+      "file": "seed_41099__exact_cross_split.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "3390adf8e564477df5c4ed1232be82340e2930490f3f236ffe3002aedc1a88d6"
+    },
+    {
+      "seed": 41099,
+      "family": "identity_cross_split",
+      "file": "seed_41099__identity_cross_split.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "5df42b3a258d06b625987f8c8a2fc979e6bdc49ee28c09d544454c6aa4330f39"
+    },
+    {
+      "seed": 41099,
+      "family": "episode_cross_split",
+      "file": "seed_41099__episode_cross_split.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "51c31f8e9c522f930fbea8900f13d5198ab5c72e33ab75e541cd94614474bd53"
+    },
+    {
+      "seed": 41099,
+      "family": "membership_cross_split",
+      "file": "seed_41099__membership_cross_split.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "d5fcdc2e80c51fbfc5f6e0e23df35f89d10aaf836d99e849a764990e9d6a1796"
+    },
+    {
+      "seed": 41099,
+      "family": "clean_collection_local_names",
+      "file": "seed_41099__clean_collection_local_names.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "6e43ba74191a50c338617466d92478cfca00cbd702e4f96ebce20d5213a4647d"
+    },
+    {
+      "seed": 41099,
+      "family": "contradictory_group_kind",
+      "file": "seed_41099__contradictory_group_kind.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "ca1ef39f3f749cc51e8ba18e72660e575d376bd1de441d8a483b4a6a94b03fac"
+    },
+    {
+      "seed": 41099,
+      "family": "unknown_group_identity",
+      "file": "seed_41099__unknown_group_identity.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "297852eb7272ad5792c6e8612ddbbdf8133605559788dca2d6adc66f9691e11e"
+    },
+    {
+      "seed": 41099,
+      "family": "unknown_partial_digest",
+      "file": "seed_41099__unknown_partial_digest.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "b33adfdd0b4305f8b948865de45637f9f3ace0fee053b16d2e3e617742bf4572"
+    },
+    {
+      "seed": 41113,
+      "family": "clean",
+      "file": "seed_41113__clean.csv",
+      "n_rows": 62,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "6fe9475e6971cfd5b09d521134156e501f29b9a4c4625b783c96abfb6818eaf7"
+    },
+    {
+      "seed": 41113,
+      "family": "exact_cross_split",
+      "file": "seed_41113__exact_cross_split.csv",
+      "n_rows": 62,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "e2ee1355159fe039aba01ade95dbe7e951ab1c1aa4fa1719755ca56b2c601f04"
+    },
+    {
+      "seed": 41113,
+      "family": "identity_cross_split",
+      "file": "seed_41113__identity_cross_split.csv",
+      "n_rows": 62,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "2c48c551992055c3052fd8d03c313e855cb702d40e9ca842817f1548ffde88c5"
+    },
+    {
+      "seed": 41113,
+      "family": "episode_cross_split",
+      "file": "seed_41113__episode_cross_split.csv",
+      "n_rows": 62,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "cc6bab2e5b22420b13077927fd958b0349b6038e0c5cbaaa66183c4b49d9bf91"
+    },
+    {
+      "seed": 41113,
+      "family": "membership_cross_split",
+      "file": "seed_41113__membership_cross_split.csv",
+      "n_rows": 62,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "e97252ffc0d9ae30a124f91e7016552027214abecdc5b6d9268c0019c13f7db2"
+    },
+    {
+      "seed": 41113,
+      "family": "clean_collection_local_names",
+      "file": "seed_41113__clean_collection_local_names.csv",
+      "n_rows": 62,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "39089ebe237d92c036adfa8cbeb2b743f20d751aab9b72994f53dc62605d7487"
+    },
+    {
+      "seed": 41113,
+      "family": "contradictory_group_kind",
+      "file": "seed_41113__contradictory_group_kind.csv",
+      "n_rows": 62,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "dafb957b5ec21f3ecaf136863d541cdb1d40746151556424fd1ae7b3ce1a3c60"
+    },
+    {
+      "seed": 41113,
+      "family": "unknown_group_identity",
+      "file": "seed_41113__unknown_group_identity.csv",
+      "n_rows": 62,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "f4b300ff25bfff501c9ced6a277be90989c9baac4c77155b023e8b2601b69e44"
+    },
+    {
+      "seed": 41113,
+      "family": "unknown_partial_digest",
+      "file": "seed_41113__unknown_partial_digest.csv",
+      "n_rows": 62,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "5846ce6b9a884dc7d85ebca6a68cc3f8f8f0ca8935111268fe894a4e70320e88"
+    },
+    {
+      "seed": 41131,
+      "family": "clean",
+      "file": "seed_41131__clean.csv",
+      "n_rows": 45,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "bde1d483d066a875ab69652816be6934b66e9ab8b3f15006cae4820f410aa410"
+    },
+    {
+      "seed": 41131,
+      "family": "exact_cross_split",
+      "file": "seed_41131__exact_cross_split.csv",
+      "n_rows": 45,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "b35a86aa895ca725a78da1c57b497e13514981e1b2e7ddd6b0a5e8c07747f7f7"
+    },
+    {
+      "seed": 41131,
+      "family": "identity_cross_split",
+      "file": "seed_41131__identity_cross_split.csv",
+      "n_rows": 45,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "9d164ad73985b92b248ee39f31220e1b857c28f49c9ac8892a6f41b7cac8fd2f"
+    },
+    {
+      "seed": 41131,
+      "family": "episode_cross_split",
+      "file": "seed_41131__episode_cross_split.csv",
+      "n_rows": 45,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "678b45afe2ca44e4b6b3e6ebf74c7fc048650b1fad5547315a1f6997a16df4e9"
+    },
+    {
+      "seed": 41131,
+      "family": "membership_cross_split",
+      "file": "seed_41131__membership_cross_split.csv",
+      "n_rows": 45,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "5a0ed0bd6adf4d2e9037f1a7e320fe2a386114fd77acc4511a09cf06270e1178"
+    },
+    {
+      "seed": 41131,
+      "family": "clean_collection_local_names",
+      "file": "seed_41131__clean_collection_local_names.csv",
+      "n_rows": 45,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "303dfebb43776453d618268127d07ad8e45b7cede0bb59e98cee724640cb5d86"
+    },
+    {
+      "seed": 41131,
+      "family": "contradictory_group_kind",
+      "file": "seed_41131__contradictory_group_kind.csv",
+      "n_rows": 45,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "36d364f8fa8d8c22bd0010bc47779df33d1f6b32ad440795a33084ec95ffea3a"
+    },
+    {
+      "seed": 41131,
+      "family": "unknown_group_identity",
+      "file": "seed_41131__unknown_group_identity.csv",
+      "n_rows": 45,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "5c4a8c206272fd8e141fd5099cbaad612b782bd25229777d4d22bde08414574d"
+    },
+    {
+      "seed": 41131,
+      "family": "unknown_partial_digest",
+      "file": "seed_41131__unknown_partial_digest.csv",
+      "n_rows": 45,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "d835aaa0456807d7afc5418b0a08c991bcc6be5a292114157232d7ad9018984d"
+    },
+    {
+      "seed": 41149,
+      "family": "clean",
+      "file": "seed_41149__clean.csv",
+      "n_rows": 41,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "4a809c3b7a635ff2a399b29cd50259a9fadd8a2c42f045cdfcd58998cc9ec759"
+    },
+    {
+      "seed": 41149,
+      "family": "exact_cross_split",
+      "file": "seed_41149__exact_cross_split.csv",
+      "n_rows": 41,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "96cbf6b1036c98b4272032940695f899aacf639010846980d3f1d1234ae0b9b8"
+    },
+    {
+      "seed": 41149,
+      "family": "identity_cross_split",
+      "file": "seed_41149__identity_cross_split.csv",
+      "n_rows": 41,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "0130847337c05d6ad055898072273116dedc75516e4dbaad5e51f7f100bf542b"
+    },
+    {
+      "seed": 41149,
+      "family": "episode_cross_split",
+      "file": "seed_41149__episode_cross_split.csv",
+      "n_rows": 41,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "d52e69072f3875fdd7ecbdaa581872e176c986c11bb401298e4f4d434219232f"
+    },
+    {
+      "seed": 41149,
+      "family": "membership_cross_split",
+      "file": "seed_41149__membership_cross_split.csv",
+      "n_rows": 41,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "d04676970f0557da503d66c1812230221609946d45ff7f6445675cd1c0362559"
+    },
+    {
+      "seed": 41149,
+      "family": "clean_collection_local_names",
+      "file": "seed_41149__clean_collection_local_names.csv",
+      "n_rows": 41,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "affede6c2e5cdc41b26af215a12ace647eda9f53540a505b9fba58fc163c1f90"
+    },
+    {
+      "seed": 41149,
+      "family": "contradictory_group_kind",
+      "file": "seed_41149__contradictory_group_kind.csv",
+      "n_rows": 41,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "a40ca6cbbd00aafc0fdfd8f2295f4dca81766d137f0f549cc1b174d14536f08b"
+    },
+    {
+      "seed": 41149,
+      "family": "unknown_group_identity",
+      "file": "seed_41149__unknown_group_identity.csv",
+      "n_rows": 41,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "34aa2a20b922921d8b8a8ce35069d730b2013177e870577e0b2c4223c4625883"
+    },
+    {
+      "seed": 41149,
+      "family": "unknown_partial_digest",
+      "file": "seed_41149__unknown_partial_digest.csv",
+      "n_rows": 41,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "b4e9501c557a65de970d36c947e2e5a30a5a30a600091952267f28439752c0e1"
+    },
+    {
+      "seed": 41161,
+      "family": "clean",
+      "file": "seed_41161__clean.csv",
+      "n_rows": 35,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "75eae014bbb6f29e210e1b5e1ff5e6c451cc911346c4c9c9ff59d6796b1e5290"
+    },
+    {
+      "seed": 41161,
+      "family": "exact_cross_split",
+      "file": "seed_41161__exact_cross_split.csv",
+      "n_rows": 35,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "045af6572416735b1dbf9f8d320b9c04b33debe195fcb46f9b032c9603602b57"
+    },
+    {
+      "seed": 41161,
+      "family": "identity_cross_split",
+      "file": "seed_41161__identity_cross_split.csv",
+      "n_rows": 35,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "9e1773545a9e9678932d4751fb4d357f4e7fe27301b3886896e0d18ee3a95bf1"
+    },
+    {
+      "seed": 41161,
+      "family": "episode_cross_split",
+      "file": "seed_41161__episode_cross_split.csv",
+      "n_rows": 35,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "86582435f3d6cb275c2f9d2003244f7cdb459ad5042e4050711f31c7cc779c38"
+    },
+    {
+      "seed": 41161,
+      "family": "membership_cross_split",
+      "file": "seed_41161__membership_cross_split.csv",
+      "n_rows": 35,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "1e4f64f585b2cae95b4d416794aa2958b1e0154f4d8fb01716b74f7d75825813"
+    },
+    {
+      "seed": 41161,
+      "family": "clean_collection_local_names",
+      "file": "seed_41161__clean_collection_local_names.csv",
+      "n_rows": 35,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "9883aa7f58412607a82ef8f56564b296879d8585491be9235685135d7178d0a2"
+    },
+    {
+      "seed": 41161,
+      "family": "contradictory_group_kind",
+      "file": "seed_41161__contradictory_group_kind.csv",
+      "n_rows": 35,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "39ae332e34ec2ca3954c31fa8028dfdf8099244928327a65efb6561ac5f60160"
+    },
+    {
+      "seed": 41161,
+      "family": "unknown_group_identity",
+      "file": "seed_41161__unknown_group_identity.csv",
+      "n_rows": 35,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "7ad3c9678515d1de789b1c46357d0b84a71aee2e1c2543162d82395c806514ec"
+    },
+    {
+      "seed": 41161,
+      "family": "unknown_partial_digest",
+      "file": "seed_41161__unknown_partial_digest.csv",
+      "n_rows": 35,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "5e14a0d80b5d95887144d6e5aabe4fcd0e3639ff467cd8e2b8c1325bce8fea22"
+    },
+    {
+      "seed": 41177,
+      "family": "clean",
+      "file": "seed_41177__clean.csv",
+      "n_rows": 34,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "e41b9a66c16fe48a7966ecaea2deec752ce286775e1041b9eef95df94aa64c2f"
+    },
+    {
+      "seed": 41177,
+      "family": "exact_cross_split",
+      "file": "seed_41177__exact_cross_split.csv",
+      "n_rows": 34,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "54c9a92f65c00278350fad98415a42619424077c13674c0d359b447de90ded24"
+    },
+    {
+      "seed": 41177,
+      "family": "identity_cross_split",
+      "file": "seed_41177__identity_cross_split.csv",
+      "n_rows": 34,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "38fb978766cdb56acbefb943a27209ee5de475a534f39f559ba99ea550dbc94c"
+    },
+    {
+      "seed": 41177,
+      "family": "episode_cross_split",
+      "file": "seed_41177__episode_cross_split.csv",
+      "n_rows": 34,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "c0d22431de71813c898998e8dc9c5218858708efd1b255f848fd67a3fd89da3e"
+    },
+    {
+      "seed": 41177,
+      "family": "membership_cross_split",
+      "file": "seed_41177__membership_cross_split.csv",
+      "n_rows": 34,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "a2a644275c114fca354bf1a1fd988165ec86fb15152413ce2accb415759fd018"
+    },
+    {
+      "seed": 41177,
+      "family": "clean_collection_local_names",
+      "file": "seed_41177__clean_collection_local_names.csv",
+      "n_rows": 34,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "d155341812ce921178a7870ce877da6232c20ae7e4693eb1754ade1069ea4a87"
+    },
+    {
+      "seed": 41177,
+      "family": "contradictory_group_kind",
+      "file": "seed_41177__contradictory_group_kind.csv",
+      "n_rows": 34,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "be5c5d7cee35b5c216da3eb781dc898b5a718cba989afc01539b8252dfb39f2b"
+    },
+    {
+      "seed": 41177,
+      "family": "unknown_group_identity",
+      "file": "seed_41177__unknown_group_identity.csv",
+      "n_rows": 34,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "406e4490dc76ce34abc6a09017f8e02cbb6adc177b50f47f846c98820c334a07"
+    },
+    {
+      "seed": 41177,
+      "family": "unknown_partial_digest",
+      "file": "seed_41177__unknown_partial_digest.csv",
+      "n_rows": 34,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "e753e54bd27c21154ba1ca90125437b08765dec4c229643b515f69fe6c5b04a8"
+    },
+    {
+      "seed": 41189,
+      "family": "clean",
+      "file": "seed_41189__clean.csv",
+      "n_rows": 43,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "95bde78f7b8c7ef2655196f97ff73627101b57f09e90420de05c70cc35c6eb16"
+    },
+    {
+      "seed": 41189,
+      "family": "exact_cross_split",
+      "file": "seed_41189__exact_cross_split.csv",
+      "n_rows": 43,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "737f2969d9b2601520ed2b6ada276b73ad38cc58a9dd78d6ce87d028dd1ecd2e"
+    },
+    {
+      "seed": 41189,
+      "family": "identity_cross_split",
+      "file": "seed_41189__identity_cross_split.csv",
+      "n_rows": 43,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "a8a0dc684dbb2797c2653918fd102ba7c130409d18661c232c821f7bf9d293eb"
+    },
+    {
+      "seed": 41189,
+      "family": "episode_cross_split",
+      "file": "seed_41189__episode_cross_split.csv",
+      "n_rows": 43,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "88558ebbdf65334930ce23a21b61f388b5773a4ddbd40fbee349efb9a7ad6d5f"
+    },
+    {
+      "seed": 41189,
+      "family": "membership_cross_split",
+      "file": "seed_41189__membership_cross_split.csv",
+      "n_rows": 43,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "377520c4751a46a188b59d73fcf0734292eb359e3b8506dbf64028096278bab1"
+    },
+    {
+      "seed": 41189,
+      "family": "clean_collection_local_names",
+      "file": "seed_41189__clean_collection_local_names.csv",
+      "n_rows": 43,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "a7f8f8aeffc348e7e54e8c490e314a35d772d507c1e51d40ddb598db6c83c2b5"
+    },
+    {
+      "seed": 41189,
+      "family": "contradictory_group_kind",
+      "file": "seed_41189__contradictory_group_kind.csv",
+      "n_rows": 43,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "22a606ce3c1cd73769e725cfac72e3f428ddfb2afb4a55f0c1b92c706de6e1c3"
+    },
+    {
+      "seed": 41189,
+      "family": "unknown_group_identity",
+      "file": "seed_41189__unknown_group_identity.csv",
+      "n_rows": 43,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "a59ad21f49426ab3c6458569b079a6844dfbe35aecf18d7201e4c1c90fe14ee1"
+    },
+    {
+      "seed": 41189,
+      "family": "unknown_partial_digest",
+      "file": "seed_41189__unknown_partial_digest.csv",
+      "n_rows": 43,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "3f6ba23f78938eb408a695867eac32e9266699b3644699d460e84229f01d4ba4"
+    },
+    {
+      "seed": 41201,
+      "family": "clean",
+      "file": "seed_41201__clean.csv",
+      "n_rows": 54,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "8a6a84cc98e405d20f9b5b1ea28771cb1a77c270c0ef49dd982d19d0656b1071"
+    },
+    {
+      "seed": 41201,
+      "family": "exact_cross_split",
+      "file": "seed_41201__exact_cross_split.csv",
+      "n_rows": 54,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "a5cd52aa00227fd9aee5aff15415596982d72ab730d06c3b4cf75d0415e971e2"
+    },
+    {
+      "seed": 41201,
+      "family": "identity_cross_split",
+      "file": "seed_41201__identity_cross_split.csv",
+      "n_rows": 54,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "a673139e1047ec03ab47a2703dfcbf172d21bf3aaae2bea7587b69fac3ea293c"
+    },
+    {
+      "seed": 41201,
+      "family": "episode_cross_split",
+      "file": "seed_41201__episode_cross_split.csv",
+      "n_rows": 54,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "35effc9446b6e4e281b108e11a4cf7b303a7616767ddcf57ad40ff067bdc2e41"
+    },
+    {
+      "seed": 41201,
+      "family": "membership_cross_split",
+      "file": "seed_41201__membership_cross_split.csv",
+      "n_rows": 54,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "b496d29da4714d2b6942565dcbcf705d0f958fc0f73132369ebbc32e7bf11247"
+    },
+    {
+      "seed": 41201,
+      "family": "clean_collection_local_names",
+      "file": "seed_41201__clean_collection_local_names.csv",
+      "n_rows": 54,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "c8801daf3aa11b9057f31384b2ca74384a2d86da834d893ec1cdb3ec9abc3fff"
+    },
+    {
+      "seed": 41201,
+      "family": "contradictory_group_kind",
+      "file": "seed_41201__contradictory_group_kind.csv",
+      "n_rows": 54,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "03e4e1d7b646d50e49ff6acd0c51e18e88cc08fce830b5d61a88c47110ffc2de"
+    },
+    {
+      "seed": 41201,
+      "family": "unknown_group_identity",
+      "file": "seed_41201__unknown_group_identity.csv",
+      "n_rows": 54,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "4546b2b65dfaed8c80b037c740f884e665fa80361ee93e16423005fee08492d3"
+    },
+    {
+      "seed": 41201,
+      "family": "unknown_partial_digest",
+      "file": "seed_41201__unknown_partial_digest.csv",
+      "n_rows": 54,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "6866c31c4687748a390e577f9a850b04a8832882044e81672a5f44ca35d3b589"
+    },
+    {
+      "seed": 41221,
+      "family": "clean",
+      "file": "seed_41221__clean.csv",
+      "n_rows": 36,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "7ef61b2f32e6b6d6d202b000a26a64fcb8de2fcf91888978528fcf802f439f76"
+    },
+    {
+      "seed": 41221,
+      "family": "exact_cross_split",
+      "file": "seed_41221__exact_cross_split.csv",
+      "n_rows": 36,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "5e9d16f365a98d7c5765253b94ed7d2ce26e76a3fe0ebe2610aebdea1f96c541"
+    },
+    {
+      "seed": 41221,
+      "family": "identity_cross_split",
+      "file": "seed_41221__identity_cross_split.csv",
+      "n_rows": 36,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "3f4b86c71ed2c2e863fe0641df39b5c3dc4de4fc0a8db1e907e27005cd32d100"
+    },
+    {
+      "seed": 41221,
+      "family": "episode_cross_split",
+      "file": "seed_41221__episode_cross_split.csv",
+      "n_rows": 36,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "ba777f6420690cad1f807b86284fd21236437fa3285de962edaca80d775a3c93"
+    },
+    {
+      "seed": 41221,
+      "family": "membership_cross_split",
+      "file": "seed_41221__membership_cross_split.csv",
+      "n_rows": 36,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "399123dd89795828a5f216285f83c4272cec4bf058e0623fe622000b66f715c2"
+    },
+    {
+      "seed": 41221,
+      "family": "clean_collection_local_names",
+      "file": "seed_41221__clean_collection_local_names.csv",
+      "n_rows": 36,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "fea995a6d371e13d7ed33c0675cb0805c2ff4310644d5fc64dd3177b5479a810"
+    },
+    {
+      "seed": 41221,
+      "family": "contradictory_group_kind",
+      "file": "seed_41221__contradictory_group_kind.csv",
+      "n_rows": 36,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "63221ed093186423761ef1fa6444fa50ad154a714ce5d2554dc5fd90574a2e4c"
+    },
+    {
+      "seed": 41221,
+      "family": "unknown_group_identity",
+      "file": "seed_41221__unknown_group_identity.csv",
+      "n_rows": 36,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "d1e26bab1cd0f219bc8228e422c4ed30616242d36b9ed3ca325cd884d67505ac"
+    },
+    {
+      "seed": 41221,
+      "family": "unknown_partial_digest",
+      "file": "seed_41221__unknown_partial_digest.csv",
+      "n_rows": 36,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "eace6ce354c9b31451507aa8a8228827721027e737d75f87e6f57961410d127f"
+    },
+    {
+      "seed": 41233,
+      "family": "clean",
+      "file": "seed_41233__clean.csv",
+      "n_rows": 48,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "16e675b3936a0bf846f85aa66c2e51562d1f6ce2c93aa80988b34ce1962b8aee"
+    },
+    {
+      "seed": 41233,
+      "family": "exact_cross_split",
+      "file": "seed_41233__exact_cross_split.csv",
+      "n_rows": 48,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "84729c2315e9f173ff769272159c490e5496d663ce75dc1fa7497a7abc255a92"
+    },
+    {
+      "seed": 41233,
+      "family": "identity_cross_split",
+      "file": "seed_41233__identity_cross_split.csv",
+      "n_rows": 48,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "3aa496ab33d31efb2f4ae5ff629291b1f649276d90a647cd4c27cc170d1ead49"
+    },
+    {
+      "seed": 41233,
+      "family": "episode_cross_split",
+      "file": "seed_41233__episode_cross_split.csv",
+      "n_rows": 48,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "bb726892fc45f350463a235aea325e393081ad59fd81130a4e4e2960e821ccbf"
+    },
+    {
+      "seed": 41233,
+      "family": "membership_cross_split",
+      "file": "seed_41233__membership_cross_split.csv",
+      "n_rows": 48,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "08f74a3f4e2591e0bc175504b41af1d9ea01ab1be748fb368f7aeea1edefd15f"
+    },
+    {
+      "seed": 41233,
+      "family": "clean_collection_local_names",
+      "file": "seed_41233__clean_collection_local_names.csv",
+      "n_rows": 48,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "f3eea1e0fd2e533f5da53fc19f7a1c3e625dd918bf26fcdff42c4c09fe8ffdc6"
+    },
+    {
+      "seed": 41233,
+      "family": "contradictory_group_kind",
+      "file": "seed_41233__contradictory_group_kind.csv",
+      "n_rows": 48,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "2120fb9a03c384142b79bcb23e85b7c715efccdb51ae790d3c7134d27d3576e9"
+    },
+    {
+      "seed": 41233,
+      "family": "unknown_group_identity",
+      "file": "seed_41233__unknown_group_identity.csv",
+      "n_rows": 48,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "fed7685dfc3a0a65344cb9eb3cd60c344a9b5df691f1095b8b436f2912977a11"
+    },
+    {
+      "seed": 41233,
+      "family": "unknown_partial_digest",
+      "file": "seed_41233__unknown_partial_digest.csv",
+      "n_rows": 48,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "a7ad0e33886f704712a6081da907bfa4243e568fc23f1e46ec2c1cd0a13a2564"
+    },
+    {
+      "seed": 41243,
+      "family": "clean",
+      "file": "seed_41243__clean.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "6f0aeecf1d4cb85da887f2e09e9ba1a1238358be650dc2d9f3780a6c225b43b5"
+    },
+    {
+      "seed": 41243,
+      "family": "exact_cross_split",
+      "file": "seed_41243__exact_cross_split.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "b36b535ae27dafdfe69ed12988f31994c7b8004826907ec208962e406dda13cb"
+    },
+    {
+      "seed": 41243,
+      "family": "identity_cross_split",
+      "file": "seed_41243__identity_cross_split.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "4b44dad52c2bb9068e8367b7028f38bc67d3215ef60c6b25fe8e600fac0d58a9"
+    },
+    {
+      "seed": 41243,
+      "family": "episode_cross_split",
+      "file": "seed_41243__episode_cross_split.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "bf1b3bab4b85b96cba87f894742f6fba78e3aec7ad9bea3794ac0800cffc4196"
+    },
+    {
+      "seed": 41243,
+      "family": "membership_cross_split",
+      "file": "seed_41243__membership_cross_split.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "194fe3ca9386774d898cf56ac038064c615f390f33ed143c99be1fecb73d2dac"
+    },
+    {
+      "seed": 41243,
+      "family": "clean_collection_local_names",
+      "file": "seed_41243__clean_collection_local_names.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "0306d5b205751d0348ac3fe98b9281b7c8a4bdc7b1833548a210520f8f992a00"
+    },
+    {
+      "seed": 41243,
+      "family": "contradictory_group_kind",
+      "file": "seed_41243__contradictory_group_kind.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "714157baf833cdd5a0af84e392fa37b1ebae5394efc7bd486da9b2794122252d"
+    },
+    {
+      "seed": 41243,
+      "family": "unknown_group_identity",
+      "file": "seed_41243__unknown_group_identity.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "843e06eed767d87f95e7774b476c4e74202cd9cbf7ed38a162cc0a03b532c3c5"
+    },
+    {
+      "seed": 41243,
+      "family": "unknown_partial_digest",
+      "file": "seed_41243__unknown_partial_digest.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "fa08bcef872962e05135a33beb0556464c3c25156540fa8e590a84f2dd69bc74"
+    },
+    {
+      "seed": 41257,
+      "family": "clean",
+      "file": "seed_41257__clean.csv",
+      "n_rows": 59,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "3fb49d5c7418ee2fb3b276ce8549831229112c4ceca5eaae216a49b1dcdf3ad8"
+    },
+    {
+      "seed": 41257,
+      "family": "exact_cross_split",
+      "file": "seed_41257__exact_cross_split.csv",
+      "n_rows": 59,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "be838d7705e49642f61265f73ef3d92e5a18dd02e05bf5a9a9493e9afca98105"
+    },
+    {
+      "seed": 41257,
+      "family": "identity_cross_split",
+      "file": "seed_41257__identity_cross_split.csv",
+      "n_rows": 59,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "6ca3649a08003d4e2085e649a5b9fc7981c620ffa6ace62c7cac7ae19b21c299"
+    },
+    {
+      "seed": 41257,
+      "family": "episode_cross_split",
+      "file": "seed_41257__episode_cross_split.csv",
+      "n_rows": 59,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "030cb2ae0abfd04ef0f3c92579afd04108cd68632f80d49db0b0766194c31fbc"
+    },
+    {
+      "seed": 41257,
+      "family": "membership_cross_split",
+      "file": "seed_41257__membership_cross_split.csv",
+      "n_rows": 59,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "bd3adb3a966f93fbc6cbd983133786f6ae615a4a006c032cf85c35f6feba7d05"
+    },
+    {
+      "seed": 41257,
+      "family": "clean_collection_local_names",
+      "file": "seed_41257__clean_collection_local_names.csv",
+      "n_rows": 59,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "42cf62c1c67edf3d92c82de506ba10cc1a73945a7730f420c23e464804230857"
+    },
+    {
+      "seed": 41257,
+      "family": "contradictory_group_kind",
+      "file": "seed_41257__contradictory_group_kind.csv",
+      "n_rows": 59,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "3239ca83b92f5e6f487889f0b7b139b36ae6ffe80f2f476e52ba77fc363ce00b"
+    },
+    {
+      "seed": 41257,
+      "family": "unknown_group_identity",
+      "file": "seed_41257__unknown_group_identity.csv",
+      "n_rows": 59,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "95b594b109bfc49805b26b6f27fe43a763010034e7d5a5d6dc6bea3e0de9056f"
+    },
+    {
+      "seed": 41257,
+      "family": "unknown_partial_digest",
+      "file": "seed_41257__unknown_partial_digest.csv",
+      "n_rows": 59,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "49e33f39e66976085607d5dcfd58dbcb704014782ca7e39fb120b24eb85e49b8"
+    },
+    {
+      "seed": 41269,
+      "family": "clean",
+      "file": "seed_41269__clean.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "eb65e8281cc9423763710c578a551ab51407ec9c1844db6def8b7c53f43dae80"
+    },
+    {
+      "seed": 41269,
+      "family": "exact_cross_split",
+      "file": "seed_41269__exact_cross_split.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "5f30462063a0d164b529d82ebde540243796f94664e2eb8266841af02bd2a36a"
+    },
+    {
+      "seed": 41269,
+      "family": "identity_cross_split",
+      "file": "seed_41269__identity_cross_split.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "67d7b00d4c665eebf63e6f98a63da69ecb3415e2e98a2bb55f247f890c511d98"
+    },
+    {
+      "seed": 41269,
+      "family": "episode_cross_split",
+      "file": "seed_41269__episode_cross_split.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "f00a127ff02f15f3040e3f75acb371d16f12b97510ef056837182f89ec4e9304"
+    },
+    {
+      "seed": 41269,
+      "family": "membership_cross_split",
+      "file": "seed_41269__membership_cross_split.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "092b85465d595cade94a15ec1ca0fbf45e99e494f99733d1d7fa94e8d839bef0"
+    },
+    {
+      "seed": 41269,
+      "family": "clean_collection_local_names",
+      "file": "seed_41269__clean_collection_local_names.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "5021427d95ae5fe6eb20d2906debc604a9f25e4b3f56f4fdac9610a721b12f00"
+    },
+    {
+      "seed": 41269,
+      "family": "contradictory_group_kind",
+      "file": "seed_41269__contradictory_group_kind.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "b595835c81e6d84b27df04b981749690a400ae5a38be2a7c7eb88267ac9b2de2"
+    },
+    {
+      "seed": 41269,
+      "family": "unknown_group_identity",
+      "file": "seed_41269__unknown_group_identity.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "9cc27e20997ced4d242454830b59eef777bcbe005bea10383c82c4c3b1f089a2"
+    },
+    {
+      "seed": 41269,
+      "family": "unknown_partial_digest",
+      "file": "seed_41269__unknown_partial_digest.csv",
+      "n_rows": 31,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "47994e90bb5e3394db8dea9fb261caff0694097d109d721fb6e30ab692ef6d84"
+    },
+    {
+      "seed": 41281,
+      "family": "clean",
+      "file": "seed_41281__clean.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "sha256": "5bac8fdd1106bd1e2b076cc88d66c53dc60ee7a8371f44b1563c960fc3496761"
+    },
+    {
+      "seed": 41281,
+      "family": "exact_cross_split",
+      "file": "seed_41281__exact_cross_split.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "sha256": "def6b2112f1d540b4baa08fd06a6f279e10a0ff3e7e430598705d128f0ef08c3"
+    },
+    {
+      "seed": 41281,
+      "family": "identity_cross_split",
+      "file": "seed_41281__identity_cross_split.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "8454437dd0bacbdc8d247c78a8be7957c109a8b65c8c3a63d1cb0fd697627da8"
+    },
+    {
+      "seed": 41281,
+      "family": "episode_cross_split",
+      "file": "seed_41281__episode_cross_split.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "adefcf57bbc8df4987359f290ab757ec41ebffc4fd38acc4213ea4ab9e8bba2d"
+    },
+    {
+      "seed": 41281,
+      "family": "membership_cross_split",
+      "file": "seed_41281__membership_cross_split.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "9a21e413b7a07ea87613e575b4d774b8b6ea1c327528c1e18b9ccc83a7c552c6"
+    },
+    {
+      "seed": 41281,
+      "family": "clean_collection_local_names",
+      "file": "seed_41281__clean_collection_local_names.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "d34ff4a0ce21a946eef192da23f677c89cdaffd6ed54e011de0b95734e142305"
+    },
+    {
+      "seed": 41281,
+      "family": "contradictory_group_kind",
+      "file": "seed_41281__contradictory_group_kind.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "groups": "FAIL"
+      },
+      "sha256": "c4b6591cd29f0def978c8b011fac1e21a1d764e517e4ff0f5691a17c06d43d73"
+    },
+    {
+      "seed": 41281,
+      "family": "unknown_group_identity",
+      "file": "seed_41281__unknown_group_identity.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "sha256": "cd4785028d9b3a6a095f97a5058123b3484ba6e551a51acb857369a4a420cdc4"
+    },
+    {
+      "seed": 41281,
+      "family": "unknown_partial_digest",
+      "file": "seed_41281__unknown_partial_digest.csv",
+      "n_rows": 53,
+      "expected_checks": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "sha256": "bbf44fd50eaf07b94dab7f394751ffc0e8f973d5a6c8016abcce0ec0be274a10"
+    }
+  ]
+}

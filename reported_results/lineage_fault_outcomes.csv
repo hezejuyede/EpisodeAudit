@@ -1,0 +1,12 @@
+case,expected,actual,actual_execution
+lineage_calibration_clean,PASS,PASS,UNKNOWN
+lineage_calibration_target_contamination,FAIL,FAIL,UNKNOWN
+lineage_fit_clean,PASS,PASS,UNKNOWN
+lineage_fit_target_contamination,FAIL,FAIL,UNKNOWN
+lineage_model_selection_clean,PASS,PASS,UNKNOWN
+lineage_model_selection_target_contamination,FAIL,FAIL,UNKNOWN
+lineage_threshold_clean,PASS,PASS,UNKNOWN
+lineage_threshold_target_contamination,FAIL,FAIL,UNKNOWN
+lineage_transform_clean,PASS,PASS,UNKNOWN
+lineage_transform_target_labels,FAIL,FAIL,UNKNOWN
+lineage_transform_unknown_labels,UNKNOWN,UNKNOWN,UNKNOWN

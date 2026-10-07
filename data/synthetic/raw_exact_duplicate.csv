@@ -1,0 +1,4 @@
+sample_id,collection_id,split,path,sha256
+a.bin,fixture,train,a.bin,0ec88670aaed39f2a9f88050db9824ed2e37f4bf053515ee2d61bcf49ea56b60
+b.bin,fixture,test,b.bin,9e02c62053a90eacaea97233eb320db71079f2c616c5230ba810e785efaf1f7a
+c.bin,fixture,test,c.bin,0ec88670aaed39f2a9f88050db9824ed2e37f4bf053515ee2d61bcf49ea56b60

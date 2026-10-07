@@ -1,0 +1,10 @@
+n_rows,repetition,operation,seconds,peak_python_allocation_bytes,group_status
+1000,0,metadata integrity without file hashing,0.023571900004753843,790744,PASS
+1000,1,metadata integrity without file hashing,0.01993800001218915,790808,PASS
+1000,2,metadata integrity without file hashing,0.019186099991202354,790808,PASS
+10000,0,metadata integrity without file hashing,0.3148505999997724,8398440,PASS
+10000,1,metadata integrity without file hashing,0.41067380001186393,8398528,PASS
+10000,2,metadata integrity without file hashing,0.30820309999398887,8398528,PASS
+100000,0,metadata integrity without file hashing,3.4962170000071637,89638008,PASS
+100000,1,metadata integrity without file hashing,3.5482775999989826,89638072,PASS
+100000,2,metadata integrity without file hashing,3.564254400000209,89638072,PASS

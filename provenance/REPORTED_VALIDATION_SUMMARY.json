@@ -1,0 +1,32 @@
+{
+  "core_source_sha256": {
+    "src/episodeaudit/__init__.py": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "src/episodeaudit/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/episodeaudit/cli.py": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "src/episodeaudit/episodes.py": "e65c0c99ef6ed32b0b1fcdac5938d6634f40c6ca26d5e64a9de0768ad2aae46d",
+    "src/episodeaudit/integrity.py": "f5b87a88d3da22515765b20b9ceecece123a0021c4c836adfe443429f4b0fd11",
+    "src/episodeaudit/manifest.py": "e5e2d6ec0abf5736bf149ad4931a4a9ae78c63753c8db41624c303190b35f9f4",
+    "src/episodeaudit/metrics.py": "9970305cf56acaf626f8311bf2fe59e44e2131a71554594f31ce8af6831ff2de",
+    "src/episodeaudit/sampling.py": "7210da4702211f87e0ff202d09eadfd5eda96a73c6608067f21a0895fff882b6"
+  },
+  "dependencies": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0"
+  },
+  "interpretation": "Assertions, seed variations and synthetic fixture rows are software checks, not independent biological experiments, clinical diagnoses or measured universal sensitivity.",
+  "known_limits": [
+    "Historical target inspection cannot be verified.",
+    "Pathological label truth not established.",
+    "Wheat plant identity unavailable.",
+    "COIL object split policy depends on known versus unseen object estimand.",
+    "No prospective model validation.",
+    "Metadata timings do not include raw-file hashing or model training."
+  ],
+  "n_assertions": 453,
+  "n_failed_assertions": 0,
+  "n_fixture_cases": 180,
+  "n_fixture_seed_replicates": 20,
+  "record_type": "Sanitized factual summary of the completed private run; not a new execution or external certification.",
+  "validation_role_independence": "Separate agent implemented oracles within the same assistant team; no third-party certification."
+}

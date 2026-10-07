@@ -1,0 +1,12 @@
+{
+  "archive_bytes": 12684276,
+  "archive_sha256": "517c5594820eb40066ba0ff6842e7f09392bf7fde849bf9cb9c28445b0f29e88",
+  "citation": "Nene SA, Nayar SK, Murase H. Columbia Object Image Library (COIL-20). Technical Report CUCS-005-96, Columbia University, February 1996.",
+  "identity_basis": "Original publisher filenames identify 20 photographed physical objects, each with 72 views.",
+  "image_count": 1440,
+  "interpretation": "Split properties depend on estimand: shared object identity is expected for closed-set object recognition across poses, and prevents an unseen-object claim. Neither split is asserted to prove biological or disease generalization.",
+  "known_object_ids": 20,
+  "landing_page": "https://www.cs.columbia.edu/CAVE/software/softlib/coil-20.php",
+  "original_url": "https://www.cs.columbia.edu/CAVE/databases/SLAM_coil-20_coil-100/coil-20/coil-20-proc.zip",
+  "redistribution": "Raw images and downloaded ZIP are local research material only; no explicit raw-data redistribution licence has been verified. Redistribute manifests and download code with attribution, not these bytes."
+}
