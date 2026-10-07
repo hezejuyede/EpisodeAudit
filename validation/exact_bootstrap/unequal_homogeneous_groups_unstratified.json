@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "audit": "predictions",
+  "metrics": {
+    "n_predictions": 5,
+    "accuracy": 0.6,
+    "balanced_accuracy": 0.5833333333333333,
+    "macro_f1_observed_truth_classes": 0.5833333333333333,
+    "classes": [
+      "A",
+      "B"
+    ],
+    "confusion_matrix": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "observed_truth_classes": [
+      "A",
+      "B"
+    ],
+    "per_class": [
+      {
+        "label": "A",
+        "n_true": 3,
+        "n_predicted": 3,
+        "n_correct": 2,
+        "recall": 0.6666666666666666,
+        "precision": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "n_provided_groups_with_true_class": 2
+      },
+      {
+        "label": "B",
+        "n_true": 2,
+        "n_predicted": 2,
+        "n_correct": 1,
+        "recall": 0.5,
+        "precision": 0.5,
+        "f1": 0.5,
+        "n_provided_groups_with_true_class": 1
+      }
+    ],
+    "balanced_accuracy_definition": "Mean recall over classes present in y_true; absent-class recalls are undefined."
+  },
+  "group_evidence_status": "PASS",
+  "n_provided_groups": 3,
+  "n_predictions_missing_group": 0,
+  "group_metrics": [
+    {
+      "key": [
+        "collection",
+        "finite-oracle",
+        "g0"
+      ],
+      "n_predictions": 2,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "true_label_counts": {
+        "A": 2
+      }
+    },
+    {
+      "key": [
+        "collection",
+        "finite-oracle",
+        "g1"
+      ],
+      "n_predictions": 1,
+      "accuracy": 0.0,
+      "balanced_accuracy": 0.0,
+      "true_label_counts": {
+        "A": 1
+      }
+    },
+    {
+      "key": [
+        "collection",
+        "finite-oracle",
+        "g2"
+      ],
+      "n_predictions": 2,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "true_label_counts": {
+        "B": 2
+      }
+    }
+  ],
+  "probability_evidence": {
+    "status": "UNKNOWN",
+    "basis": "no_explicit_probability_class_mapping",
+    "decision_rule_verification": "UNKNOWN",
+    "calibration": "not_assessed"
+  },
+  "bootstrap": {
+    "performed": true,
+    "unit": "group",
+    "n_units": 3,
+    "n_replicates": 20000,
+    "seed": 27017,
+    "confidence": 0.95,
+    "method": "percentile",
+    "class_stratified": false,
+    "intervals": {
+      "accuracy": {
+        "lower": 0.0,
+        "upper": 1.0,
+        "n_valid_replicates": 20000
+      },
+      "balanced_accuracy": {
+        "lower": 0.25,
+        "upper": 0.75,
+        "n_valid_replicates": 13304
+      },
+      "macro_f1_observed_truth_classes": {
+        "lower": 0.2,
+        "upper": 0.7777777777777777,
+        "n_valid_replicates": 13304
+      }
+    },
+    "n_replicates_missing_original_truth_classes": 6696,
+    "class_metric_interval_conditioning": "Replicates retaining all originally observed truth classes; missing-class replicates are explicitly excluded.",
+    "inference_boundary": "Provided other groups; group identity and independence are unverified.",
+    "warnings": [
+      "Some original truth classes are absent in bootstrap replicates; class-metric intervals are conditional."
+    ]
+  },
+  "limitations": [
+    "Predictions and labels are supplied; pathology and label truth are not verified.",
+    "Group labels do not by themselves establish specimen independence.",
+    "Confidence intervals are conditional on the recorded rows/groups and fixed model predictions.",
+    "Seeds, views, groups, specimens, and independently collected datasets are different units.",
+    "No causal collection-shift mechanism or future-domain generalization is inferred."
+  ]
+}

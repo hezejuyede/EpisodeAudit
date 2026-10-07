@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "aggregate_input_only": true,
+  "no_original_HAR_rows_used_for_plot": true,
+  "same_pixels_as_current_manuscript_S1": true,
+  "same_PNG_bytes_as_current_manuscript_S1": true,
+  "PNG_dimensions": [
+    3311,
+    2027
+  ],
+  "manuscript_PNG_sha256": "d9db889582eb89d7114b5d660ab2dcd80b667ea63fbf9a0bafcfa2453e038ce4",
+  "portable_PNG_sha256": "d9db889582eb89d7114b5d660ab2dcd80b667ea63fbf9a0bafcfa2453e038ce4",
+  "portable_plot_script_sha256": "b7745a6923ec2f2a5412e8dd9615e1cf6d5b677835b290ddb812b9984736a6d8",
+  "reported_aggregate_sha256": "f78dc3089c8efacd6ffa6034a3e9550bbb25ba04c079d883050bb9c232c7200c",
+  "excluded_generated_directory": "figures",
+  "boundary": "Figure uses published-safe aggregate states only; no participant IDs or window rows are rendered."
+}

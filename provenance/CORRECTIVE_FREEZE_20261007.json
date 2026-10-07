@@ -1,0 +1,35 @@
+{
+  "software_version": "1.0.0",
+  "source_sha256": {
+    "src/episodeaudit/__init__.py": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "src/episodeaudit/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/episodeaudit/cli.py": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "src/episodeaudit/episodes.py": "b61b0e738b8a924d4f408a1f608dc078dadb5d420660215af6ebe177d2bf50cc",
+    "src/episodeaudit/integrity.py": "faede735df9e0b2f9fcd59ceee2fdce969404f53d59350af08a46a2493123fe4",
+    "src/episodeaudit/manifest.py": "4c9e4bb3c399298f789ee1d08152fa67eae9905af97fa50414369029dda3b77a",
+    "src/episodeaudit/metrics.py": "eaf54e1387898f40fde374eff9ac04fa4d7e2a375813060e94b0ace74081df38",
+    "src/episodeaudit/sampling.py": "ef7ff71f2b5653d9b16dd0e435765f68082c37245e95adc04f91455daf8479ae"
+  },
+  "previous_source_sha256": {
+    "src/episodeaudit/__init__.py": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "src/episodeaudit/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/episodeaudit/cli.py": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "src/episodeaudit/episodes.py": "e65c0c99ef6ed32b0b1fcdac5938d6634f40c6ca26d5e64a9de0768ad2aae46d",
+    "src/episodeaudit/integrity.py": "f5b87a88d3da22515765b20b9ceecece123a0021c4c836adfe443429f4b0fd11",
+    "src/episodeaudit/manifest.py": "e5e2d6ec0abf5736bf149ad4931a4a9ae78c63753c8db41624c303190b35f9f4",
+    "src/episodeaudit/metrics.py": "9970305cf56acaf626f8311bf2fe59e44e2131a71554594f31ce8af6831ff2de",
+    "src/episodeaudit/sampling.py": "7210da4702211f87e0ff202d09eadfd5eda96a73c6608067f21a0895fff882b6"
+  },
+  "changed_modules": [
+    "src/episodeaudit/episodes.py",
+    "src/episodeaudit/integrity.py",
+    "src/episodeaudit/manifest.py",
+    "src/episodeaudit/metrics.py",
+    "src/episodeaudit/sampling.py"
+  ],
+  "discovery": "Exploratory adversarial API audit after earlier validation freeze",
+  "regression_receipt": "04_VALIDATION/SECOND_ROUND_ADVERSARIAL/CORRECTED_REGRESSION_RECEIPT.json",
+  "original_failure_receipt": "04_VALIDATION/SECOND_ROUND_ADVERSARIAL/ADVERSARIAL_API_RESULTS.json",
+  "old_validation_boundary": "Earlier validation receipts remain scoped to earlier source bytes and recorded cases; they do not validate this corrective freeze.",
+  "public_release_candidate_still_previous_freeze": true
+}

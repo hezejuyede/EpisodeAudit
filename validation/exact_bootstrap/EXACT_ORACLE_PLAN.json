@@ -1,0 +1,170 @@
+{
+  "status": "SAVED_BEFORE_THIS_EXACT_ORACLE_RUN; post-initial-validation addendum",
+  "date": "2026-10-07",
+  "cases": [
+    {
+      "name": "unequal_homogeneous_groups_unstratified",
+      "stratify": false,
+      "groups": [
+        [
+          [
+            "A",
+            "A"
+          ],
+          [
+            "A",
+            "A"
+          ]
+        ],
+        [
+          [
+            "A",
+            "B"
+          ]
+        ],
+        [
+          [
+            "B",
+            "B"
+          ],
+          [
+            "B",
+            "A"
+          ]
+        ]
+      ],
+      "classes": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "name": "unequal_homogeneous_groups_stratified",
+      "stratify": true,
+      "groups": [
+        [
+          [
+            "A",
+            "A"
+          ],
+          [
+            "A",
+            "A"
+          ]
+        ],
+        [
+          [
+            "A",
+            "B"
+          ]
+        ],
+        [
+          [
+            "B",
+            "B"
+          ],
+          [
+            "B",
+            "A"
+          ]
+        ]
+      ],
+      "classes": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "name": "mixed_label_groups_unstratified",
+      "stratify": false,
+      "groups": [
+        [
+          [
+            "A",
+            "A"
+          ],
+          [
+            "B",
+            "A"
+          ]
+        ],
+        [
+          [
+            "A",
+            "B"
+          ],
+          [
+            "B",
+            "B"
+          ]
+        ],
+        [
+          [
+            "A",
+            "A"
+          ],
+          [
+            "B",
+            "B"
+          ],
+          [
+            "B",
+            "B"
+          ]
+        ]
+      ],
+      "classes": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "name": "predicted_class_absent_from_truth",
+      "stratify": false,
+      "groups": [
+        [
+          [
+            "A",
+            "A"
+          ],
+          [
+            "A",
+            "A"
+          ]
+        ],
+        [
+          [
+            "A",
+            "C"
+          ]
+        ],
+        [
+          [
+            "B",
+            "B"
+          ],
+          [
+            "B",
+            "A"
+          ]
+        ]
+      ],
+      "classes": [
+        "A",
+        "B",
+        "C"
+      ]
+    }
+  ],
+  "n_monte_carlo_replicates_per_case": 20000,
+  "seed": 27017,
+  "point_metric_tolerance": 1e-12,
+  "interval_endpoint_tolerance": 1e-12,
+  "missing_class_fraction_tolerance": 0.02,
+  "reference_method": "Exact ordered whole-group resample enumeration and Fraction confusion counts; inverse-CDF endpoints.",
+  "limitations": [
+    "Checks these finite fixed-prediction distributions, not general confidence-interval coverage.",
+    "Monte Carlo endpoint equality is prechecked against discrete support; endpoints at probability jumps can vary in other examples.",
+    "This assistant-generated local oracle is not external-laboratory replication."
+  ]
+}

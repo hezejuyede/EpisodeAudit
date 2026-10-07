@@ -7,7 +7,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any, Iterable
 
-from .manifest import AuditInputError, Manifest, group_key, membership_key
+from .manifest import AuditInputError, Manifest, _group_kind_conflicts, group_key, membership_key
 
 
 def _status(failures: bool, complete: bool) -> str:
@@ -71,12 +71,7 @@ def audit_integrity(manifest: Manifest, *, verify_files: bool = False, data_root
     membership = _cross_overlaps(selected, sides, membership_key)
     groups = _cross_overlaps(selected, sides, group_key)
     declared = _cross_overlaps(selected, sides, lambda r: r.get("sha256") or None)
-    kinds: dict[tuple, set[str]] = defaultdict(set)
-    for row in manifest.rows:
-        key = group_key(row)
-        if key is not None:
-            kinds[key].add(row.get("group_kind", "unknown"))
-    contradictions = [{"key": list(k), "group_kinds": sorted(v)} for k, v in sorted(kinds.items()) if len(v) > 1]
+    contradictions = _group_kind_conflicts(manifest.rows)
     all_groups = sufficient and all(group_key(r) is not None and r.get("group_kind", "unknown") != "unknown" for r in selected)
     all_declared = sufficient and all(r.get("sha256") for r in selected)
     digest_labels = defaultdict(lambda: defaultdict(list))
@@ -237,6 +232,12 @@ def audit_lineage(manifest: Manifest, lineage: dict[str, Any], *, train_splits: 
                     stage_unknown += 1
                 elif labels is True and (key[0] not in allowed or any(r.get("split") in testing for r in records)):
                     reasons.append("evaluation_labels_used_in_transform_stage")
+                elif labels is True and len(records) == 1:
+                    split = records[0].get("split", "")
+                    if split not in training | validation:
+                        missing.append({"stage": name, "key": list(key),
+                                        "reason": "membership_split_unknown" if not split else "membership_split_role_unknown"})
+                        stage_unknown += 1
             else:
                 if key[0] not in allowed:
                     reasons.append("fit_or_selection_member_outside_allowed_sources")

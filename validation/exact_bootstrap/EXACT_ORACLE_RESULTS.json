@@ -1,0 +1,554 @@
+{
+  "date": "2026-10-07",
+  "plan_sha256": "27045a34af1b7f8e793414d5893ee24fc35e38101f0793eb4388713fad312581",
+  "script_sha256": "9f8fba2ab53c9b68f386892213134d50c9e8426f7deba01bdca7483492fc2f69",
+  "runtime_sha256": {
+    "__init__.py": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "cli.py": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "episodes.py": "b61b0e738b8a924d4f408a1f608dc078dadb5d420660215af6ebe177d2bf50cc",
+    "integrity.py": "faede735df9e0b2f9fcd59ceee2fdce969404f53d59350af08a46a2493123fe4",
+    "manifest.py": "4c9e4bb3c399298f789ee1d08152fa67eae9905af97fa50414369029dda3b77a",
+    "metrics.py": "eaf54e1387898f40fde374eff9ac04fa4d7e2a375813060e94b0ace74081df38",
+    "sampling.py": "ef7ff71f2b5653d9b16dd0e435765f68082c37245e95adc04f91455daf8479ae"
+  },
+  "python_version": "3.12.14",
+  "numpy_version": "2.3.5",
+  "n_checks": 53,
+  "n_failed": 0,
+  "n_real_observations": 0,
+  "n_synthetic_finite_distributions": 4,
+  "results": [
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "reference": {
+        "n_ordered_equiprobable_resamples": 27,
+        "n_missing_truth_class_resamples": 9,
+        "missing_truth_class_probability_exact": "1/3",
+        "point_metrics_exact": {
+          "accuracy": "3/5",
+          "balanced_accuracy": "7/12",
+          "macro_f1_observed_truth_classes": "7/12"
+        },
+        "conditional_distributions": {
+          "accuracy": {
+            "n_reference_resamples": 27,
+            "exact_support_counts": {
+              "0": 1,
+              "1/4": 3,
+              "2/5": 3,
+              "1/2": 4,
+              "3/5": 6,
+              "2/3": 3,
+              "4/5": 3,
+              "5/6": 3,
+              "1": 1
+            },
+            "lower_0_025": 0.0,
+            "upper_0_975": 1.0
+          },
+          "balanced_accuracy": {
+            "n_reference_resamples": 18,
+            "exact_support_counts": {
+              "1/4": 6,
+              "7/12": 6,
+              "3/4": 6
+            },
+            "lower_0_025": 0.25,
+            "upper_0_975": 0.75
+          },
+          "macro_f1_observed_truth_classes": {
+            "n_reference_resamples": 18,
+            "exact_support_counts": {
+              "1/5": 3,
+              "2/7": 3,
+              "7/12": 6,
+              "2/3": 3,
+              "7/9": 3
+            },
+            "lower_0_025": 0.2,
+            "upper_0_975": 0.7777777777777778
+          }
+        }
+      },
+      "report_file": "unequal_homogeneous_groups_unstratified.json"
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "reference": {
+        "n_ordered_equiprobable_resamples": 4,
+        "n_missing_truth_class_resamples": 0,
+        "missing_truth_class_probability_exact": "0",
+        "point_metrics_exact": {
+          "accuracy": "3/5",
+          "balanced_accuracy": "7/12",
+          "macro_f1_observed_truth_classes": "7/12"
+        },
+        "conditional_distributions": {
+          "accuracy": {
+            "n_reference_resamples": 4,
+            "exact_support_counts": {
+              "1/4": 1,
+              "3/5": 2,
+              "5/6": 1
+            },
+            "lower_0_025": 0.25,
+            "upper_0_975": 0.8333333333333334
+          },
+          "balanced_accuracy": {
+            "n_reference_resamples": 4,
+            "exact_support_counts": {
+              "1/4": 1,
+              "7/12": 2,
+              "3/4": 1
+            },
+            "lower_0_025": 0.25,
+            "upper_0_975": 0.75
+          },
+          "macro_f1_observed_truth_classes": {
+            "n_reference_resamples": 4,
+            "exact_support_counts": {
+              "1/5": 1,
+              "7/12": 2,
+              "7/9": 1
+            },
+            "lower_0_025": 0.2,
+            "upper_0_975": 0.7777777777777778
+          }
+        }
+      },
+      "report_file": "unequal_homogeneous_groups_stratified.json"
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "reference": {
+        "n_ordered_equiprobable_resamples": 27,
+        "n_missing_truth_class_resamples": 0,
+        "missing_truth_class_probability_exact": "0",
+        "point_metrics_exact": {
+          "accuracy": "5/7",
+          "balanced_accuracy": "17/24",
+          "macro_f1_observed_truth_classes": "17/24"
+        },
+        "conditional_distributions": {
+          "accuracy": {
+            "n_reference_resamples": 27,
+            "exact_support_counts": {
+              "1/2": 8,
+              "5/7": 12,
+              "7/8": 6,
+              "1": 1
+            },
+            "lower_0_025": 0.5,
+            "upper_0_975": 1.0
+          },
+          "balanced_accuracy": {
+            "n_reference_resamples": 27,
+            "exact_support_counts": {
+              "1/2": 8,
+              "2/3": 3,
+              "17/24": 6,
+              "3/4": 3,
+              "5/6": 3,
+              "9/10": 3,
+              "1": 1
+            },
+            "lower_0_025": 0.5,
+            "upper_0_975": 1.0
+          },
+          "macro_f1_observed_truth_classes": {
+            "n_reference_resamples": 27,
+            "exact_support_counts": {
+              "1/3": 2,
+              "17/35": 6,
+              "13/20": 3,
+              "17/24": 9,
+              "47/55": 3,
+              "55/63": 3,
+              "1": 1
+            },
+            "lower_0_025": 0.3333333333333333,
+            "upper_0_975": 1.0
+          }
+        }
+      },
+      "report_file": "mixed_label_groups_unstratified.json"
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "reference": {
+        "n_ordered_equiprobable_resamples": 27,
+        "n_missing_truth_class_resamples": 9,
+        "missing_truth_class_probability_exact": "1/3",
+        "point_metrics_exact": {
+          "accuracy": "3/5",
+          "balanced_accuracy": "7/12",
+          "macro_f1_observed_truth_classes": "2/3"
+        },
+        "conditional_distributions": {
+          "accuracy": {
+            "n_reference_resamples": 27,
+            "exact_support_counts": {
+              "0": 1,
+              "1/4": 3,
+              "2/5": 3,
+              "1/2": 4,
+              "3/5": 6,
+              "2/3": 3,
+              "4/5": 3,
+              "5/6": 3,
+              "1": 1
+            },
+            "lower_0_025": 0.0,
+            "upper_0_975": 1.0
+          },
+          "balanced_accuracy": {
+            "n_reference_resamples": 18,
+            "exact_support_counts": {
+              "1/4": 6,
+              "7/12": 6,
+              "3/4": 6
+            },
+            "lower_0_025": 0.25,
+            "upper_0_975": 0.75
+          },
+          "macro_f1_observed_truth_classes": {
+            "n_reference_resamples": 18,
+            "exact_support_counts": {
+              "1/3": 6,
+              "2/3": 9,
+              "7/9": 3
+            },
+            "lower_0_025": 0.3333333333333333,
+            "upper_0_975": 0.7777777777777778
+          }
+        }
+      },
+      "report_file": "predicted_class_absent_from_truth.json"
+    }
+  ],
+  "checks": [
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "point:accuracy",
+      "passed": true
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "point:balanced_accuracy",
+      "passed": true
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "point:macro_f1_observed_truth_classes",
+      "passed": true
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "missing_class_fraction",
+      "passed": true,
+      "exact": 0.3333333333333333,
+      "observed": 0.3348
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "all_accuracy_replicates_retained",
+      "passed": true
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "accuracy:lower",
+      "passed": true,
+      "exact": 0.0,
+      "observed": 0.0
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "accuracy:upper",
+      "passed": true,
+      "exact": 1.0,
+      "observed": 1.0
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "balanced_accuracy:lower",
+      "passed": true,
+      "exact": 0.25,
+      "observed": 0.25
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "balanced_accuracy:upper",
+      "passed": true,
+      "exact": 0.75,
+      "observed": 0.75
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "balanced_accuracy:conditional_denominator",
+      "passed": true
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "macro_f1_observed_truth_classes:lower",
+      "passed": true,
+      "exact": 0.2,
+      "observed": 0.2
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "macro_f1_observed_truth_classes:upper",
+      "passed": true,
+      "exact": 0.7777777777777778,
+      "observed": 0.7777777777777777
+    },
+    {
+      "case": "unequal_homogeneous_groups_unstratified",
+      "property": "macro_f1_observed_truth_classes:conditional_denominator",
+      "passed": true
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "point:accuracy",
+      "passed": true
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "point:balanced_accuracy",
+      "passed": true
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "point:macro_f1_observed_truth_classes",
+      "passed": true
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "missing_class_fraction",
+      "passed": true,
+      "exact": 0.0,
+      "observed": 0.0
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "all_accuracy_replicates_retained",
+      "passed": true
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "accuracy:lower",
+      "passed": true,
+      "exact": 0.25,
+      "observed": 0.25
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "accuracy:upper",
+      "passed": true,
+      "exact": 0.8333333333333334,
+      "observed": 0.8333333333333334
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "balanced_accuracy:lower",
+      "passed": true,
+      "exact": 0.25,
+      "observed": 0.25
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "balanced_accuracy:upper",
+      "passed": true,
+      "exact": 0.75,
+      "observed": 0.75
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "balanced_accuracy:conditional_denominator",
+      "passed": true
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "macro_f1_observed_truth_classes:lower",
+      "passed": true,
+      "exact": 0.2,
+      "observed": 0.2
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "macro_f1_observed_truth_classes:upper",
+      "passed": true,
+      "exact": 0.7777777777777778,
+      "observed": 0.7777777777777777
+    },
+    {
+      "case": "unequal_homogeneous_groups_stratified",
+      "property": "macro_f1_observed_truth_classes:conditional_denominator",
+      "passed": true
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "point:accuracy",
+      "passed": true
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "point:balanced_accuracy",
+      "passed": true
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "point:macro_f1_observed_truth_classes",
+      "passed": true
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "missing_class_fraction",
+      "passed": true,
+      "exact": 0.0,
+      "observed": 0.0
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "all_accuracy_replicates_retained",
+      "passed": true
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "accuracy:lower",
+      "passed": true,
+      "exact": 0.5,
+      "observed": 0.5
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "accuracy:upper",
+      "passed": true,
+      "exact": 1.0,
+      "observed": 1.0
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "balanced_accuracy:lower",
+      "passed": true,
+      "exact": 0.5,
+      "observed": 0.5
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "balanced_accuracy:upper",
+      "passed": true,
+      "exact": 1.0,
+      "observed": 1.0
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "balanced_accuracy:conditional_denominator",
+      "passed": true
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "macro_f1_observed_truth_classes:lower",
+      "passed": true,
+      "exact": 0.3333333333333333,
+      "observed": 0.3333333333333333
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "macro_f1_observed_truth_classes:upper",
+      "passed": true,
+      "exact": 1.0,
+      "observed": 1.0
+    },
+    {
+      "case": "mixed_label_groups_unstratified",
+      "property": "macro_f1_observed_truth_classes:conditional_denominator",
+      "passed": true
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "point:accuracy",
+      "passed": true
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "point:balanced_accuracy",
+      "passed": true
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "point:macro_f1_observed_truth_classes",
+      "passed": true
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "missing_class_fraction",
+      "passed": true,
+      "exact": 0.3333333333333333,
+      "observed": 0.3348
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "all_accuracy_replicates_retained",
+      "passed": true
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "accuracy:lower",
+      "passed": true,
+      "exact": 0.0,
+      "observed": 0.0
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "accuracy:upper",
+      "passed": true,
+      "exact": 1.0,
+      "observed": 1.0
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "balanced_accuracy:lower",
+      "passed": true,
+      "exact": 0.25,
+      "observed": 0.25
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "balanced_accuracy:upper",
+      "passed": true,
+      "exact": 0.75,
+      "observed": 0.75
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "balanced_accuracy:conditional_denominator",
+      "passed": true
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "macro_f1_observed_truth_classes:lower",
+      "passed": true,
+      "exact": 0.3333333333333333,
+      "observed": 0.3333333333333333
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "macro_f1_observed_truth_classes:upper",
+      "passed": true,
+      "exact": 0.7777777777777778,
+      "observed": 0.7777777777777777
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "macro_f1_observed_truth_classes:conditional_denominator",
+      "passed": true
+    },
+    {
+      "case": "predicted_class_absent_from_truth",
+      "property": "absent_truth_recall_undefined",
+      "passed": true
+    }
+  ],
+  "interpretation": "Finite-distribution implementation agreement only; does not establish frequentist coverage or specimen/collection independence."
+}

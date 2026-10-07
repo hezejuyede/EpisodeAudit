@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "script": "scripts/download_har_local_source.py",
+      "argument_tail": [],
+      "exit_code": 2,
+      "network_or_child_process_attempts": 0,
+      "error": "usage: download_har_local_source.py [-h] [--opt-in-upstream-data]\ndownload_har_local_source.py: error: No automatic download. Current UCI record states CC BY 4.0; the original archive prohibits commercial use. Review both notices and explicitly add --opt-in-upstream-data only for your own permitted local use.\n"
+    },
+    {
+      "script": "scripts/run_har_application.py",
+      "argument_tail": [
+        "--audit"
+      ],
+      "exit_code": 2,
+      "network_or_child_process_attempts": 0,
+      "error": "usage: run_har_application.py [-h] [--prepare-only] [--audit]\n                              [--runtime-freeze RUNTIME_FREEZE]\n                              [--from-local-archive FROM_LOCAL_ARCHIVE]\n                              [--opt-in-upstream-data]\nrun_har_application.py: error: No automatic HAR download or parsing. Review docs/HAR_REPRODUCTION_AND_RIGHTS.md, then explicitly add --opt-in-upstream-data only for your own permitted local use.\n"
+    },
+    {
+      "script": "scripts/record_har_execution.py",
+      "argument_tail": [],
+      "exit_code": 2,
+      "network_or_child_process_attempts": 0,
+      "error": "usage: record_har_execution.py [-h] [--opt-in-upstream-data]\nrecord_har_execution.py: error: No automatic HAR download or parsing. Add --opt-in-upstream-data only after reviewing both upstream notices.\n"
+    },
+    {
+      "script": "scripts/build_har_public_aggregate.py",
+      "argument_tail": [],
+      "exit_code": 2,
+      "network_or_child_process_attempts": 0,
+      "error": "usage: build_har_public_aggregate.py [-h] [--opt-in-upstream-data]\nbuild_har_public_aggregate.py: error: No automatic parsing of local HAR-derived rows. Add --opt-in-upstream-data after reviewing both upstream notices.\n"
+    }
+  ],
+  "no_optin_no_network_or_child_process_attempt": true,
+  "HAR_output_tree_unchanged": true,
+  "HAR_output_tree_preexisted": false,
+  "boundary": "Actual no-opt-in execution with guarded subprocess/URL/socket entry points; no HAR processing occurred."
+}

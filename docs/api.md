@@ -20,6 +20,8 @@ The public functions are imported from `episodeaudit`. Input problems raise `Aud
 
 Partition captures by collection, supplied acquisition ID, and local calendar day. Sort by UTC time, breaking equal-time ties by sample ID. Start a new episode when the adjacent time gap exceeds the configured threshold. Equality remains in the same episode. Chaining is intentional: captures at 0, 4, and 8 seconds belong to one episode with a 5-second gap even though the first-to-last interval is 8 seconds. A day boundary always starts another partition. Offset-qualified timestamps are preferred. `naive_timezone="UTC"` or an available IANA name is an explicit assumption, recorded in `episode_time_basis`.
 
+`overwrite_groups` must be a boolean. A string such as `"False"` or a numeric flag is rejected; only explicit `True` permits replacing existing groups.
+
 IDs are deterministic truncated SHA-256 tokens of the partition and first capture; they are identifiers for this grouping rule, not a hash of specimen identity. Changing inputs/rules can change groups. An episode can mix different underlying specimens if acquisition metadata is incomplete.
 
 ## Sampling expectations

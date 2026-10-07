@@ -1,0 +1,252 @@
+{
+  "phase": "SECOND_ROUND_HAR_METADATA_WORKFLOW",
+  "status": "EXECUTED_LOCAL_ONLY_WITH_REDISTRIBUTION_HOLD",
+  "dependency_versions": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0"
+  },
+  "source": {
+    "title": "Human Activity Recognition Using Smartphones",
+    "doi": "10.24432/C54S4K",
+    "url": "https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones",
+    "download_sha256_locally_computed": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031",
+    "full_outer_and_inner_zip_crc_verified": true,
+    "http_content_length": null,
+    "http_content_length_verification": "UNKNOWN",
+    "hash_boundary": "Local provenance, not a checksum or signature published by UCI."
+  },
+  "official_aggregate_counts": {
+    "n_repeated_windows": 10299,
+    "n_provided_participants": 30,
+    "n_training_windows": 7352,
+    "n_test_windows": 2947,
+    "n_training_participants": 21,
+    "n_test_participants": 9,
+    "n_shared_participants": 0,
+    "n_activities": 6,
+    "set_and_crosstab_oracles_agree": true
+  },
+  "constructed_fault_aggregate_counts": {
+    "uses_only_original_training_windows": true,
+    "n_repeated_windows": 7352,
+    "n_constructed_train_windows": 5146,
+    "n_constructed_test_windows": 2206,
+    "n_shared_participants": 21,
+    "set_and_crosstab_oracles_agree": true,
+    "seed": 72007,
+    "construction": "Actual scikit-learn ShuffleSplit, test_size=0.30; our explicit fault, not the original UCI protocol."
+  },
+  "protocol_states": {
+    "official_unspecified": {
+      "aggregate_computational_status": "UNKNOWN",
+      "check_states": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "PASS"
+      },
+      "physical_identity_evidence": "UNKNOWN",
+      "unobserved_execution_leakage": "UNKNOWN"
+    },
+    "official_disjoint": {
+      "aggregate_computational_status": "UNKNOWN",
+      "check_states": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "PASS"
+      },
+      "physical_identity_evidence": "UNKNOWN",
+      "unobserved_execution_leakage": "UNKNOWN"
+    },
+    "constructed_train_shuffle_disjoint": {
+      "aggregate_computational_status": "FAIL",
+      "check_states": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "physical_identity_evidence": "UNKNOWN",
+      "unobserved_execution_leakage": "UNKNOWN"
+    },
+    "restored_official_disjoint": {
+      "aggregate_computational_status": "UNKNOWN",
+      "check_states": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "PASS"
+      },
+      "physical_identity_evidence": "UNKNOWN",
+      "unobserved_execution_leakage": "UNKNOWN"
+    },
+    "fault_transform_missing_split": {
+      "aggregate_computational_status": "UNKNOWN",
+      "check_states": {
+        "membership": "UNKNOWN",
+        "groups": "UNKNOWN",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "physical_identity_evidence": "UNKNOWN",
+      "unobserved_execution_leakage": "UNKNOWN"
+    },
+    "repaired_transform_official_membership": {
+      "aggregate_computational_status": "UNKNOWN",
+      "check_states": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "PASS"
+      },
+      "physical_identity_evidence": "UNKNOWN",
+      "unobserved_execution_leakage": "UNKNOWN"
+    },
+    "heldout_label_using_transform": {
+      "aggregate_computational_status": "FAIL",
+      "check_states": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "FAIL"
+      },
+      "physical_identity_evidence": "UNKNOWN",
+      "unobserved_execution_leakage": "UNKNOWN"
+    }
+  },
+  "postrun_transform_controls": {
+    "status_timing": "Exploratory controls declared in a dated addendum after initial results were known.",
+    "missing_training_transform_split": "UNKNOWN",
+    "same_declaration_with_repaired_official_membership": "PASS",
+    "genuine_heldout_label_transform": "FAIL",
+    "heldout_finding_reasons": [
+      "evaluation_labels_used_in_transform_stage"
+    ],
+    "boundary": "Declared protocol evidence changes. Actual model training and historical label access are not independently observed."
+  },
+  "sampling_aggregate": {
+    "image": {
+      "n_draws": 7352,
+      "replacement": false,
+      "n_provided_subject_groups": 21,
+      "groups_seen": 21,
+      "draw_count_cv": 0.09924499874798441,
+      "seed": 72007,
+      "boundary": "Allocation only. The two replacement settings differ; no classifier-training or prediction-improvement effect is measured."
+    },
+    "group": {
+      "n_draws": 7352,
+      "replacement": true,
+      "n_provided_subject_groups": 21,
+      "groups_seen": 21,
+      "draw_count_cv": 0.04283101643565863,
+      "seed": 72007,
+      "boundary": "Allocation only. The two replacement settings differ; no classifier-training or prediction-improvement effect is measured."
+    }
+  },
+  "fixed_constant_rule": {
+    "type": "fixed training-majority constant",
+    "selection": "Official training activity frequency only; ties smallest activity ID.",
+    "selected_activity": "LAYING",
+    "training_activity_counts_by_original_activity_id": {
+      "1": 1226,
+      "2": 1073,
+      "3": 986,
+      "4": 1286,
+      "5": 1374,
+      "6": 1407
+    },
+    "test_activity_counts": {
+      "LAYING": 537,
+      "SITTING": 491,
+      "STANDING": 532,
+      "WALKING": 496,
+      "WALKING_DOWNSTAIRS": 420,
+      "WALKING_UPSTAIRS": 471
+    },
+    "test_used_to_choose_rule": false,
+    "balanced_accuracy": 0.16666666666666666,
+    "accuracy": 0.18221920597217509,
+    "actual_sklearn_oracle_matches": true,
+    "bootstrap": {
+      "performed": true,
+      "unit": "group",
+      "n_units": 9,
+      "n_replicates": 1000,
+      "seed": 72011,
+      "confidence": 0.95,
+      "method": "percentile",
+      "class_stratified": false,
+      "intervals": {
+        "accuracy": {
+          "lower": 0.17425727285967818,
+          "upper": 0.18874791361453072,
+          "n_valid_replicates": 1000
+        },
+        "balanced_accuracy": {
+          "lower": 0.16666666666666666,
+          "upper": 0.16666666666666666,
+          "n_valid_replicates": 1000
+        },
+        "macro_f1_observed_truth_classes": {
+          "lower": 0.049465954932641554,
+          "upper": 0.0529262516333127,
+          "n_valid_replicates": 1000
+        }
+      },
+      "n_replicates_missing_original_truth_classes": 0,
+      "class_metric_interval_conditioning": "Replicates retaining all originally observed truth classes; missing-class replicates are explicitly excluded.",
+      "inference_boundary": "Provided identity groups; group identity and independence are unverified.",
+      "warnings": []
+    },
+    "boundary": "Metric joining demonstration with a fixed constant rule. BA=1/6 is analytic; the degenerate BA interval does not show generalization or classifier superiority."
+  },
+  "execution": {
+    "status": "COMPLETED",
+    "execution_error_count": 0,
+    "executed_application_assertion_line_events": 54,
+    "distinct_application_assertions_reached": 28,
+    "count_boundary": "Counts application Assert statement line events, excluding generator/comprehension frames. Core source and library assertions are not counted. With an error-free replay all listed assertion executions completed without raising.",
+    "separate_from_original_453_assertions": true
+  },
+  "reproduction_fingerprints": {
+    "application_script_sha256": "19874c7875112455c2479f4d5ac4bf98240b42c5477d76491c8d51b10467dd34",
+    "corrective_freeze_sha256": "05c58b2dc7890ec0b0b53265ea44d1d239e6979312c781c0d0a26586cf871682",
+    "eight_runtime_source_sha256": {
+      "src/episodeaudit/__init__.py": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+      "src/episodeaudit/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "src/episodeaudit/cli.py": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+      "src/episodeaudit/episodes.py": "b61b0e738b8a924d4f408a1f608dc078dadb5d420660215af6ebe177d2bf50cc",
+      "src/episodeaudit/integrity.py": "faede735df9e0b2f9fcd59ceee2fdce969404f53d59350af08a46a2493123fe4",
+      "src/episodeaudit/manifest.py": "4c9e4bb3c399298f789ee1d08152fa67eae9905af97fa50414369029dda3b77a",
+      "src/episodeaudit/metrics.py": "eaf54e1387898f40fde374eff9ac04fa4d7e2a375813060e94b0ace74081df38",
+      "src/episodeaudit/sampling.py": "ef7ff71f2b5653d9b16dd0e435765f68082c37245e95adc04f91455daf8479ae"
+    },
+    "postrun_control_plan_sha256": "2fd091ff2d2119a17bd19563a9e33963b387018844e0ccca2d25b44ccfc82442"
+  },
+  "rights": {
+    "redistribution_status": "HOLD_UNRESOLVED_UPSTREAM_NOTICE_DISCREPANCY",
+    "current_UCI_record_claim": "CC BY 4.0",
+    "original_README_and_names_notice": "Any commercial use is prohibited.",
+    "no_raw_or_row_level_derived_HAR_metadata_bundled": true,
+    "software_MIT_does_not_apply_to_upstream_HAR_data": true,
+    "local_download": "Explicit opt-in from the official free source only, after reviewing both notices."
+  },
+  "scientific_boundary": "One genuine non-image repeated-measurement metadata application. No sensor-feature model, independently recruited participants, physical identity reauthentication, external-user adoption, plant/pathology validation, algorithm superiority or future-domain accuracy claim."
+}

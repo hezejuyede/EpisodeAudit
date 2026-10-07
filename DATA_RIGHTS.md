@@ -36,3 +36,17 @@ Reported Deepchecks controls used version 0.19.1 and selected original exact-row
 ## Release status
 
 This is a local public-release candidate. No repository has been created or pushed, no DOI has been assigned, and no immutable public availability is asserted. Final publication requires author review of this file list and explicit authorization. The code's MIT terms and the data-specific boundaries above must accompany any approved release.
+
+## UCI HAR: aggregate software outputs and optional local processing
+
+The current official [UCI HAR record](https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones) states CC BY 4.0, while the retrieved original ZIP README and outer `.names` notice state **“Any commercial use is prohibited.”** This source-notice discrepancy remains unresolved. The software's MIT license does not replace or transfer upstream HAR data rights. No authorization to override the original notice is asserted.
+
+Original ZIPs, sensor vectors, subject/activity vectors, README/outer notices, original or derived window-level manifests, prediction rows and member-level traces are **not included in the public, review or master packages**. Optional local processing writes those materials only below the ignored `replayed_results/har` directory; the entire directory must be excluded from every ZIP and public commit, including any local hard-linked source cache used for validation.
+
+`reported_results/HAR_APPLICATION_PUBLIC_SUMMARY.json` contains our own aggregate counts, software protocol decisions, allocation outputs and fixed-rule metric checks. It includes no original participant-ID list or window rows. Our software code and these aggregate outputs do not constitute a new license grant for the source data. The optional scripts require explicit `--opt-in-upstream-data` for both downloading and processing, and refer to the official free source for permitted local academic reproduction. Default invocation rejects source processing; opting in does not resolve redistribution rights. See [the detailed local-use instructions](docs/HAR_REPRODUCTION_AND_RIGHTS.md).
+
+Dataset attribution follows the official UCI DOI creator order: Reyes-Ortiz J, Anguita D, Ghio A, Oneto L, Parra X. *Human Activity Recognition Using Smartphones*. UCI Machine Learning Repository; 2013. [DOI 10.24432/C54S4K](https://doi.org/10.24432/C54S4K).
+
+The original notice additionally requests: Anguita D, Ghio A, Oneto L, Parra X, Reyes-Ortiz JL. *A Public Domain Dataset for Human Activity Recognition Using Smartphones*. ESANN 2013 proceedings; 2013. p. 437–442. [Official conference proceedings](https://www.esann.org/proceedings/2013); [original publisher PDF](https://www.esann.org/sites/default/files/proceedings/legacy/es2013-84.pdf). The conference-paper and dataset creator orders differ. The paper title is not used to override the source rights notice, and no unverified conference-paper DOI is introduced.
+
+The HAR application checks supplied repeated-measurement metadata and declared fit/transform membership. It does not establish newly recruited participants, physical identity verification, external-user adoption, new field/pathology data, a superior classifier or observed historical training execution.

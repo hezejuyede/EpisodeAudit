@@ -1,0 +1,66 @@
+[
+  {
+    "file": "src/episodeaudit/__init__.py",
+    "src_sha256": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "installed_sha256": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "build_sha256": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "wheel_sha256": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "boundary": "Build/wheel bytes were checked during the recorded fresh build; source and installed bytes rechecked here."
+  },
+  {
+    "file": "src/episodeaudit/__main__.py",
+    "src_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "installed_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "build_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "wheel_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "boundary": "Build/wheel bytes were checked during the recorded fresh build; source and installed bytes rechecked here."
+  },
+  {
+    "file": "src/episodeaudit/cli.py",
+    "src_sha256": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "installed_sha256": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "build_sha256": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "wheel_sha256": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "boundary": "Build/wheel bytes were checked during the recorded fresh build; source and installed bytes rechecked here."
+  },
+  {
+    "file": "src/episodeaudit/episodes.py",
+    "src_sha256": "b61b0e738b8a924d4f408a1f608dc078dadb5d420660215af6ebe177d2bf50cc",
+    "installed_sha256": "b61b0e738b8a924d4f408a1f608dc078dadb5d420660215af6ebe177d2bf50cc",
+    "build_sha256": "b61b0e738b8a924d4f408a1f608dc078dadb5d420660215af6ebe177d2bf50cc",
+    "wheel_sha256": "b61b0e738b8a924d4f408a1f608dc078dadb5d420660215af6ebe177d2bf50cc",
+    "boundary": "Build/wheel bytes were checked during the recorded fresh build; source and installed bytes rechecked here."
+  },
+  {
+    "file": "src/episodeaudit/integrity.py",
+    "src_sha256": "faede735df9e0b2f9fcd59ceee2fdce969404f53d59350af08a46a2493123fe4",
+    "installed_sha256": "faede735df9e0b2f9fcd59ceee2fdce969404f53d59350af08a46a2493123fe4",
+    "build_sha256": "faede735df9e0b2f9fcd59ceee2fdce969404f53d59350af08a46a2493123fe4",
+    "wheel_sha256": "faede735df9e0b2f9fcd59ceee2fdce969404f53d59350af08a46a2493123fe4",
+    "boundary": "Build/wheel bytes were checked during the recorded fresh build; source and installed bytes rechecked here."
+  },
+  {
+    "file": "src/episodeaudit/manifest.py",
+    "src_sha256": "4c9e4bb3c399298f789ee1d08152fa67eae9905af97fa50414369029dda3b77a",
+    "installed_sha256": "4c9e4bb3c399298f789ee1d08152fa67eae9905af97fa50414369029dda3b77a",
+    "build_sha256": "4c9e4bb3c399298f789ee1d08152fa67eae9905af97fa50414369029dda3b77a",
+    "wheel_sha256": "4c9e4bb3c399298f789ee1d08152fa67eae9905af97fa50414369029dda3b77a",
+    "boundary": "Build/wheel bytes were checked during the recorded fresh build; source and installed bytes rechecked here."
+  },
+  {
+    "file": "src/episodeaudit/metrics.py",
+    "src_sha256": "eaf54e1387898f40fde374eff9ac04fa4d7e2a375813060e94b0ace74081df38",
+    "installed_sha256": "eaf54e1387898f40fde374eff9ac04fa4d7e2a375813060e94b0ace74081df38",
+    "build_sha256": "eaf54e1387898f40fde374eff9ac04fa4d7e2a375813060e94b0ace74081df38",
+    "wheel_sha256": "eaf54e1387898f40fde374eff9ac04fa4d7e2a375813060e94b0ace74081df38",
+    "boundary": "Build/wheel bytes were checked during the recorded fresh build; source and installed bytes rechecked here."
+  },
+  {
+    "file": "src/episodeaudit/sampling.py",
+    "src_sha256": "ef7ff71f2b5653d9b16dd0e435765f68082c37245e95adc04f91455daf8479ae",
+    "installed_sha256": "ef7ff71f2b5653d9b16dd0e435765f68082c37245e95adc04f91455daf8479ae",
+    "build_sha256": "ef7ff71f2b5653d9b16dd0e435765f68082c37245e95adc04f91455daf8479ae",
+    "wheel_sha256": "ef7ff71f2b5653d9b16dd0e435765f68082c37245e95adc04f91455daf8479ae",
+    "boundary": "Build/wheel bytes were checked during the recorded fresh build; source and installed bytes rechecked here."
+  }
+]

@@ -8,7 +8,7 @@ from typing import Any, Iterable
 
 import numpy as np
 
-from .manifest import AuditInputError, Manifest, group_key, membership_key
+from .manifest import AuditInputError, Manifest, _group_kind_conflicts, group_key, membership_key
 
 
 def _rank(values: np.ndarray) -> np.ndarray:
@@ -62,6 +62,8 @@ def sample_indices(manifest: Manifest, n_draws: int, *, strategy: str = "image",
     keys = [membership_key(manifest.rows[i]) for i in selected]
     if len(keys) != len(set(keys)):
         raise AuditInputError("Sampling requires unique collection/sample membership within the selection.")
+    if _group_kind_conflicts(manifest.rows[i] for i in selected):
+        raise AuditInputError("Conflicting group-kind metadata for one namespace/group ID; group exposure calculations are ambiguous.")
     missing = [i for i in selected if group_key(manifest.rows[i]) is None]
     members: dict[tuple, list[int]] = {}
     for i in selected:
@@ -104,7 +106,7 @@ def sample_indices(manifest: Manifest, n_draws: int, *, strategy: str = "image",
             "splits": sorted(split_set) if split_set is not None else None,
             "indices": [int(i) for i in chosen],
             "selected_members": [list(membership_key(manifest.rows[int(i)])) for i in chosen],
-            "group_evidence_status": "PASS" if complete_groups else "UNKNOWN",
+            "group_evidence_status": "PASS" if complete_groups and all(manifest.rows[i].get("group_kind", "unknown") != "unknown" for i in selected) else "UNKNOWN",
             "group_exposures": exposures, "expected_group_exposures": probability,
             "n_missing_group_records": len(missing), "n_groups": len(members), "groups_seen": seen,
             "group_coverage": float(seen / len(members)) if complete_groups and members else None,

@@ -52,3 +52,21 @@ python scripts/plot_article_figures.py
 ```
 
 The optional generator uses only `reported_results/wheat_replay_class_metrics.csv`, `reported_results/sampling_oracle_results.csv`, and `reported_results/wheat_U0_software_sampling_replay.csv`. It writes the three main figures and graphical abstract as PNG/PDF plus a provenance JSON in `figures/`. All inputs and output paths are relative to the checkout. Matplotlib is outside the core dependency list. The local review recorded four PNGs identical to the original article artwork; PDF metadata can vary. The public candidate includes the script and inputs, while the generated files and SHA comparisons are retained in the separate local release review.
+
+## Exact finite group-bootstrap reference
+
+Four artificial fixed-prediction configurations test unequal and mixed groups, stratification, and an absent truth class. The independent rational-arithmetic enumerator checks the finite distributions and class-support conditioning. It is not a population coverage study.
+
+```sh
+python scripts/check_exact_bootstrap.py
+```
+
+## Corrective rerun and finite-oracle coverage
+
+The current software has 55 behavioral test methods. Four defects discovered after the initial freeze were corrected: label-consuming transforms require known permitted partition roles; grouped consumers reject conflicting same-key kind metadata; nonfinite numeric IDs/labels cannot be converted into artificial strings; and episode replacement requires a boolean flag. Consistently unknown group kinds remain explicitly resampleable with unknown evidence. Old failure records remain in `validation/`; these are post-discovery regressions, not preregistered or third-party certification.
+
+Current `results/` records identify the rerun of 453 assertions, 117 addendum cases, 12 installed CLI commands and 180 selected original-library comparisons. `validation/exact_bootstrap/` records 53 checks on four fully enumerated small synthetic resampling distributions. Run `python scripts/check_exact_bootstrap.py` to replay that finite reference comparison. The 53 checks add no real observations or population-coverage experiment. Receipt hashes for raw execution files and sanitized public counterparts are labelled separately; `provenance/SOURCE_COPY_LEDGER.json` distinguishes current source/output digests from historical initial-copy digests.
+
+## Optional HAR aggregation and upstream rights
+
+Only aggregate HAR summaries/audit statuses are public. Window arrays, source ZIPs, original notices and per-window traces are not included. The original UCI page's CC BY 4.0 statement conflicts with the downloaded archive's commercial-use prohibition; that conflict is not resolved by the MIT software license. Default commands without `--opt-in-upstream-data` stop before download/data generation. Optional commands in README write upstream-derived local outputs under ignored `replayed_results/har` and require separate acceptance of applicable upstream terms. See `docs/HAR_REPRODUCTION_AND_RIGHTS.md`. Aggregate task counts and a simple baseline illustrate the audit interface, not new recognition accuracy or independent-domain validity.

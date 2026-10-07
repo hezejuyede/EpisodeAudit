@@ -1,0 +1,68 @@
+{
+  "initial_source_and_workflow_plan": {
+    "planned_on": "2026-10-07",
+    "purpose": "Second-round real non-image participant metadata application and joined workflow demonstration, independent of the original 453-assertion run.",
+    "primary_source": "https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones",
+    "doi": "10.24432/C54S4K",
+    "official_download": "https://archive.ics.uci.edu/static/public/240/human%2Bactivity%2Brecognition%2Busing%2Bsmartphones.zip",
+    "official_license": "CC BY 4.0 as stated by the current UCI primary record; preserve original archive notices separately.",
+    "input_scope": "Original subject_train, subject_test, y_train, y_test and activity labels only; original window row positions identify members. No sensor vectors or 561-dimensional feature values are extracted, used for modelling or redistributed.",
+    "unit_oracles": [
+      "Parallel subject/activity vectors must have equal row counts and integer values within original identifier ranges.",
+      "Identify official training/test subject sets from actual supplied metadata; verify zero intersection independently with Python sets and a pandas subject/split crosstab.",
+      "Every official window appears exactly once; original subject and activity annotations remain unchanged."
+    ],
+    "construction_seed": 72007,
+    "bootstrap_seed": 72011,
+    "bootstrap_replicates": 1000,
+    "constructed_split": "Actual sklearn ShuffleSplit applied only to original training windows with test_size=0.30 and random_state=72007. This is our fault example, not the official protocol or untouched scientific validation.",
+    "joined_workflow": [
+      "Original metadata to collection/sample manifest with subject identity group and official split.",
+      "Official unspecified and group-disjoint protocol states.",
+      "Declare fitting/selection members restricted to official training rows; declarations are not external verification of runtime training.",
+      "Draw the official training row-count budget using image-uniform without replacement and group-uniform with replacement, recording both settings.",
+      "Choose one constant activity prediction by the largest official-training activity count; break ties by smallest activity ID. Do not use test labels for choosing the prediction rule.",
+      "Join fixed test predictions to the official manifest and evaluate metrics with subject-unit bootstrap, stratify=false because each subject can contain multiple activities.",
+      "Fault probe: remove the split from an original-training row declared in a label-using transform; expect missing evidence UNKNOWN.",
+      "Constructed original-training window ShuffleSplit shares participants under a disjoint requirement; expect group FAIL. Restore original official subject membership and re-audit group PASS."
+    ],
+    "execution_gate": "Prepare metadata/oracles now. Do not run EpisodeAudit until root supplies the corrected runtime freeze. Record exact runtime module hashes with second-round results.",
+    "limitations": [
+      "Not a new independent laboratory, prospective user adoption study, field plant cohort or unified pathology review.",
+      "No sensor classification research, model comparison, algorithmic superiority or clinical-validity claim.",
+      "The constant-baseline six-class BA oracle is 1/6; this illustrates metric linkage, not a novel classifier result.",
+      "Subject identifiers are supplied by the original data collectors; authors do not independently re-identify participants.",
+      "Raw-content hashing and unobserved historical execution remain UNKNOWN."
+    ]
+  },
+  "exploratory_postrun_controls": {
+    "phase": "SECOND_ROUND_HAR_POSTRUN_TRANSFORM_CONTROLS",
+    "planned_at_utc": "2026-10-07T12:29:59.621710+00:00",
+    "timing": "Exploratory controls planned after the initial genuine HAR workflow results were available; not retrospective preregistration.",
+    "original_frozen_plan_unchanged": true,
+    "controls": [
+      {
+        "name": "repaired_transform_official_membership",
+        "same_declaration": "har_fault_transform_lineage.json",
+        "manifest": "original undamaged official manifest",
+        "expected_declared_lineage": "PASS",
+        "interpretation": "Restored supplied split evidence only, not actual training verification."
+      },
+      {
+        "name": "heldout_label_using_transform",
+        "selection": "First original official test row, not chosen on prediction performance",
+        "declaration": "uses_labels=true, purpose=transform, same allowed source collection",
+        "expected_declared_lineage": "FAIL",
+        "expected_reason": "evaluation_labels_used_in_transform_stage",
+        "interpretation": "Declared heldout-label access violates listed protocol, not proof of actual historical model execution."
+      }
+    ],
+    "unchanged_unknown_boundaries": [
+      "raw content hashes",
+      "physical participant identity reauthentication",
+      "unobserved actual training or historical target peeking"
+    ],
+    "runtime": "Existing corrected freeze only; no source modules are edited."
+  },
+  "public_reproduction_boundary": "Plans describe metadata contracts; no original participant ID list, source rows or sensor files are supplied. All local processing requires explicit opt-in."
+}

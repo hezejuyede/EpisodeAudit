@@ -1,0 +1,35 @@
+{
+  "status": "EXECUTED",
+  "n_matched_cases": 180,
+  "n_seed_variants": 20,
+  "versions": {
+    "deepchecks": "0.19.1",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.5.2",
+    "category-encoders": "2.6.4",
+    "setuptools": "80.9.0"
+  },
+  "original_source_record_files": 320,
+  "original_source_record_mismatches": 0,
+  "checks": [
+    "deepchecks.tabular.checks.TrainTestSamplesMix",
+    "deepchecks.tabular.checks.IndexTrainTestLeakage"
+  ],
+  "input_adapter": "Unlabelled tabular features are two halves of supplied SHA-256 strings. Original IndexTrainTestLeakage is run twice, once with namespace-aware group keys and once with collection/sample membership keys as the index. No actual pixel inputs or Deepchecks vision-suite benchmark.",
+  "group_ratio_definition": "Deepchecks IndexTrainTestLeakage reports number of distinct intersecting index values divided by number of test rows, not fraction of test rows belonging to overlapping groups.",
+  "limitations": [
+    "Selected exact/index overlap checks, not all Deepchecks functionality.",
+    "Digest features are provided strings, not verified raw image content.",
+    "Missing group inputs skip group-index checks; this is unavailable evidence rather than failure of the external tool.",
+    "Overlap detection is interpreted against a declared group-disjoint protocol; known-object/new-view recognition can legitimately share identities.",
+    "Lineage, exposure and class reports are outside these selected checks; cannot infer all of Deepchecks lacks alternatives or extensions.",
+    "No throughput claim across tools; selected adapters and dependency stacks differ."
+  ],
+  "captured_upstream_warning_counts": {
+    "FutureWarning: DataFrame.applymap has been deprecated. Use DataFrame.map instead.": 180
+  },
+  "comparison_expansion": "A third run using membership keys as the provided index was added after the first external-tool execution to avoid weakening a baseline that can natively audit more than one index semantic. Original overlap figures remain unchanged.",
+  "compatibility": "Pinned NumPy1.26.4/pandas2.2.3/SciPy1.14.1/scikit-learn1.5.2/setuptools80.9.0/category-encoders2.6.4 after recorded dependency incompatibilities. Original library source unmodified; no monkeypatches."
+}

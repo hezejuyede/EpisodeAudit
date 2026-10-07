@@ -10,7 +10,7 @@ from typing import Any, Iterable, Mapping
 
 import numpy as np
 
-from .manifest import AuditInputError, Manifest, group_key, membership_key
+from .manifest import AuditInputError, Manifest, _group_kind_conflicts, _scalar_string, group_key, membership_key
 
 
 def load_predictions(path: str | Path) -> list[dict[str, str]]:
@@ -91,12 +91,7 @@ def evaluate_predictions(predictions: Iterable[Mapping[str, object]], *, manifes
             raise AuditInputError(f"Prediction row {index}: expected a mapping.")
         row = {}
         for field in ("sample_id", "collection_id", "y_true", "y_pred"):
-            value = item.get(field, "")
-            if value is None:
-                value = ""
-            if not isinstance(value, (str, int, float)):
-                raise AuditInputError(f"Prediction row {index}: {field} must be scalar.")
-            row[field] = str(value).strip()
+            row[field] = _scalar_string(item.get(field, ""), f"Prediction row {index}, {field}")
         if any(not row[field] for field in ("sample_id", "y_true", "y_pred")):
             raise AuditInputError(f"Prediction row {index}: sample_id, y_true, and y_pred must be nonempty.")
         rows.append(row)
@@ -125,6 +120,9 @@ def evaluate_predictions(predictions: Iterable[Mapping[str, object]], *, manifes
             membership.append((row["collection_id"], row["sample_id"]))
     if len(membership) != len(set(membership)):
         raise AuditInputError("Repeated predictions for a membership key require a separate declared analysis, not silent pooling.")
+    linked_rows = [member for member in linked if member is not None]
+    if _group_kind_conflicts(linked_rows):
+        raise AuditInputError("Conflicting group-kind metadata for one namespace/group ID; grouped prediction calculations are ambiguous.")
     actual = np.asarray([row["y_true"] for row in rows])
     estimated = np.asarray([row["y_pred"] for row in rows])
     observed_labels = set(actual.tolist()).union(estimated.tolist())
@@ -188,7 +186,7 @@ def evaluate_predictions(predictions: Iterable[Mapping[str, object]], *, manifes
         label = item["label"]
         item["n_provided_groups_with_true_class"] = sum(any(actual[i] == label for i in positions) for positions in group_members.values()) if not missing_groups else None
     report = {"schema_version": "1.0", "audit": "predictions", "metrics": primary,
-              "group_evidence_status": "PASS" if not missing_groups else "UNKNOWN",
+              "group_evidence_status": "PASS" if not missing_groups and all(member.get("group_kind", "unknown") != "unknown" for member in linked_rows) else "UNKNOWN",
               "n_provided_groups": len(group_members), "n_predictions_missing_group": missing_groups,
               "group_metrics": group_reports, "probability_evidence": probability_report, "bootstrap": {"performed": False},
               "limitations": ["Predictions and labels are supplied; pathology and label truth are not verified.",

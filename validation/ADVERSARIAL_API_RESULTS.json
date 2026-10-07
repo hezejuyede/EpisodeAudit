@@ -1,0 +1,616 @@
+{
+  "round": "second exploratory adversarial audit",
+  "date": "2026-10-07",
+  "scope": [
+    "cross-collection membership namespaces",
+    "explicit group namespace",
+    "label-consuming transform lineage",
+    "contradictory group metadata",
+    "numeric nonfinite missing scalars",
+    "mixed-label bootstrap",
+    "empty/single-group/zero-draw cases",
+    "probability decision rules",
+    "episode overwrite input type"
+  ],
+  "not_checked": [
+    "exhaustive fuzzing",
+    "cross-platform path semantics",
+    "performance or security certification",
+    "unobserved training execution"
+  ],
+  "n_cases": 13,
+  "n_actual_defects": 6,
+  "source_sha256": {
+    "src/episodeaudit/__init__.py": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "src/episodeaudit/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/episodeaudit/cli.py": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "src/episodeaudit/episodes.py": "e65c0c99ef6ed32b0b1fcdac5938d6634f40c6ca26d5e64a9de0768ad2aae46d",
+    "src/episodeaudit/integrity.py": "f5b87a88d3da22515765b20b9ceecece123a0021c4c836adfe443429f4b0fd11",
+    "src/episodeaudit/manifest.py": "e5e2d6ec0abf5736bf149ad4931a4a9ae78c63753c8db41624c303190b35f9f4",
+    "src/episodeaudit/metrics.py": "9970305cf56acaf626f8311bf2fe59e44e2131a71554594f31ce8af6831ff2de",
+    "src/episodeaudit/sampling.py": "7210da4702211f87e0ff202d09eadfd5eda96a73c6608067f21a0895fff882b6"
+  },
+  "source_modified": false,
+  "relationship_to_first_receipts": "This is a new post-first-run exploration. Earlier receipts remain true for their recorded fixtures; they did not cover these API composition/nonfinite boundary cases. A previous pass is not an all-input correctness guarantee.",
+  "outcomes": [
+    {
+      "name": "collection_local_id_controls",
+      "input": "A/same and B/same, same bare group ID, no shared namespace",
+      "oracle": "Membership/group checks PASS; explicit prediction joins unique; bare prediction join rejected.",
+      "observed": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "n_predictions": 2,
+        "bare_prediction": {
+          "error_type": "AuditInputError",
+          "message": "Every prediction must resolve to exactly one manifest member; provide collection_id when necessary."
+        }
+      },
+      "actual_defect": false,
+      "severity": "none",
+      "minimal_fix_suggestion": ""
+    },
+    {
+      "name": "explicit_shared_namespace",
+      "input": "Different collections share explicit global-plants/1",
+      "oracle": "Group-disjoint check FAIL.",
+      "observed": {
+        "status": "FAIL",
+        "basis": "provided_namespace_and_group_identifiers",
+        "cross_split_overlaps": [
+          {
+            "key": [
+              "explicit",
+              "global-plants",
+              "1"
+            ],
+            "train_members": [
+              [
+                "A",
+                "same"
+              ]
+            ],
+            "test_members": [
+              [
+                "B",
+                "same"
+              ]
+            ]
+          }
+        ],
+        "protocol": "disjoint",
+        "overlap_detection": "DETECTED",
+        "contradictory_group_kinds": [],
+        "n_missing_selected": 0
+      },
+      "actual_defect": false,
+      "severity": "none",
+      "minimal_fix_suggestion": ""
+    },
+    {
+      "name": "label_transform_missing_partition",
+      "input": {
+        "manifest": [
+          {
+            "sample_id": "u",
+            "collection_id": "source",
+            "label": "A"
+          }
+        ],
+        "lineage": {
+          "allowed_source_collections": [
+            "source"
+          ],
+          "stages": [
+            {
+              "name": "label-consuming-transform",
+              "purpose": "transform",
+              "uses_labels": true,
+              "sample_ids": [
+                {
+                  "sample_id": "u",
+                  "collection_id": "source"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "oracle": "UNKNOWN because a label-consuming stage cannot establish non-held-out membership with missing split.",
+      "observed": {
+        "status": "PASS",
+        "basis": "provided_declarations_only",
+        "allowed_source_collections": [
+          "source"
+        ],
+        "stages": [
+          {
+            "name": "label-consuming-transform",
+            "purpose": "transform",
+            "status": "PASS",
+            "n_members": 1
+          }
+        ],
+        "train_splits": [
+          "train"
+        ],
+        "validation_splits": [
+          "val",
+          "validation"
+        ],
+        "test_splits": [
+          "test"
+        ],
+        "findings": [],
+        "missing_evidence": [],
+        "execution_verification": "UNKNOWN",
+        "limitation": "Declarations do not prove actual execution or absence of historical target peeking."
+      },
+      "actual_defect": true,
+      "severity": "high",
+      "minimal_fix_suggestion": "For uses_labels=True transforms, require a declared train/validation split; blank/unrecognized split becomes UNKNOWN."
+    },
+    {
+      "name": "label_transform_unknown_partition",
+      "input": {
+        "manifest": [
+          {
+            "sample_id": "u",
+            "collection_id": "source",
+            "label": "A",
+            "split": "future"
+          }
+        ],
+        "lineage": {
+          "allowed_source_collections": [
+            "source"
+          ],
+          "stages": [
+            {
+              "name": "label-consuming-transform",
+              "purpose": "transform",
+              "uses_labels": true,
+              "sample_ids": [
+                {
+                  "sample_id": "u",
+                  "collection_id": "source"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "oracle": "UNKNOWN (or explicit unsupported-partition error), never PASS for unspecified partition role.",
+      "observed": {
+        "status": "PASS",
+        "basis": "provided_declarations_only",
+        "allowed_source_collections": [
+          "source"
+        ],
+        "stages": [
+          {
+            "name": "label-consuming-transform",
+            "purpose": "transform",
+            "status": "PASS",
+            "n_members": 1
+          }
+        ],
+        "train_splits": [
+          "train"
+        ],
+        "validation_splits": [
+          "val",
+          "validation"
+        ],
+        "test_splits": [
+          "test"
+        ],
+        "findings": [],
+        "missing_evidence": [],
+        "execution_verification": "UNKNOWN",
+        "limitation": "Declarations do not prove actual execution or absence of historical target peeking."
+      },
+      "actual_defect": true,
+      "severity": "high",
+      "minimal_fix_suggestion": "Accept label-consuming transforms only in declared train/validation names; unrecognized names must not silently pass."
+    },
+    {
+      "name": "label_transform_known_test_control",
+      "input": "Same member uses declared test split",
+      "oracle": "FAIL",
+      "observed": {
+        "status": "FAIL",
+        "basis": "provided_declarations_only",
+        "allowed_source_collections": [
+          "source"
+        ],
+        "stages": [
+          {
+            "name": "label-consuming-transform",
+            "purpose": "transform",
+            "status": "FAIL",
+            "n_members": 1
+          }
+        ],
+        "train_splits": [
+          "train"
+        ],
+        "validation_splits": [
+          "val",
+          "validation"
+        ],
+        "test_splits": [
+          "test"
+        ],
+        "findings": [
+          {
+            "stage": "label-consuming-transform",
+            "key": [
+              "source",
+              "u"
+            ],
+            "reasons": [
+              "evaluation_labels_used_in_transform_stage"
+            ]
+          }
+        ],
+        "missing_evidence": [],
+        "execution_verification": "UNKNOWN",
+        "limitation": "Declarations do not prove actual execution or absence of historical target peeking."
+      },
+      "actual_defect": false,
+      "severity": "none",
+      "minimal_fix_suggestion": ""
+    },
+    {
+      "name": "contradictory_group_kinds_consumers",
+      "input": [
+        {
+          "sample_id": "a",
+          "collection_id": "source",
+          "label": "A",
+          "group_id": "1",
+          "group_kind": "identity",
+          "group_namespace": "shared"
+        },
+        {
+          "sample_id": "b",
+          "collection_id": "source",
+          "label": "A",
+          "group_id": "1",
+          "group_kind": "episode",
+          "group_namespace": "shared"
+        },
+        {
+          "sample_id": "c",
+          "collection_id": "source",
+          "label": "B",
+          "group_id": "2",
+          "group_kind": "identity",
+          "group_namespace": "shared"
+        }
+      ],
+      "oracle": "Integrity FAIL; group metrics/bootstrap and group sampler reject or expose FAIL for contradictory same-key kinds.",
+      "observed": {
+        "integrity_group_status": "FAIL",
+        "metrics_group_status": "PASS",
+        "metrics_bootstrap": {
+          "performed": true,
+          "unit": "group",
+          "n_units": 2,
+          "n_replicates": 25,
+          "seed": 7,
+          "confidence": 0.95,
+          "method": "percentile",
+          "class_stratified": false,
+          "intervals": {
+            "accuracy": {
+              "lower": 1.0,
+              "upper": 1.0,
+              "n_valid_replicates": 25
+            },
+            "balanced_accuracy": {
+              "lower": 1.0,
+              "upper": 1.0,
+              "n_valid_replicates": 11
+            },
+            "macro_f1_observed_truth_classes": {
+              "lower": 1.0,
+              "upper": 1.0,
+              "n_valid_replicates": 11
+            }
+          },
+          "n_replicates_missing_original_truth_classes": 14,
+          "class_metric_interval_conditioning": "Replicates retaining all originally observed truth classes; missing-class replicates are explicitly excluded.",
+          "inference_boundary": "Provided episode/identity groups; group identity and independence are unverified.",
+          "warnings": [
+            "Some original truth classes are absent in bootstrap replicates; class-metric intervals are conditional."
+          ]
+        },
+        "sampling_group_status": "PASS",
+        "n_groups": 2
+      },
+      "actual_defect": true,
+      "severity": "high",
+      "minimal_fix_suggestion": "Share a group metadata-consistency validator across integrity, sampling and metrics; reject contradictions before grouped calculations."
+    },
+    {
+      "name": "numeric_nan_group_silent_identity",
+      "input": "Two rows supplied numeric NaN group_id, as common in dataframe records",
+      "oracle": "Reject nonfinite scalar metadata or normalize optional numeric NaN to missing; cannot obtain PASS and merge both as real group 'nan'.",
+      "observed": {
+        "normalized_manifest": [
+          {
+            "sample_id": "a",
+            "collection_id": "source",
+            "label": "A",
+            "group_id": "nan",
+            "group_kind": "identity"
+          },
+          {
+            "sample_id": "b",
+            "collection_id": "source",
+            "label": "B",
+            "group_id": "nan",
+            "group_kind": "identity"
+          }
+        ],
+        "sampling": {
+          "schema_version": "1.0",
+          "audit": "sampling",
+          "strategy": "group",
+          "seed": 7,
+          "n_selected": 2,
+          "n_draws": 4,
+          "replacement": true,
+          "splits": null,
+          "indices": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "selected_members": [
+            [
+              "source",
+              "b"
+            ],
+            [
+              "source",
+              "b"
+            ],
+            [
+              "source",
+              "b"
+            ],
+            [
+              "source",
+              "b"
+            ]
+          ],
+          "group_evidence_status": "PASS",
+          "group_exposures": [
+            {
+              "key": [
+                "collection",
+                "source",
+                "nan"
+              ],
+              "n_images": 2,
+              "n_draws": 4
+            }
+          ],
+          "expected_group_exposures": [
+            {
+              "key": [
+                "collection",
+                "source",
+                "nan"
+              ],
+              "expected_draws": 4.0
+            }
+          ],
+          "n_missing_group_records": 0,
+          "n_groups": 1,
+          "groups_seen": 1,
+          "group_coverage": 1.0,
+          "draw_count_cv": 0.0,
+          "spearman_group_size_vs_draws": null,
+          "limitation": "Every supplied group is counted, including zero-draw groups. Group evidence and biological identity remain separate."
+        }
+      },
+      "actual_defect": true,
+      "severity": "high",
+      "minimal_fix_suggestion": "Reject float/NumPy nonfinite metadata before str conversion, or explicitly normalize optional missing scalars and reject required IDs."
+    },
+    {
+      "name": "numeric_nan_prediction_silent_class",
+      "input": "Numeric NaN required prediction ID and true/predicted labels",
+      "oracle": "AuditInputError for missing/nonfinite required values; no fictional 'nan' truth class and apparent perfect score.",
+      "observed": {
+        "returned": {
+          "schema_version": "1.0",
+          "audit": "predictions",
+          "metrics": {
+            "n_predictions": 2,
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "macro_f1_observed_truth_classes": 1.0,
+            "classes": [
+              "B",
+              "nan"
+            ],
+            "confusion_matrix": [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "observed_truth_classes": [
+              "B",
+              "nan"
+            ],
+            "per_class": [
+              {
+                "label": "B",
+                "n_true": 1,
+                "n_predicted": 1,
+                "n_correct": 1,
+                "recall": 1.0,
+                "precision": 1.0,
+                "f1": 1.0,
+                "n_provided_groups_with_true_class": null
+              },
+              {
+                "label": "nan",
+                "n_true": 1,
+                "n_predicted": 1,
+                "n_correct": 1,
+                "recall": 1.0,
+                "precision": 1.0,
+                "f1": 1.0,
+                "n_provided_groups_with_true_class": null
+              }
+            ],
+            "balanced_accuracy_definition": "Mean recall over classes present in y_true; absent-class recalls are undefined."
+          },
+          "group_evidence_status": "UNKNOWN",
+          "n_provided_groups": 0,
+          "n_predictions_missing_group": 2,
+          "group_metrics": [],
+          "probability_evidence": {
+            "status": "UNKNOWN",
+            "basis": "no_explicit_probability_class_mapping",
+            "decision_rule_verification": "UNKNOWN",
+            "calibration": "not_assessed"
+          },
+          "bootstrap": {
+            "performed": false
+          },
+          "limitations": [
+            "Predictions and labels are supplied; pathology and label truth are not verified.",
+            "Group labels do not by themselves establish specimen independence.",
+            "Confidence intervals are conditional on the recorded rows/groups and fixed model predictions.",
+            "Seeds, views, groups, specimens, and independently collected datasets are different units.",
+            "No causal collection-shift mechanism or future-domain generalization is inferred."
+          ]
+        }
+      },
+      "actual_defect": true,
+      "severity": "high",
+      "minimal_fix_suggestion": "Reject nonfinite numeric required prediction values before string normalization."
+    },
+    {
+      "name": "mixed_class_group_stratification_control",
+      "input": "One group spans A and B",
+      "oracle": "AuditInputError, not split into pseudo-groups.",
+      "observed": {
+        "error_type": "AuditInputError",
+        "message": "Class-stratified group bootstrap requires class-homogeneous groups; mixed groups cannot be silently split."
+      },
+      "actual_defect": false,
+      "severity": "none",
+      "minimal_fix_suggestion": ""
+    },
+    {
+      "name": "single_group_and_zero_draw_control",
+      "input": "One prediction group; zero sampling budget",
+      "oracle": "Bootstrap rejected; zero-draw CV null and 1 unseen group.",
+      "observed": {
+        "bootstrap": {
+          "error_type": "AuditInputError",
+          "message": "At least two resampling units are required for a bootstrap interval."
+        },
+        "sampling_cv": null,
+        "groups_seen": 0,
+        "n_groups": 1
+      },
+      "actual_defect": false,
+      "severity": "none",
+      "minimal_fix_suggestion": ""
+    },
+    {
+      "name": "empty_manifest_control",
+      "input": "Empty iterable",
+      "oracle": "AuditInputError",
+      "observed": {
+        "error_type": "AuditInputError",
+        "message": "Manifest has no rows; an empty audit cannot pass."
+      },
+      "actual_defect": false,
+      "severity": "none",
+      "minimal_fix_suggestion": ""
+    },
+    {
+      "name": "decision_rule_controls",
+      "input": "Contradictory argmax, undeclared decision, tied maxima",
+      "oracle": "Explicit violation rejected; undeclared UNKNOWN; tied argmax PASS.",
+      "observed": {
+        "explicit": {
+          "error_type": "AuditInputError",
+          "message": "Prediction row 2: y_pred violates the declared argmax decision rule."
+        },
+        "undeclared": {
+          "status": "PASS",
+          "basis": "provided_numeric_probabilities_with_explicit_class_mapping",
+          "class_columns": {
+            "A": "pA",
+            "B": "pB"
+          },
+          "sum_tolerance": 1e-06,
+          "decision_rule_verification": "UNKNOWN",
+          "decision_rule": null,
+          "n_validated_rows": 1,
+          "calibration": "not_assessed",
+          "limitation": "Numeric consistency does not establish calibration quality or honest probability generation."
+        },
+        "tie": {
+          "status": "PASS",
+          "basis": "provided_numeric_probabilities_with_explicit_class_mapping",
+          "class_columns": {
+            "A": "pA",
+            "B": "pB"
+          },
+          "sum_tolerance": 1e-06,
+          "decision_rule_verification": "PASS",
+          "decision_rule": "argmax",
+          "n_validated_rows": 1,
+          "calibration": "not_assessed",
+          "limitation": "Numeric consistency does not establish calibration quality or honest probability generation."
+        }
+      },
+      "actual_defect": false,
+      "severity": "none",
+      "minimal_fix_suggestion": ""
+    },
+    {
+      "name": "episode_overwrite_boolean_type",
+      "input": "overwrite_groups='False' supplied as string config value",
+      "oracle": "AuditInputError; an explicit boolean True is required to overwrite existing groups.",
+      "observed": {
+        "returned": {
+          "rows": [
+            {
+              "sample_id": "a",
+              "collection_id": "source",
+              "group_id": "ep-136e4635811765106bb7",
+              "group_kind": "episode",
+              "timestamp": "2026-01-01T00:00:00+00:00",
+              "acquisition_id": "camera",
+              "group_namespace": "",
+              "episode_gap_seconds": "5.0",
+              "episode_time_basis": "provided_utc_offset"
+            }
+          ]
+        }
+      },
+      "actual_defect": true,
+      "severity": "medium",
+      "minimal_fix_suggestion": "Validate isinstance(overwrite_groups, bool) before deciding overwrite permission."
+    }
+  ]
+}

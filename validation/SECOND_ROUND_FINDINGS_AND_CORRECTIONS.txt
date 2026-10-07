@@ -1,0 +1,44 @@
+SECOND EXPLORATORY API AUDIT AND CORRECTIVE FREEZE — 2026-10-07
+
+Result
+The actual first probe executed 13 focused cases. Seven legitimate controls behaved as expected, and six failure triggers represented four root defects. These are functional/evidence-contract defects, not scientific findings or a score of publication readiness. The corrected source subsequently passed all 55 behavioral unit tests and all 13 adversarial domains rechecked. No runtime training, public deployment, specimen identification or pathology review is implied.
+
+1. Label-consuming transform lineage could falsely PASS incomplete partitions (high).
+Trigger: source member with split missing or split='future' outside all declared partition name sets; transform stage declares uses_labels=true.
+Before: audit_lineage.status=PASS; no missing evidence is recorded. The same explicitly held-out test member correctly failed, revealing a missing-boundary branch rather than a justified permission.
+Expected: label access cannot prove permitted development membership when a partition role is unknown.
+Correction: a uses_labels=true transform member in allowed sources must be in declared training/validation partitions. Missing/unrecognized role returns UNKNOWN and missing_evidence reason membership_split_unknown/membership_split_role_unknown. Observed target/test-label use still FAIL. Label-free target inference remains permitted. Custom name sets retain their roles.
+Code: integrity.py, lines around 235.
+
+2. Conflicting same-key group kinds passed grouped consumers (high).
+Trigger: same explicit namespace/group ID has group_kind identity in one row and episode in another.
+Before: integrity groups FAIL, but sampling and metrics group_evidence_status PASS; the group bootstrap pooled those rows without surfacing the metadata contradiction.
+Expected: the joined evidence contract must not disagree across grouped consumers.
+Correction: manifest._group_kind_conflicts is used by integrity, selected sampling records and linked metric records. Sampling/metrics reject contradictory selected group metadata with AuditInputError. The original conservative integrity rule is preserved: a mixture of recorded unknown/known kinds for one key remains unresolved metadata conflict. Groups consistently unknown may still be explicitly resampled, with group_evidence_status UNKNOWN. Group-evidence PASS denotes complete supplied metadata, not actual identity.
+Code: manifest.py helper; integrity.py; sampling.py; metrics.py.
+Controls: same bare group IDs across collections remain distinct; repeated bare sample IDs across collections join only with a unique collection/member key; selected training rows are not invalidated by unused test rows during sampling.
+
+3. Numerical missing/nonfinite scalar values became apparent IDs/classes (high).
+Trigger: numeric float NaN passed as group_id, sample_id or prediction y_true/y_pred, as commonly encountered in dataframe records. Positive/negative infinity had the same type-normalization problem.
+Before: str(NaN) became 'nan'; two unknown groups merged into one apparently valid group and sampling passed. Prediction NaN became a fictional truth class and could contribute to a perfect reported accuracy.
+Expected: numerical missingness must not become positive identity/label evidence.
+Correction: one shared scalar normalization helper rejects nonfinite float values before string conversion for manifest metadata and required prediction fields. Missing optional values must be None or empty strings. Literal strings 'nan' remain literal values; strict CSV ingestion does not infer missingness from arbitrary tokens.
+Code: manifest.py _scalar_string; metrics.py normalization.
+Controls: finite scalar/string IDs retained; literal 'nan' accepted as an explicit string; None normalized to empty optional metadata; probability finite/simplex/argmax validation unchanged.
+
+4. Episode overwrite permission accepted a truthy string (medium).
+Trigger: build_episodes(existing_group_manifest, overwrite_groups='False').
+Before: the string was truthy, so original groups were silently replaced.
+Expected: existing group replacement requires explicit boolean True.
+Correction: overwrite_groups must be bool. Strings, numeric flags and None raise AuditInputError. False preserves refusal; True makes the requested replacement without mutating the supplied manifest.
+Code: episodes.py, line 40.
+
+Scope and material not tested
+The focused audit covered collection/group namespaces, transform label-use partitions, missing scalar API values, group-kind composition, mixed-label stratification, empty/single-group/zero-draw cases and declared probability decision rules. It was not exhaustive fuzzing, a cross-platform filesystem audit, a security certification, or an observation of actual model-training execution. Existing raw-path/hash mismatch controls passed as part of the complete unit suite; no new raw-image evidence was obtained.
+
+Chronology and receipts
+adversarial_api_probe.py and ADVERSARIAL_API_RESULTS.json preserve the actual before-correction failures and original source SHA. They are not altered to make this exploration look planned before the first study run.
+recheck_after_correction.py and CORRECTED_REGRESSION_RECEIPT.json record the corrected rerun and the old/new source digests. CORRECTED_CORE_TEST_LOG.txt records 55 tests, exit 0, OK.
+03_CODE/episodeaudit/CORRECTIVE_FREEZE_20261007.json is the new freeze. Five runtime modules changed: manifest.py, integrity.py, metrics.py, sampling.py, episodes.py. __init__.py, __main__.py and cli.py remain unchanged.
+Earlier validation/install receipts describe the older source bytes and cases. Their historical observations are retained, but cannot certify the corrected freeze. Twelve post-discovery regression test methods were added without claiming preregistration or third-party independence.
+The 09 public release candidate and its old ZIP/Git commit were deliberately not updated in this task. It therefore still contains the earlier freeze and must be synchronized and independently rechecked before any release or submission archive is generated.

@@ -29,8 +29,6 @@ python -m unittest discover -s tests -v
 
 For a source-only run without installation, add the repository's `src` directory to `PYTHONPATH`. The supplied CI workflow tests Python 3.10, 3.11, and 3.12 on Linux; a local Windows run does not imply that a remote CI run has occurred.
 
-On Windows with file-path length limits, unpack to a short folder and keep pip's temporary path short. A failed build can leave a staging directory; retry from a fresh checkout. The local release review preserves the initial long-path build failure and the successful fresh-build run.
-
 ## First run
 
 ```sh
@@ -104,9 +102,11 @@ The new software code is released under the MIT terms in `LICENSE.txt` (identica
 
 This local version is 1.0.0. No publicly hosted software repository, release DOI, or peer-reviewed acceptance is asserted by this source directory. A companion manuscript must identify the actual archived release before submission. The code is a development of general audit components; its software tests are distinct from the historical wheat study's numerical checks.
 
+The second exploratory API audit found input-contract defects after the first recorded validation run. Corrections require known partition roles for label-consuming transforms, share group-kind consistency checks across consumers, reject nonfinite numerical metadata/labels, and require a boolean episode-overwrite flag. Consistently unknown group kinds remain usable for explicitly requested group resampling with `group_evidence_status=UNKNOWN`; varied recorded kinds for one key are rejected. A group-evidence pass means complete supplied metadata, without certifying actual identity. Earlier validation receipts describe their original code bytes and fixtures; they are not evidence that all inputs of the corrected source have been externally validated. The corrected source has a separate freeze receipt.
+
 ## Local release candidate and complete replay
 
-This checkout includes the frozen eight runtime modules, 43 behavioral tests, synthetic fault fixtures, licensed wheat-derived tables, factual COIL manifests, and an anonymous acquisition-size ledger. It excludes original images, private correspondence, other submitted manuscripts, model weights, local environments, and third-party library source or binaries.
+This checkout includes the frozen eight runtime modules, 55 behavioral tests, synthetic fault fixtures, licensed wheat-derived tables, factual COIL manifests, and an anonymous acquisition-size ledger. It excludes original images, private correspondence, other submitted manuscripts, model weights, local environments, and third-party library source or binaries.
 
 After installation, run:
 
@@ -128,3 +128,33 @@ python scripts/plot_article_figures.py
 Matplotlib is optional and is not part of the core runtime. The script writes PNG/PDF artwork and a provenance record to `figures/`. Only paths were adapted from the article's generator; the plotting logic is unchanged. All four PNGs matched the original article files byte for byte in the recorded local environment. PDF creation metadata may differ, so no PDF byte-identity claim is made. The candidate ships the generator and its inputs; generated graphics remain separate local review artifacts.
 
 The synthetic test plan and later expansion retain their actual chronology. Separate implementation roles within the same assistant team are not third-party certification. Passing software checks cannot establish pathology truth, specimen independence, untouched development history, or publication rank.
+
+
+## Corrective validation snapshot
+
+The corrective source passed 55 behavioral tests and the 13 previously recorded adversarial domains after repair. The later API/CLI/library reruns include 453 assertion checks, 117 addendum cases, 12 installed CLI commands, 53 finite-oracle checks on four synthetic resampling examples, and 180 selected original-library Deepchecks comparisons with 320 original RECORD entries matching. These are software executions on one Windows host; seed variants and assertions are not independent biological samples. The initial failure inputs and old/new runtime hashes are retained in `validation/` and `provenance/`; post-discovery tests are described as regression checks. Historical receipt fields refer to the snapshot when recorded, rather than asserting that later public-candidate synchronization was already complete.
+
+Run `python validation/recheck_adversarial_domains.py` after installation for the 13 targeted corrected/control domains. Sanitized execution records are in `results/`. Final file indexing and public publication are separate pending steps.
+
+## Exact finite group-bootstrap reference
+
+Four artificial fixed-prediction configurations test unequal and mixed groups, stratification, and an absent truth class. The independent rational-arithmetic enumerator checks the finite distributions and class-support conditioning. It is not a population coverage study.
+
+```sh
+python scripts/check_exact_bootstrap.py
+```
+
+## Finite resampling checks and optional HAR application
+
+`python scripts/check_exact_bootstrap.py` replays 53 checks against four completely enumerated synthetic resampling distributions. The rational-arithmetic reference is independent of EpisodeAudit's metric computation. These examples test defined conditional bootstrap arithmetic; they are zero new real observations and do not establish population coverage or independent specimen uncertainty. `results/CURRENT_VALIDATION_PROVENANCE.json` identifies the corrective rerun, while `results/INSTALLED_SOURCE_HASH_CHECK.json` records the equal source/build/wheel/installed runtime bytes. Public path-adapted receipts state their transformations explicitly.
+
+The optional UCI HAR application releases aggregate counts and audit outcomes only. Human activity windows, source ZIPs, upstream notices and per-window traces are excluded from the public candidate. The upstream UCI page states CC BY 4.0 while the original archive's notice prohibits commercial use; this conflict remains unresolved, and the software's MIT license grants no upstream-data rights. See [docs/HAR_REPRODUCTION_AND_RIGHTS.md](docs/HAR_REPRODUCTION_AND_RIGHTS.md).
+
+Default HAR script calls without the explicit flag stop with exit 2 before network access or data generation. Optional local-use commands are:
+
+```sh
+python scripts/download_har_local_source.py --opt-in-upstream-data
+python scripts/run_har_application.py --audit --opt-in-upstream-data
+```
+
+Upstream-derived local files and individual traces are written only under ignored `replayed_results/har`. The public aggregate comparison illustrates joined membership/protocol/lineage/reporting interfaces. Its constant baseline and recorded split counts do not demonstrate a novel recognition model, independent field diagnosis, or universal software sensitivity.

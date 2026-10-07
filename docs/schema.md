@@ -4,6 +4,8 @@
 
 The input is a comma-separated UTF-8 or UTF-8-BOM CSV. Header names are unique and have no surrounding whitespace. Required IDs are nonempty strings. Optional values may be empty. Scalar values are stripped of surrounding whitespace; textual IDs are not converted to integers. Control characters and malformed CSV field counts are rejected. Extra columns are preserved.
 
+The in-memory API rejects numerical `NaN` and positive/negative infinity before string conversion. Use `None` or an empty string for missing optional values; required IDs and prediction labels remain mandatory. Literal strings such as `"nan"` are preserved as strings rather than guessed to be missing. This rule prevents dataframe missing values from creating artificial group IDs or truth classes.
+
 | Field | Meaning |
 |---|---|
 | `sample_id` | A unique record/view identifier within one collection. |
@@ -27,6 +29,8 @@ Group key with an explicit namespace: `("explicit", group_namespace, group_id)`.
 `group_kind` deliberately does not change the key. Contradictory kinds for one namespace/ID are a failure, so relabeling a group cannot evade overlap checking. Bare IDs equal across two collections do not merge automatically. Different collection-local group keys do not prove that the underlying specimens differ.
 
 A group ID with missing kind can reveal a supplied overlap, but cannot obtain a complete group-check pass. A namespace or kind without a group ID is malformed. Repeated membership keys are kept for auditing rather than silently deduplicated. Sampling, episode construction, and prediction joining require unambiguous membership.
+
+Integrity, sampling and grouped prediction calculations share the same conservative group-kind consistency rule. Multiple recorded kinds for one namespace/ID, including a mix of `unknown` and a known kind, are unresolved metadata: integrity reports failure and group consumers reject that selection. Groups whose kinds are consistently `unknown` remain usable for explicit group sampling/bootstrap, with `group_evidence_status=UNKNOWN`. A `PASS` for group evidence describes complete supplied metadata, not verified identity or specimen independence.
 
 ## Integrity report
 
@@ -69,6 +73,8 @@ The group-overlap policy must correspond to the actual research question. Known-
 Purposes: `fit`, `model_selection`, `calibration`, `threshold`, `transform`. Stage names are unique. Fit members must be in an allowed source collection and a declared training split. Selection/calibration/threshold members may be in declared training or validation splits of an allowed source. Default names are `train`, `validation`/`val`, and held-out `test`; custom disjoint name sets are propagated consistently to the lineage checker. Held-out membership fails even in an allowed source collection. A transform stage may read target records if it explicitly declares `uses_labels=false`; target/held-out label use fails. A missing label-use declaration is unknown. Members are two-field objects to avoid ambiguity from joining IDs with delimiters. Empty member lists are unknown rather than vacuously passing. Unknown or ambiguous manifest members fail.
 
 The declaration is not a runtime trace. Users must retain their actual training configuration, source-only selection logic, and development history separately. Historical target peeking cannot be excluded from these records.
+
+For `uses_labels=true` transform stages, a member must also have a declared training or validation split. A missing or unrecognized split role is `UNKNOWN`; observed target/held-out label use remains a failure. `uses_labels=false` permits label-free inference access without inventing a partition role.
 
 ## Sampling and metrics
 

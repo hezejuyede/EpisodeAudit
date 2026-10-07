@@ -1,0 +1,4663 @@
+[
+  {
+    "name": "fixture_hash:seed_41017__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41017__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41017__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41017__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41017__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41017__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41017__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41017__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41017__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41017__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41017__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41017__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41017__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41017__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41017__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41017__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41017__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41017__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41029__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41029__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41029__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41029__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41029__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41029__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41029__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41029__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41029__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41029__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41029__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41029__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41029__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41029__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41029__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41029__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41029__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41029__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41041__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41041__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41041__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41041__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41041__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41041__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41041__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41041__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41041__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41041__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41041__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41041__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41041__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41041__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41041__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41041__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41041__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41041__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41053__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41053__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41053__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41053__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41053__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41053__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41053__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41053__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41053__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41053__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41053__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41053__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41053__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41053__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41053__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41053__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41053__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41053__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41069__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41069__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41069__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41069__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41069__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41069__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41069__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41069__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41069__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41069__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41069__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41069__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41069__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41069__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41069__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41069__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41069__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41069__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41083__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41083__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41083__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41083__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41083__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41083__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41083__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41083__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41083__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41083__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41083__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41083__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41083__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41083__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41083__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41083__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41083__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41083__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41099__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41099__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41099__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41099__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41099__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41099__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41099__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41099__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41099__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41099__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41099__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41099__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41099__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41099__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41099__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41099__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41099__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41099__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41113__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41113__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41113__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41113__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41113__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41113__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41113__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41113__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41113__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41113__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41113__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41113__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41113__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41113__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41113__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41113__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41113__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41113__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41131__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41131__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41131__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41131__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41131__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41131__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41131__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41131__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41131__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41131__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41131__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41131__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41131__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41131__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41131__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41131__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41131__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41131__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41149__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41149__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41149__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41149__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41149__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41149__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41149__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41149__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41149__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41149__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41149__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41149__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41149__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41149__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41149__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41149__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41149__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41149__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41161__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41161__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41161__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41161__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41161__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41161__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41161__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41161__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41161__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41161__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41161__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41161__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41161__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41161__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41161__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41161__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41161__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41161__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41177__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41177__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41177__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41177__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41177__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41177__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41177__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41177__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41177__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41177__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41177__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41177__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41177__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41177__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41177__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41177__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41177__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41177__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41189__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41189__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41189__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41189__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41189__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41189__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41189__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41189__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41189__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41189__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41189__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41189__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41189__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41189__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41189__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41189__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41189__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41189__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41201__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41201__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41201__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41201__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41201__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41201__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41201__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41201__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41201__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41201__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41201__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41201__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41201__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41201__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41201__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41201__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41201__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41201__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41221__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41221__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41221__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41221__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41221__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41221__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41221__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41221__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41221__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41221__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41221__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41221__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41221__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41221__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41221__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41221__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41221__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41221__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41233__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41233__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41233__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41233__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41233__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41233__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41233__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41233__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41233__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41233__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41233__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41233__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41233__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41233__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41233__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41233__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41233__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41233__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41243__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41243__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41243__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41243__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41243__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41243__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41243__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41243__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41243__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41243__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41243__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41243__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41243__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41243__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41243__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41243__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41243__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41243__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41257__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41257__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41257__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41257__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41257__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41257__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41257__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41257__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41257__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41257__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41257__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41257__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41257__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41257__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41257__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41257__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41257__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41257__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41269__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41269__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41269__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41269__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41269__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41269__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41269__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41269__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41269__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41269__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41269__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41269__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41269__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41269__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41269__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41269__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41269__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41269__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41281__clean.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41281__clean.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41281__exact_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41281__exact_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "FAIL",
+        "groups": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "FAIL",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41281__identity_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41281__identity_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41281__episode_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41281__episode_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41281__membership_cross_split.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41281__membership_cross_split.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "membership": "FAIL",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "FAIL",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41281__clean_collection_local_names.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41281__clean_collection_local_names.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "PASS",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41281__contradictory_group_kind.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41281__contradictory_group_kind.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "FAIL"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "FAIL",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41281__unknown_group_identity.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41281__unknown_group_identity.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "UNKNOWN",
+        "provided_hashes": "PASS",
+        "label_consistency": "PASS",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "fixture_hash:seed_41281__unknown_partial_digest.csv",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "known_truth:seed_41281__unknown_partial_digest.csv",
+    "passed": true,
+    "details": {
+      "expected": {
+        "provided_hashes": "UNKNOWN"
+      },
+      "actual": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "provided_hashes": "UNKNOWN",
+        "label_consistency": "UNKNOWN",
+        "raw_content": "UNKNOWN",
+        "declared_lineage": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "name": "same_split_label_consistency_violation",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "raw_clean",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "raw_exact_duplicate",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "raw_digest_mismatch",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "all_invalid_schemas_rejected",
+    "passed": true,
+    "details": {
+      "rejected": 6,
+      "total": 6
+    }
+  },
+  {
+    "name": "lineage_calibration_clean",
+    "passed": true,
+    "details": {
+      "expected": "PASS",
+      "actual": "PASS"
+    }
+  },
+  {
+    "name": "lineage_calibration_clean:execution_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "lineage_calibration_target_contamination",
+    "passed": true,
+    "details": {
+      "expected": "FAIL",
+      "actual": "FAIL"
+    }
+  },
+  {
+    "name": "lineage_calibration_target_contamination:execution_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "lineage_fit_clean",
+    "passed": true,
+    "details": {
+      "expected": "PASS",
+      "actual": "PASS"
+    }
+  },
+  {
+    "name": "lineage_fit_clean:execution_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "lineage_fit_target_contamination",
+    "passed": true,
+    "details": {
+      "expected": "FAIL",
+      "actual": "FAIL"
+    }
+  },
+  {
+    "name": "lineage_fit_target_contamination:execution_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "lineage_model_selection_clean",
+    "passed": true,
+    "details": {
+      "expected": "PASS",
+      "actual": "PASS"
+    }
+  },
+  {
+    "name": "lineage_model_selection_clean:execution_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "lineage_model_selection_target_contamination",
+    "passed": true,
+    "details": {
+      "expected": "FAIL",
+      "actual": "FAIL"
+    }
+  },
+  {
+    "name": "lineage_model_selection_target_contamination:execution_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "lineage_threshold_clean",
+    "passed": true,
+    "details": {
+      "expected": "PASS",
+      "actual": "PASS"
+    }
+  },
+  {
+    "name": "lineage_threshold_clean:execution_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "lineage_threshold_target_contamination",
+    "passed": true,
+    "details": {
+      "expected": "FAIL",
+      "actual": "FAIL"
+    }
+  },
+  {
+    "name": "lineage_threshold_target_contamination:execution_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "lineage_transform_clean",
+    "passed": true,
+    "details": {
+      "expected": "PASS",
+      "actual": "PASS"
+    }
+  },
+  {
+    "name": "lineage_transform_clean:execution_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "lineage_transform_target_labels",
+    "passed": true,
+    "details": {
+      "expected": "FAIL",
+      "actual": "FAIL"
+    }
+  },
+  {
+    "name": "lineage_transform_target_labels:execution_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "lineage_transform_unknown_labels",
+    "passed": true,
+    "details": {
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN"
+    }
+  },
+  {
+    "name": "lineage_transform_unknown_labels:execution_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "missing_lineage_unknown",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_repeat:image:0",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_all_groups:image:0",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_CV_oracle:image:0",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_indices:image:0",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_repeat:image:1",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_all_groups:image:1",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_CV_oracle:image:1",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_indices:image:1",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_repeat:image:7",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_all_groups:image:7",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_CV_oracle:image:7",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_indices:image:7",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_repeat:image:42",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_all_groups:image:42",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_CV_oracle:image:42",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_indices:image:42",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_repeat:image:100000",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_all_groups:image:100000",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_CV_oracle:image:100000",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_indices:image:100000",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_repeat:group:0",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_all_groups:group:0",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_CV_oracle:group:0",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_indices:group:0",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_repeat:group:1",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_all_groups:group:1",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_CV_oracle:group:1",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_indices:group:1",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_repeat:group:7",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_all_groups:group:7",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_CV_oracle:group:7",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_indices:group:7",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_repeat:group:42",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_all_groups:group:42",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_CV_oracle:group:42",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_indices:group:42",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_repeat:group:100000",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_all_groups:group:100000",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_CV_oracle:group:100000",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "sampling_indices:group:100000",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "episode_adjacent_chain_boundary",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "episode_never_identity",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "episode_requires_timestamp",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "episode_requires_acquisition_id",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "naive_timezone_requires_declaration",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "metrics_sklearn_balanced_accuracy",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "metrics_sklearn_confusion_matrix",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "group_bootstrap_uses_group_units",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "metrics_rejects_orphan",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "metrics_rejects_label_mismatch",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "metrics_rejects_duplicated_prediction",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "missing_groups_bootstrap_refused",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "coil20_identity_disjoint:group_property",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "coil20_identity_disjoint:verified_raw_content",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "coil20_shared_identity_pose_split:group_property",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "coil20_shared_identity_pose_split:verified_raw_content",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "COIL20_legitimate_pose_protocol:overlap_allowed",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "COIL20_overlap_still_visible:overlap_allowed",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "COIL20_legitimate_pose_protocol:unspecified",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "COIL20_overlap_still_visible:unspecified",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "wheat_JIC_to_Holeta:BA_sklearn",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "wheat_JIC_to_Holeta:no_fabricated_identity",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "wheat_Holeta_to_JIC:BA_sklearn",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "wheat_Holeta_to_JIC:no_fabricated_identity",
+    "passed": true,
+    "details": null
+  },
+  {
+    "name": "U0_episode_split_property",
+    "passed": true,
+    "details": null
+  }
+]

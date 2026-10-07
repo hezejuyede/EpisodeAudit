@@ -1,0 +1,5 @@
+# Optional local HAR metadata application; not part of the core runtime.
+# These are the versions used in the reported/replayed HAR application.
+numpy==2.3.5
+pandas==3.0.1
+scikit-learn==1.8.0

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "portable_actual_execution_error_count": 0,
+  "actual_application_assertion_line_events": 54,
+  "distinct_reached_assertions": 28,
+  "all_eight_runtime_SHA_match_current_canonical": true,
+  "semantic_aggregate_results_exactly_match_reported": true,
+  "only_expected_source_fingerprint_differences": [
+    "application_script_sha256: portable path/gate adaptation",
+    "postrun_control_plan_sha256: public combined plans wrapper"
+  ],
+  "no_optin_checks_after_local_cache": [
+    {
+      "script": "scripts/download_har_local_source.py",
+      "without_optin_exit_code": 2,
+      "network_or_child_attempts": 0
+    },
+    {
+      "script": "scripts/run_har_application.py",
+      "without_optin_exit_code": 2,
+      "network_or_child_attempts": 0
+    },
+    {
+      "script": "scripts/record_har_execution.py",
+      "without_optin_exit_code": 2,
+      "network_or_child_attempts": 0
+    },
+    {
+      "script": "scripts/build_har_public_aggregate.py",
+      "without_optin_exit_code": 2,
+      "network_or_child_attempts": 0
+    }
+  ],
+  "no_optin_no_network_no_file_mutations": true,
+  "local_raw_cache_is_hardlink": true,
+  "excluded_private_output_prefix": "replayed_results/har/",
+  "new_network_download_performed_in_portable_validation": false,
+  "application_script_sha256": "37d06eb56b585c08d317b51c3eda00189a34e4e37d4ac78095683026acf0f2be",
+  "reported_public_aggregate_sha256": "f78dc3089c8efacd6ffa6034a3e9550bbb25ba04c079d883050bb9c232c7200c",
+  "boundary": "No source ZIP, notices, row data, original participant IDs or member traces are included in this receipt. Successful execution preserves UNKNOWN and intentional FAIL evidence states."
+}

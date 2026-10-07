@@ -109,7 +109,7 @@ save(fig,'Figure_3_Exposure_Accounting')
 
 fig,ax=plt.subplots(figsize=(13.28,5.31)); ax.set(xlim=(0,1),ylim=(0,1)); ax.axis('off')
 ax.text(.5,.91,'EpisodeAudit',ha='center',weight='bold',fontsize=24)
-ax.text(.5,.81,'Evidence-aware evaluation of repeated-view images',ha='center',fontsize=17)
+ax.text(.5,.81,'Evidence-aware evaluation of grouped records',ha='center',fontsize=17)
 labels=['Manifest and\nprovenance','Declared task\nand fitting members','Exposure and\nprediction reports']
 for x,label in zip([.18,.5,.82],labels): box(ax,x,.55,.26,.25,label,fs=15)
 arrow(ax,(.315,.55),(.365,.55));arrow(ax,(.635,.55),(.685,.55))

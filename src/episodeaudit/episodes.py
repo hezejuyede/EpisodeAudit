@@ -36,6 +36,8 @@ def build_episodes(manifest: Manifest, *, gap_seconds: float = 5.0,
     """
     if isinstance(gap_seconds, bool) or not isinstance(gap_seconds, (int, float)) or not math.isfinite(gap_seconds) or gap_seconds < 0:
         raise AuditInputError("gap_seconds must be a finite nonnegative number.")
+    if not isinstance(overwrite_groups, bool):
+        raise AuditInputError("overwrite_groups must be boolean; only explicit True permits overwriting existing groups.")
     zone = _assumed_timezone(naive_timezone)
     keys = [membership_key(row) for row in manifest.rows]
     if len(keys) != len(set(keys)):

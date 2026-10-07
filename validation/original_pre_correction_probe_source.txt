@@ -1,0 +1,167 @@
+"""Exploratory second-round contract probes; no frozen runtime edits.
+
+This is not a preregistered experiment or independent external validation.
+Each case has an explicit input and contract oracle before its first execution.
+"""
+import hashlib
+import json
+import math
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+CODE = ROOT / "03_CODE/episodeaudit"
+OUT = Path(__file__).resolve().parent
+sys.path.insert(0, str(CODE / "src"))
+from episodeaudit import (AuditInputError, audit_integrity, audit_lineage, build_episodes,
+                          evaluate_predictions, manifest_from_rows, sample_indices)
+
+
+def row(sample, collection="source", **kwargs):
+    return {"sample_id": sample, "collection_id": collection, **kwargs}
+
+
+def predictions(manifest):
+    return [{"sample_id": item["sample_id"], "collection_id": item["collection_id"],
+             "y_true": item["label"], "y_pred": item["label"]} for item in manifest.rows]
+
+
+def caught(call):
+    try:
+        return {"returned": call()}
+    except Exception as error:
+        return {"error_type": type(error).__name__, "message": str(error)}
+
+
+def main():
+    outcomes = []
+    def record(name, input_description, expectation, observed, defect, severity="none", recommendation=""):
+        outcomes.append({"name": name, "input": input_description, "oracle": expectation,
+                         "observed": observed, "actual_defect": defect, "severity": severity,
+                         "minimal_fix_suggestion": recommendation})
+
+    # 1. Namespace controls: repeated bare sample IDs across collections are legal.
+    cross = manifest_from_rows([row("same", "A", label="positive", group_id="1", group_kind="identity", split="train"),
+                                row("same", "B", label="negative", group_id="1", group_kind="identity", split="test")])
+    audit = audit_integrity(cross, group_policy="disjoint")
+    explicit_predictions = evaluate_predictions(predictions(cross), manifest=cross)
+    bare_predictions = caught(lambda: evaluate_predictions([
+        {"sample_id": "same", "y_true": "positive", "y_pred": "positive"}], manifest=cross))
+    record("collection_local_id_controls", "A/same and B/same, same bare group ID, no shared namespace",
+           "Membership/group checks PASS; explicit prediction joins unique; bare prediction join rejected.",
+           {"membership": audit["checks"]["membership"]["status"], "groups": audit["checks"]["groups"]["status"],
+            "n_predictions": explicit_predictions["metrics"]["n_predictions"], "bare_prediction": bare_predictions},
+           not (audit["checks"]["membership"]["status"] == audit["checks"]["groups"]["status"] == "PASS"
+                and bare_predictions.get("error_type") == "AuditInputError"))
+
+    global_rows = [dict(item, group_namespace="global-plants") for item in cross.rows]
+    global_audit = audit_integrity(manifest_from_rows(global_rows), group_policy="disjoint")
+    record("explicit_shared_namespace", "Different collections share explicit global-plants/1", "Group-disjoint check FAIL.",
+           global_audit["checks"]["groups"], global_audit["checks"]["groups"]["status"] != "FAIL")
+
+    # 2. A label-consuming transform cannot prove an unpartitioned source record is permitted.
+    no_split = manifest_from_rows([row("u", label="A")])
+    declaration = {"allowed_source_collections": ["source"], "stages": [
+        {"name": "label-consuming-transform", "purpose": "transform", "uses_labels": True,
+         "sample_ids": [{"sample_id": "u", "collection_id": "source"}]}]}
+    result = audit_lineage(no_split, declaration)
+    record("label_transform_missing_partition", {"manifest": list(no_split.rows), "lineage": declaration},
+           "UNKNOWN because a label-consuming stage cannot establish non-held-out membership with missing split.", result,
+           result["status"] == "PASS", "high", "For uses_labels=True transforms, require a declared train/validation split; blank/unrecognized split becomes UNKNOWN.")
+    future = manifest_from_rows([row("u", label="A", split="future")])
+    result = audit_lineage(future, declaration)
+    record("label_transform_unknown_partition", {"manifest": list(future.rows), "lineage": declaration},
+           "UNKNOWN (or explicit unsupported-partition error), never PASS for unspecified partition role.", result,
+           result["status"] == "PASS", "high", "Accept label-consuming transforms only in declared train/validation names; unrecognized names must not silently pass.")
+    heldout = manifest_from_rows([row("u", label="A", split="test")])
+    result = audit_lineage(heldout, declaration)
+    record("label_transform_known_test_control", "Same member uses declared test split", "FAIL", result, result["status"] != "FAIL")
+
+    # 3. Contradictory group kinds have the same identity key, but consumers skip integrity validation.
+    contradictory = manifest_from_rows([
+        row("a", label="A", group_id="1", group_kind="identity", group_namespace="shared"),
+        row("b", label="A", group_id="1", group_kind="episode", group_namespace="shared"),
+        row("c", label="B", group_id="2", group_kind="identity", group_namespace="shared")])
+    integrity = audit_integrity(contradictory, group_policy="disjoint")
+    metrics = evaluate_predictions(predictions(contradictory), manifest=contradictory, unit="group", bootstrap=25, seed=7)
+    sampling = sample_indices(contradictory, 10, strategy="group", seed=7)
+    record("contradictory_group_kinds_consumers", list(contradictory.rows),
+           "Integrity FAIL; group metrics/bootstrap and group sampler reject or expose FAIL for contradictory same-key kinds.",
+           {"integrity_group_status": integrity["checks"]["groups"]["status"],
+            "metrics_group_status": metrics["group_evidence_status"], "metrics_bootstrap": metrics["bootstrap"],
+            "sampling_group_status": sampling["group_evidence_status"], "n_groups": sampling["n_groups"]},
+           metrics["group_evidence_status"] == "PASS" or sampling["group_evidence_status"] == "PASS", "high",
+           "Share a group metadata-consistency validator across integrity, sampling and metrics; reject contradictions before grouped calculations.")
+
+    # 4. Typical in-memory missing values must not become seemingly real identifiers/classes.
+    nonfinite = manifest_from_rows([
+        row("a", label="A", group_id=float("nan"), group_kind="identity"),
+        row("b", label="B", group_id=float("nan"), group_kind="identity")])
+    merged = sample_indices(nonfinite, 4, strategy="group", seed=7)
+    record("numeric_nan_group_silent_identity", "Two rows supplied numeric NaN group_id, as common in dataframe records",
+           "Reject nonfinite scalar metadata or normalize optional numeric NaN to missing; cannot obtain PASS and merge both as real group 'nan'.",
+           {"normalized_manifest": list(nonfinite.rows), "sampling": merged},
+           merged["group_evidence_status"] == "PASS" and merged["n_groups"] == 1, "high",
+           "Reject float/NumPy nonfinite metadata before str conversion, or explicitly normalize optional missing scalars and reject required IDs.")
+    nan_predictions = caught(lambda: evaluate_predictions([
+        {"sample_id": float("nan"), "y_true": float("nan"), "y_pred": float("nan")},
+        {"sample_id": "b", "y_true": "B", "y_pred": "B"}]))
+    record("numeric_nan_prediction_silent_class", "Numeric NaN required prediction ID and true/predicted labels",
+           "AuditInputError for missing/nonfinite required values; no fictional 'nan' truth class and apparent perfect score.", nan_predictions,
+           "returned" in nan_predictions, "high", "Reject nonfinite numeric required prediction values before string normalization.")
+
+    # 5. Deliberate bootstrap and zero-budget controls should retain honest limits.
+    mixed = manifest_from_rows([row("a", label="A", group_id="1", group_kind="identity"),
+                                row("b", label="B", group_id="1", group_kind="identity"),
+                                row("c", label="A", group_id="2", group_kind="identity")])
+    result = caught(lambda: evaluate_predictions(predictions(mixed), manifest=mixed, bootstrap=10, unit="group", stratify=True))
+    record("mixed_class_group_stratification_control", "One group spans A and B", "AuditInputError, not split into pseudo-groups.", result,
+           result.get("error_type") != "AuditInputError")
+    single = manifest_from_rows([row("a", label="A", group_id="1", group_kind="identity")])
+    result = caught(lambda: evaluate_predictions(predictions(single), manifest=single, bootstrap=10, unit="group"))
+    zero = sample_indices(single, 0, strategy="group")
+    record("single_group_and_zero_draw_control", "One prediction group; zero sampling budget", "Bootstrap rejected; zero-draw CV null and 1 unseen group.",
+           {"bootstrap": result, "sampling_cv": zero["draw_count_cv"], "groups_seen": zero["groups_seen"], "n_groups": zero["n_groups"]},
+           result.get("error_type") != "AuditInputError" or zero["draw_count_cv"] is not None or zero["groups_seen"] != 0)
+    result = caught(lambda: manifest_from_rows([]))
+    record("empty_manifest_control", "Empty iterable", "AuditInputError", result, result.get("error_type") != "AuditInputError")
+
+    # 6. Explicit argmax, tied maxima, and no declaration are separate cases.
+    p = [{"sample_id": "a", "y_true": "A", "y_pred": "B", "pA": .8, "pB": .2}]
+    argmax = caught(lambda: evaluate_predictions(p, probability_columns={"A": "pA", "B": "pB"}, decision_rule="argmax"))
+    unspecified = evaluate_predictions(p, probability_columns={"A": "pA", "B": "pB"})
+    tied = evaluate_predictions([dict(p[0], pA=.5, pB=.5)], probability_columns={"A": "pA", "B": "pB"}, decision_rule="argmax")
+    record("decision_rule_controls", "Contradictory argmax, undeclared decision, tied maxima", "Explicit violation rejected; undeclared UNKNOWN; tied argmax PASS.",
+           {"explicit": argmax, "undeclared": unspecified["probability_evidence"], "tie": tied["probability_evidence"]},
+           argmax.get("error_type") != "AuditInputError" or unspecified["probability_evidence"]["decision_rule_verification"] != "UNKNOWN"
+           or tied["probability_evidence"]["decision_rule_verification"] != "PASS")
+
+    # 7. Boolean overwrite safety is not checked by the otherwise strict API.
+    old = manifest_from_rows([row("a", group_id="old", group_kind="identity", timestamp="2026-01-01T00:00:00+00:00", acquisition_id="camera")])
+    unsafe = caught(lambda: build_episodes(old, overwrite_groups="False"))
+    record("episode_overwrite_boolean_type", "overwrite_groups='False' supplied as string config value", "AuditInputError; an explicit boolean True is required to overwrite existing groups.",
+           unsafe, "returned" in unsafe, "medium", "Validate isinstance(overwrite_groups, bool) before deciding overwrite permission.")
+
+    sources = {path.relative_to(CODE).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+               for path in sorted((CODE / "src/episodeaudit").glob("*.py"))}
+    # Serialize manifests returned by the overwrite probe without private absolute paths.
+    for outcome in outcomes:
+        ret = outcome.get("observed", {}).get("returned") if isinstance(outcome.get("observed"), dict) else None
+        if hasattr(ret, "rows"):
+            outcome["observed"]["returned"] = {"rows": list(ret.rows)}
+    report = {"round": "second exploratory adversarial audit", "date": "2026-10-07",
+              "scope": ["cross-collection membership namespaces", "explicit group namespace", "label-consuming transform lineage",
+                        "contradictory group metadata", "numeric nonfinite missing scalars", "mixed-label bootstrap", "empty/single-group/zero-draw cases",
+                        "probability decision rules", "episode overwrite input type"],
+              "not_checked": ["exhaustive fuzzing", "cross-platform path semantics", "performance or security certification", "unobserved training execution"],
+              "n_cases": len(outcomes), "n_actual_defects": sum(item["actual_defect"] for item in outcomes),
+              "source_sha256": sources, "source_modified": False,
+              "relationship_to_first_receipts": "This is a new post-first-run exploration. Earlier receipts remain true for their recorded fixtures; they did not cover these API composition/nonfinite boundary cases. A previous pass is not an all-input correctness guarantee.",
+              "outcomes": outcomes}
+    (OUT / "ADVERSARIAL_API_RESULTS.json").write_text(json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    print(json.dumps({"n_cases": len(outcomes), "n_actual_defects": report["n_actual_defects"],
+                      "defects": [item["name"] for item in outcomes if item["actual_defect"]], "runtime_source_modified": False}, indent=2))
+
+
+if __name__ == "__main__":
+    main()

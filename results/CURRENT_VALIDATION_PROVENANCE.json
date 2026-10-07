@@ -1,0 +1,51 @@
+{
+  "status": "EXECUTED_CORRECTIVE_REVALIDATION",
+  "date": "2026-10-07",
+  "runtime_source_sha256": {
+    "src/episodeaudit/__init__.py": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "src/episodeaudit/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/episodeaudit/cli.py": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "src/episodeaudit/episodes.py": "b61b0e738b8a924d4f408a1f608dc078dadb5d420660215af6ebe177d2bf50cc",
+    "src/episodeaudit/integrity.py": "faede735df9e0b2f9fcd59ceee2fdce969404f53d59350af08a46a2493123fe4",
+    "src/episodeaudit/manifest.py": "4c9e4bb3c399298f789ee1d08152fa67eae9905af97fa50414369029dda3b77a",
+    "src/episodeaudit/metrics.py": "eaf54e1387898f40fde374eff9ac04fa4d7e2a375813060e94b0ace74081df38",
+    "src/episodeaudit/sampling.py": "ef7ff71f2b5653d9b16dd0e435765f68082c37245e95adc04f91455daf8479ae"
+  },
+  "api_reexecuted": true,
+  "original_453_checks_reexecuted": true,
+  "post_initial_117_checks_reexecuted": true,
+  "actual_external_library_reexecuted": true,
+  "installed_CLI_reexecuted": true,
+  "changed_modules": [
+    "src/episodeaudit/episodes.py",
+    "src/episodeaudit/integrity.py",
+    "src/episodeaudit/manifest.py",
+    "src/episodeaudit/metrics.py",
+    "src/episodeaudit/sampling.py"
+  ],
+  "boundary": "An execution/provenance record for specific inputs; not third-party certification, universal defect sensitivity or field validation.",
+  "private_execution_artifact_sha256": {
+    "results/VALIDATION_SUMMARY.json": "1b01bd376f3fb05b8d18e2f122aac62f487e12d11ba8dd03aedd21d322047a69",
+    "results/ADDENDUM_VALIDATION_SUMMARY.json": "c371bc51f1a15cbe9947db088383204813414acab33111664c03da68b1cb40f8",
+    "results/assertion_results.json": "a4b8f046ebc49a3d79c94a23f6b069ebf5c8603a11c6acf583f12d106cfc7f75",
+    "results/CLEAN_ENV_CLI_VALIDATION.json": "162e1292971ab63edb2dfe4e1df40104cb90fea10140d89afb0402ce5782a8ad",
+    "results/INSTALLED_SOURCE_HASH_CHECK.json": "05da117179b095857d20cc50c2275c1a1e18fa33dce890b6bf3a361a4f6bc63c",
+    "results/DEEPCHECKS_EXECUTION_RECEIPT.json": "30d85af9f38707f9cf24cbc9f1a522ac382cbbaa45f953e7a64fae455840bb77",
+    "SECOND_ROUND_ADVERSARIAL/CORRECTED_REGRESSION_RECEIPT.json": "55e5eeaa7451e50e39cdeb5e94bff164ffaae08b0158b94f7cbacdb163c8b120",
+    "SECOND_ROUND_ADVERSARIAL/SECOND_ROUND_INSTALLED_AND_EXTERNAL_RECEIPT.json": "9a3138cf8defd3ea0b72fdb672849dfd9c17afaf906258788010b9b3b1bf59d4",
+    "SECOND_ROUND_EXACT_BOOTSTRAP/EXACT_ORACLE_RESULTS.json": "507dd3b93226e8e7d9022d80c7e6f6d8c4692433c8f83331ede978a1a1256575",
+    "SECOND_ROUND_HAR/SECOND_ROUND_HAR_SUMMARY.json": "98e8e585c9fa9b0860f9bae21e97edb60ed717e9499a7bb5b5cbd418a628c365"
+  },
+  "public_adaptation": "Execution artifact hashes above refer to the original workspace receipts before public path sanitization. Public counterpart hashes below identify existing synchronized release files; unchanged execution facts and runtime hashes are retained.",
+  "public_counterpart_sha256": {
+    "results/VALIDATION_SUMMARY.json": "1b01bd376f3fb05b8d18e2f122aac62f487e12d11ba8dd03aedd21d322047a69",
+    "results/ADDENDUM_VALIDATION_SUMMARY.json": "c371bc51f1a15cbe9947db088383204813414acab33111664c03da68b1cb40f8",
+    "results/assertion_results.json": "a4b8f046ebc49a3d79c94a23f6b069ebf5c8603a11c6acf583f12d106cfc7f75",
+    "results/CLEAN_ENV_CLI_VALIDATION.json": "794925169a742209410e694723b48cf651134f905117850f53f943f121ce4d4f",
+    "results/DEEPCHECKS_EXECUTION_RECEIPT.json": "30d85af9f38707f9cf24cbc9f1a522ac382cbbaa45f953e7a64fae455840bb77",
+    "validation/CORRECTED_REGRESSION_RECEIPT.json": "55e5eeaa7451e50e39cdeb5e94bff164ffaae08b0158b94f7cbacdb163c8b120",
+    "validation/exact_bootstrap/EXACT_ORACLE_RESULTS.json": "507dd3b93226e8e7d9022d80c7e6f6d8c4692433c8f83331ede978a1a1256575",
+    "results/INSTALLED_SOURCE_HASH_CHECK.json": "05da117179b095857d20cc50c2275c1a1e18fa33dce890b6bf3a361a4f6bc63c"
+  },
+  "old_CURRENT_receipt_retention": "The original earlier provenance receipt remains in private revision history; no private history files are included."
+}

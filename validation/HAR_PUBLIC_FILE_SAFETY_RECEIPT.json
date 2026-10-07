@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "public_HAR_files": [
+    {
+      "file": "reported_results/HAR_APPLICATION_PUBLIC_SUMMARY.json",
+      "bytes": 10486,
+      "sha256": "f78dc3089c8efacd6ffa6034a3e9550bbb25ba04c079d883050bb9c232c7200c"
+    },
+    {
+      "file": "scripts/download_har_local_source.py",
+      "bytes": 4200,
+      "sha256": "2abc165a76b7919851d8de1b7d498aaad302830960ac2ba3a7b67c59e12c0188"
+    },
+    {
+      "file": "scripts/run_har_application.py",
+      "bytes": 24039,
+      "sha256": "37d06eb56b585c08d317b51c3eda00189a34e4e37d4ac78095683026acf0f2be"
+    },
+    {
+      "file": "scripts/record_har_execution.py",
+      "bytes": 3460,
+      "sha256": "c4542c23b9932f2f99e2b96fa094461370c9d4a3a8b7ce8085040a81c659470e"
+    },
+    {
+      "file": "scripts/build_har_public_aggregate.py",
+      "bytes": 8350,
+      "sha256": "b7261a06bfaa0a914bc9bf33b66b3a1381d24095740da8c86828cb5e1c84a253"
+    },
+    {
+      "file": "scripts/plot_har_workflow.py",
+      "bytes": 4439,
+      "sha256": "b7745a6923ec2f2a5412e8dd9615e1cf6d5b677835b290ddb812b9984736a6d8"
+    },
+    {
+      "file": "scripts/requirements-har.txt",
+      "bytes": 192,
+      "sha256": "e38ce8c4fcc5b501ed8d4e4c0cc9ea6b2c9ac5a0c356cef8519b4c073b7ec197"
+    },
+    {
+      "file": "docs/HAR_REPRODUCTION_AND_RIGHTS.md",
+      "bytes": 5626,
+      "sha256": "a4c0cc06fa2c82fbef9687927c6b896eb56639712213ecaaafa257e3151c46be"
+    },
+    {
+      "file": "provenance/HAR_PROTOCOL_PLANS.json",
+      "bytes": 5414,
+      "sha256": "6c4dfa6264dbba20fe2a34248959bf04149e26553b7bc7faccdf84749b6c2a44"
+    },
+    {
+      "file": "validation/HAR_NO_OPTIN_GUARD_RECEIPT.json",
+      "bytes": 2265,
+      "sha256": "f31a190314f581cd119a036b4b16feb7986271ea4f561bd677897fcb256da33f"
+    },
+    {
+      "file": "validation/HAR_PORTABLE_REPLAY_RECEIPT.json",
+      "bytes": 1722,
+      "sha256": "4727b8214680cccfe43c160b20fed60cede3eaaf975a9579cc03daa93c5ae481"
+    },
+    {
+      "file": "validation/HAR_S1_PORTABLE_COMPARISON.json",
+      "bytes": 809,
+      "sha256": "724b8f44928e1cf7552518bdedfad817063c666436f29c139e78632f6a8cf37c"
+    }
+  ],
+  "public_aggregate_no_original_ID_list_or_row_level_fields": true,
+  "public_scripts_syntax_checked": true,
+  "no_host_absolute_paths_in_public_HAR_files": true,
+  "no_original_subject_ID_strings_in_public_HAR_files": true,
+  "official_HTTPS_source_links_are_retained": true,
+  "ignored_local_raw_and_derived_tree": "replayed_results/har/",
+  "must_exclude_entire_tree_from_all_ZIPs_and_public_commit": true,
+  "global_modified_file_only_HAR_section": "DATA_RIGHTS.md",
+  "untouched_by_this_HAR_task": [
+    "README.md",
+    "DATA_README.md",
+    "release file index",
+    "local Git history",
+    "submission ZIPs"
+  ],
+  "boundary": "Checks the listed HAR public-safe files. A prior auxiliary drive-path scan false positive on https:// URLs was corrected and recorded locally; local source/row outputs are excluded, not declared publicly redistributable."
+}

@@ -1,0 +1,7 @@
+direction,class,n_true,n_correct,recall,balanced_accuracy,n_predictions,identity_evidence,bootstrap_unit
+JIC→Holeta,healthy,101,61,0.6039603960396039,0.6664602324625801,406,UNKNOWN,image
+JIC→Holeta,septoria,97,71,0.7319587628865979,0.6664602324625801,406,UNKNOWN,image
+JIC→Holeta,stripe_rust,208,138,0.6634615384615384,0.6664602324625801,406,UNKNOWN,image
+Holeta→JIC,healthy,122,90,0.7377049180327869,0.5067105654251549,709,UNKNOWN,image
+Holeta→JIC,septoria,348,0,0.0,0.5067105654251549,709,UNKNOWN,image
+Holeta→JIC,stripe_rust,239,187,0.7824267782426778,0.5067105654251549,709,UNKNOWN,image

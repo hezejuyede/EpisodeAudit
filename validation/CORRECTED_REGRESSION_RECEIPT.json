@@ -1,0 +1,322 @@
+{
+  "round": "correction after exploratory second-round failure reproduction",
+  "software_version": "1.0.0",
+  "n_adversarial_domains_rechecked": 13,
+  "n_remaining_failed_domains": 0,
+  "core_unittest_exit_code": 0,
+  "unittest_output": "test_demo_and_error_json (test_core.CLITests.test_demo_and_error_json) ... ok\ntest_require_pass_unknown_exit (test_core.CLITests.test_require_pass_unknown_exit) ... ok\ntest_unwritable_output_produces_json_fallback (test_core.CLITests.test_unwritable_output_produces_json_fallback) ... ok\ntest_day_boundary_splits (test_core.EpisodeTests.test_day_boundary_splits) ... ok\ntest_missing_acquisition_key_rejected (test_core.EpisodeTests.test_missing_acquisition_key_rejected) ... ok\ntest_naive_time_rejected_without_assumption (test_core.EpisodeTests.test_naive_time_rejected_without_assumption) ... ok\ntest_row_reordering_does_not_change_episode_assignment (test_core.EpisodeTests.test_row_reordering_does_not_change_episode_assignment) ... ok\ntest_threshold_and_adjacent_chaining (test_core.EpisodeTests.test_threshold_and_adjacent_chaining) ... ok\ntest_allowed_object_reuse_avoids_false_failure (test_core.IntegrityTests.test_allowed_object_reuse_avoids_false_failure) ... ok\ntest_custom_split_contract_propagates (test_core.IntegrityTests.test_custom_split_contract_propagates) ... ok\ntest_explicit_shared_namespace_detected (test_core.IntegrityTests.test_explicit_shared_namespace_detected) ... ok\ntest_kind_relabel_does_not_evade_overlap (test_core.IntegrityTests.test_kind_relabel_does_not_evade_overlap) ... ok\ntest_missing_group_kind_is_unknown (test_core.IntegrityTests.test_missing_group_kind_is_unknown) ... ok\ntest_path_escape_is_not_read (test_core.IntegrityTests.test_path_escape_is_not_read) ... ok\ntest_raw_duplicate_and_hash_mismatch (test_core.IntegrityTests.test_raw_duplicate_and_hash_mismatch) ... ok\ntest_same_bare_group_across_collections_is_local (test_core.IntegrityTests.test_same_bare_group_across_collections_is_local) ... ok\ntest_same_split_label_conflict (test_core.IntegrityTests.test_same_split_label_conflict) ... ok\ntest_source_test_not_permitted_for_fit (test_core.IntegrityTests.test_source_test_not_permitted_for_fit) ... ok\ntest_supplied_hash_is_not_raw_verification (test_core.IntegrityTests.test_supplied_hash_is_not_raw_verification) ... ok\ntest_target_fit_declared_failure (test_core.IntegrityTests.test_target_fit_declared_failure) ... ok\ntest_unknown_stage_structure_rejected (test_core.IntegrityTests.test_unknown_stage_structure_rejected) ... ok\ntest_bad_csv_field_count_rejected (test_core.ManifestTests.test_bad_csv_field_count_rejected) ... ok\ntest_duplicate_csv_headers_rejected (test_core.ManifestTests.test_duplicate_csv_headers_rejected) ... ok\ntest_empty_rejected (test_core.ManifestTests.test_empty_rejected) ... ok\ntest_malformed_hash_rejected (test_core.ManifestTests.test_malformed_hash_rejected) ... ok\ntest_missing_evidence_never_passes (test_core.ManifestTests.test_missing_evidence_never_passes) ... ok\ntest_missing_required_field_rejected (test_core.ManifestTests.test_missing_required_field_rejected) ... ok\ntest_repeated_members_are_retained_for_audit (test_core.ManifestTests.test_repeated_members_are_retained_for_audit) ... ok\ntest_string_ids_and_extra_fields_preserved (test_core.ManifestTests.test_string_ids_and_extra_fields_preserved) ... ok\ntest_bootstrap_units_and_determinism (test_core.MetricTests.test_bootstrap_units_and_determinism) ... ok\ntest_declared_argmax_violation_rejected (test_core.MetricTests.test_declared_argmax_violation_rejected) ... ok\ntest_group_bootstrap_does_not_fallback_to_images (test_core.MetricTests.test_group_bootstrap_does_not_fallback_to_images) ... ok\ntest_known_metrics_and_absent_class (test_core.MetricTests.test_known_metrics_and_absent_class) ... ok\ntest_manifest_label_mismatch_rejected (test_core.MetricTests.test_manifest_label_mismatch_rejected) ... ok\ntest_orphan_member_rejected (test_core.MetricTests.test_orphan_member_rejected) ... ok\ntest_probability_mapping_validation (test_core.MetricTests.test_probability_mapping_validation) ... ok\ntest_repeated_predictions_rejected (test_core.MetricTests.test_repeated_predictions_rejected) ... ok\ntest_episode_kind_required (test_core.SamplingTests.test_episode_kind_required) ... ok\ntest_equal_budget_and_determinism (test_core.SamplingTests.test_equal_budget_and_determinism) ... ok\ntest_image_expected_exposure_is_size_weighted (test_core.SamplingTests.test_image_expected_exposure_is_size_weighted) ... ok\ntest_missing_group_cannot_balance (test_core.SamplingTests.test_missing_group_cannot_balance) ... ok\ntest_zero_budget_cv_undefined (test_core.SamplingTests.test_zero_budget_cv_undefined) ... ok\ntest_zero_draw_groups_counted (test_core.SamplingTests.test_zero_draw_groups_counted) ... ok\ntest_only_boolean_true_authorizes_overwrite (test_second_round_regressions.EpisodePermissionRegressionTests.test_only_boolean_true_authorizes_overwrite) ... ok\ntest_all_unknown_kind_groups_resample_but_evidence_is_unknown (test_second_round_regressions.GroupConsistencyRegressionTests.test_all_unknown_kind_groups_resample_but_evidence_is_unknown) ... ok\ntest_conflicts_rejected_by_each_group_consumer (test_second_round_regressions.GroupConsistencyRegressionTests.test_conflicts_rejected_by_each_group_consumer) ... ok\ntest_same_bare_group_with_different_collection_namespaces_is_valid (test_second_round_regressions.GroupConsistencyRegressionTests.test_same_bare_group_with_different_collection_namespaces_is_valid) ... ok\ntest_sampling_only_validates_selected_rows (test_second_round_regressions.GroupConsistencyRegressionTests.test_sampling_only_validates_selected_rows) ... ok\ntest_custom_partition_names_control (test_second_round_regressions.LineageRegressionTests.test_custom_partition_names_control) ... ok\ntest_label_using_transform_cannot_pass_missing_or_unknown_partition (test_second_round_regressions.LineageRegressionTests.test_label_using_transform_cannot_pass_missing_or_unknown_partition) ... ok\ntest_label_using_transform_train_validation_and_test_controls (test_second_round_regressions.LineageRegressionTests.test_label_using_transform_train_validation_and_test_controls) ... ok\ntest_target_label_use_fails_but_label_free_inference_is_permitted (test_second_round_regressions.LineageRegressionTests.test_target_label_use_fails_but_label_free_inference_is_permitted) ... ok\ntest_literal_nan_strings_and_optional_none_are_not_guessed (test_second_round_regressions.NonfiniteScalarRegressionTests.test_literal_nan_strings_and_optional_none_are_not_guessed) ... ok\ntest_nonfinite_manifest_scalar_cannot_become_id_or_metadata (test_second_round_regressions.NonfiniteScalarRegressionTests.test_nonfinite_manifest_scalar_cannot_become_id_or_metadata) ... ok\ntest_nonfinite_prediction_scalar_cannot_become_truth_or_id (test_second_round_regressions.NonfiniteScalarRegressionTests.test_nonfinite_prediction_scalar_cannot_become_truth_or_id) ... ok\n\n----------------------------------------------------------------------\nRan 55 tests in 0.209s\n\nOK\n",
+  "changed_runtime_modules": [
+    "src/episodeaudit/episodes.py",
+    "src/episodeaudit/integrity.py",
+    "src/episodeaudit/manifest.py",
+    "src/episodeaudit/metrics.py",
+    "src/episodeaudit/sampling.py"
+  ],
+  "original_freeze_sha256": {
+    "src/episodeaudit/__init__.py": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "src/episodeaudit/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/episodeaudit/cli.py": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "src/episodeaudit/episodes.py": "e65c0c99ef6ed32b0b1fcdac5938d6634f40c6ca26d5e64a9de0768ad2aae46d",
+    "src/episodeaudit/integrity.py": "f5b87a88d3da22515765b20b9ceecece123a0021c4c836adfe443429f4b0fd11",
+    "src/episodeaudit/manifest.py": "e5e2d6ec0abf5736bf149ad4931a4a9ae78c63753c8db41624c303190b35f9f4",
+    "src/episodeaudit/metrics.py": "9970305cf56acaf626f8311bf2fe59e44e2131a71554594f31ce8af6831ff2de",
+    "src/episodeaudit/sampling.py": "7210da4702211f87e0ff202d09eadfd5eda96a73c6608067f21a0895fff882b6"
+  },
+  "new_freeze_sha256": {
+    "src/episodeaudit/__init__.py": "827c82ddd9e1dcc97cd8ea93078423a36190be5206b8b363c7ebd900791cb3d3",
+    "src/episodeaudit/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/episodeaudit/cli.py": "8f9b127b86c24f19fb90cafd334c34d14711c800b3c8a93cb68f4920c0243068",
+    "src/episodeaudit/episodes.py": "b61b0e738b8a924d4f408a1f608dc078dadb5d420660215af6ebe177d2bf50cc",
+    "src/episodeaudit/integrity.py": "faede735df9e0b2f9fcd59ceee2fdce969404f53d59350af08a46a2493123fe4",
+    "src/episodeaudit/manifest.py": "4c9e4bb3c399298f789ee1d08152fa67eae9905af97fa50414369029dda3b77a",
+    "src/episodeaudit/metrics.py": "eaf54e1387898f40fde374eff9ac04fa4d7e2a375813060e94b0ace74081df38",
+    "src/episodeaudit/sampling.py": "ef7ff71f2b5653d9b16dd0e435765f68082c37245e95adc04f91455daf8479ae"
+  },
+  "original_probe_and_failure_results_preserved_sha256": {
+    "adversarial_api_probe.py": "1bedb75f2139bb40a7d767898d3a6839b851ef944faa18c19865b18f1c072168",
+    "ADVERSARIAL_API_RESULTS.json": "41b07a014db6e4b6ea9a07095e131efea724cfd8e38550286e21daf58a00b7b5"
+  },
+  "original_failures_rewritten": false,
+  "posthoc_regression_tests": true,
+  "public_candidate_updated": false,
+  "scope_boundary": "This corrects software input/evidence contracts. It does not add independent collections, biological identities, pathology review, model improvement or external deployment.",
+  "checks": [
+    {
+      "name": "collection_local_id_controls",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "membership": "PASS",
+        "groups": "PASS",
+        "bare": {
+          "error_type": "AuditInputError",
+          "message": "Every prediction must resolve to exactly one manifest member; provide collection_id when necessary."
+        }
+      }
+    },
+    {
+      "name": "explicit_shared_namespace",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "status": "FAIL",
+        "basis": "provided_namespace_and_group_identifiers",
+        "cross_split_overlaps": [
+          {
+            "key": [
+              "explicit",
+              "global-plants",
+              "1"
+            ],
+            "train_members": [
+              [
+                "A",
+                "same"
+              ]
+            ],
+            "test_members": [
+              [
+                "B",
+                "same"
+              ]
+            ]
+          }
+        ],
+        "protocol": "disjoint",
+        "overlap_detection": "DETECTED",
+        "contradictory_group_kinds": [],
+        "n_missing_selected": 0
+      }
+    },
+    {
+      "name": "label_transform_missing_partition",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "status": "UNKNOWN",
+        "basis": "provided_declarations_only",
+        "allowed_source_collections": [
+          "source"
+        ],
+        "stages": [
+          {
+            "name": "label-consuming-transform",
+            "purpose": "transform",
+            "status": "UNKNOWN",
+            "n_members": 1
+          }
+        ],
+        "train_splits": [
+          "train"
+        ],
+        "validation_splits": [
+          "val",
+          "validation"
+        ],
+        "test_splits": [
+          "test"
+        ],
+        "findings": [],
+        "missing_evidence": [
+          {
+            "stage": "label-consuming-transform",
+            "key": [
+              "source",
+              "u"
+            ],
+            "reason": "membership_split_unknown"
+          }
+        ],
+        "execution_verification": "UNKNOWN",
+        "limitation": "Declarations do not prove actual execution or absence of historical target peeking."
+      }
+    },
+    {
+      "name": "label_transform_unknown_partition",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "status": "UNKNOWN",
+        "basis": "provided_declarations_only",
+        "allowed_source_collections": [
+          "source"
+        ],
+        "stages": [
+          {
+            "name": "label-consuming-transform",
+            "purpose": "transform",
+            "status": "UNKNOWN",
+            "n_members": 1
+          }
+        ],
+        "train_splits": [
+          "train"
+        ],
+        "validation_splits": [
+          "val",
+          "validation"
+        ],
+        "test_splits": [
+          "test"
+        ],
+        "findings": [],
+        "missing_evidence": [
+          {
+            "stage": "label-consuming-transform",
+            "key": [
+              "source",
+              "u"
+            ],
+            "reason": "membership_split_role_unknown"
+          }
+        ],
+        "execution_verification": "UNKNOWN",
+        "limitation": "Declarations do not prove actual execution or absence of historical target peeking."
+      }
+    },
+    {
+      "name": "label_transform_known_test_control",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "status": "FAIL",
+        "basis": "provided_declarations_only",
+        "allowed_source_collections": [
+          "source"
+        ],
+        "stages": [
+          {
+            "name": "label-consuming-transform",
+            "purpose": "transform",
+            "status": "FAIL",
+            "n_members": 1
+          }
+        ],
+        "train_splits": [
+          "train"
+        ],
+        "validation_splits": [
+          "val",
+          "validation"
+        ],
+        "test_splits": [
+          "test"
+        ],
+        "findings": [
+          {
+            "stage": "label-consuming-transform",
+            "key": [
+              "source",
+              "u"
+            ],
+            "reasons": [
+              "evaluation_labels_used_in_transform_stage"
+            ]
+          }
+        ],
+        "missing_evidence": [],
+        "execution_verification": "UNKNOWN",
+        "limitation": "Declarations do not prove actual execution or absence of historical target peeking."
+      }
+    },
+    {
+      "name": "contradictory_group_kinds_consumers",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "metrics": {
+          "error_type": "AuditInputError",
+          "message": "Conflicting group-kind metadata for one namespace/group ID; grouped prediction calculations are ambiguous."
+        },
+        "sampling": {
+          "error_type": "AuditInputError",
+          "message": "Conflicting group-kind metadata for one namespace/group ID; group exposure calculations are ambiguous."
+        }
+      }
+    },
+    {
+      "name": "numeric_nan_group_silent_identity",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "error_type": "AuditInputError",
+        "message": "Row 2, group_id: nonfinite numeric values are not allowed; use None or an empty string for missing values."
+      }
+    },
+    {
+      "name": "numeric_nan_prediction_silent_class",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "error_type": "AuditInputError",
+        "message": "Prediction row 2, sample_id: nonfinite numeric values are not allowed; use None or an empty string for missing values."
+      }
+    },
+    {
+      "name": "mixed_class_group_stratification_control",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "error_type": "AuditInputError",
+        "message": "Class-stratified group bootstrap requires class-homogeneous groups; mixed groups cannot be silently split."
+      }
+    },
+    {
+      "name": "single_group_and_zero_draw_control",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "bootstrap": {
+          "error_type": "AuditInputError",
+          "message": "At least two resampling units are required for a bootstrap interval."
+        },
+        "cv": null,
+        "groups_seen": 0
+      }
+    },
+    {
+      "name": "empty_manifest_control",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "error_type": "AuditInputError",
+        "message": "Manifest has no rows; an empty audit cannot pass."
+      }
+    },
+    {
+      "name": "decision_rule_controls",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "argmax": {
+          "error_type": "AuditInputError",
+          "message": "Prediction row 2: y_pred violates the declared argmax decision rule."
+        },
+        "unspecified": {
+          "status": "PASS",
+          "basis": "provided_numeric_probabilities_with_explicit_class_mapping",
+          "class_columns": {
+            "A": "pA",
+            "B": "pB"
+          },
+          "sum_tolerance": 1e-06,
+          "decision_rule_verification": "UNKNOWN",
+          "decision_rule": null,
+          "n_validated_rows": 1,
+          "calibration": "not_assessed",
+          "limitation": "Numeric consistency does not establish calibration quality or honest probability generation."
+        },
+        "tied": {
+          "status": "PASS",
+          "basis": "provided_numeric_probabilities_with_explicit_class_mapping",
+          "class_columns": {
+            "A": "pA",
+            "B": "pB"
+          },
+          "sum_tolerance": 1e-06,
+          "decision_rule_verification": "PASS",
+          "decision_rule": "argmax",
+          "n_validated_rows": 1,
+          "calibration": "not_assessed",
+          "limitation": "Numeric consistency does not establish calibration quality or honest probability generation."
+        }
+      }
+    },
+    {
+      "name": "episode_overwrite_boolean_type",
+      "corrected_or_control_behavior": true,
+      "observed": {
+        "error_type": "AuditInputError",
+        "message": "overwrite_groups must be boolean; only explicit True permits overwriting existing groups."
+      }
+    }
+  ]
+}

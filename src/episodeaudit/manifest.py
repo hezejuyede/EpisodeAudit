@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import csv
+import math
 import re
+from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, Mapping
@@ -51,6 +53,37 @@ def group_key(row: Mapping[str, str]) -> tuple[str, str, str] | None:
     return "collection", row["collection_id"], row["group_id"]
 
 
+def _scalar_string(value: object, context: str) -> str:
+    """Normalize supplied scalars without turning numerical missingness into IDs."""
+    if value is None:
+        value = ""
+    if not isinstance(value, (str, int, float)):
+        raise AuditInputError(f"{context}: value must be a scalar string or number.")
+    if isinstance(value, float) and not math.isfinite(value):
+        raise AuditInputError(f"{context}: nonfinite numeric values are not allowed; use None or an empty string for missing values.")
+    string = str(value).strip()
+    if any(ord(c) < 32 for c in string):
+        raise AuditInputError(f"{context}: control characters are not allowed.")
+    return string
+
+
+def _group_kind_conflicts(rows: Iterable[Mapping[str, str]]) -> list[dict[str, object]]:
+    """Keep the integrity contract's conservative same-key consistency rule.
+
+    Multiple recorded kinds, including a mixture of unknown and known, leave
+    one key's metadata unresolved. All-unknown groups can be used explicitly,
+    but callers retain UNKNOWN evidence rather than certifying their kind.
+    """
+    kinds = defaultdict(set)
+    for row in rows:
+        key = group_key(row)
+        kind = row.get("group_kind", "unknown") or "unknown"
+        if key is not None:
+            kinds[key].add(kind)
+    return [{"key": list(key), "group_kinds": sorted(values)}
+            for key, values in sorted(kinds.items()) if len(values) > 1]
+
+
 def manifest_from_rows(rows: Iterable[Mapping[str, object]], columns: Iterable[str] | None = None) -> Manifest:
     collected = list(rows)
     if not collected:
@@ -70,15 +103,7 @@ def manifest_from_rows(rows: Iterable[Mapping[str, object]], columns: Iterable[s
             raise AuditInputError(f"Row {index} contains fields not represented in the CSV header.")
         row = {}
         for name in names:
-            value = original.get(name, "")
-            if value is None:
-                value = ""
-            if not isinstance(value, (str, int, float)):
-                raise AuditInputError(f"Row {index}, {name}: value must be a scalar string or number.")
-            string = str(value).strip()
-            if any(ord(c) < 32 for c in string):
-                raise AuditInputError(f"Row {index}, {name}: control characters are not allowed.")
-            row[name] = string
+            row[name] = _scalar_string(original.get(name, ""), f"Row {index}, {name}")
         for name in REQUIRED_COLUMNS:
             if not row.get(name):
                 raise AuditInputError(f"Row {index}: {name} must be nonempty.")
