@@ -100,7 +100,7 @@ Source cross-validation, target performance, algorithmic seeds, and independent 
 
 The new software code is released under the MIT terms in `LICENSE.txt` (identical to `LICENSE`). This license does not grant rights to third-party images, model weights, or historical datasets. Their original licenses and access conditions remain applicable.
 
-This local version is 1.0.0. No publicly hosted software repository, release DOI, or peer-reviewed acceptance is asserted by this source directory. A companion manuscript must identify the actual archived release before submission. The code is a development of general audit components; its software tests are distinct from the historical wheat study's numerical checks.
+Version 1.0.0 is publicly available at [https://github.com/hezejuyede/EpisodeAudit](https://github.com/hezejuyede/EpisodeAudit), with the immutable source snapshot identified by the `v1.0.0` tag. No archival DOI or peer-reviewed acceptance is asserted. The code is a development of general audit components; its software tests are distinct from the historical wheat study's numerical checks.
 
 The second exploratory API audit found input-contract defects after the first recorded validation run. Corrections require known partition roles for label-consuming transforms, share group-kind consistency checks across consumers, reject nonfinite numerical metadata/labels, and require a boolean episode-overwrite flag. Consistently unknown group kinds remain usable for explicitly requested group resampling with `group_evidence_status=UNKNOWN`; varied recorded kinds for one key are rejected. A group-evidence pass means complete supplied metadata, without certifying actual identity. Earlier validation receipts describe their original code bytes and fixtures; they are not evidence that all inputs of the corrected source have been externally validated. The corrected source has a separate freeze receipt.
 
@@ -116,7 +116,7 @@ python scripts/replay_released_data.py
 python verify_release.py
 ```
 
-The replay uses relative paths and compares fixed class metrics, conditional intervals, and aggregate allocation against reference outputs. It does not retrain historical classifiers or reconstruct images from counts. [DATA_README.md](DATA_README.md) lists replay coverage and optional original-library controls. [DATA_RIGHTS.md](DATA_RIGHTS.md) records upstream attribution and the data-specific license boundaries. [RELEASE_STATUS.json](RELEASE_STATUS.json) explicitly records that no remote repository, release tag, or DOI has been created.
+The replay uses relative paths and compares fixed class metrics, conditional intervals, and aggregate allocation against reference outputs. It does not retrain historical classifiers or reconstruct images from counts. [DATA_README.md](DATA_README.md) lists replay coverage and optional original-library controls. [DATA_RIGHTS.md](DATA_RIGHTS.md) records upstream attribution and the data-specific license boundaries. [RELEASE_STATUS.json](RELEASE_STATUS.json) records the public repository and tag and states that no archival DOI has been created.
 
 The three article figures and graphical abstract can also be regenerated from the three deposited result tables:
 
@@ -134,7 +134,7 @@ The synthetic test plan and later expansion retain their actual chronology. Sepa
 
 The corrective source passed 55 behavioral tests and the 13 previously recorded adversarial domains after repair. The later API/CLI/library reruns include 453 assertion checks, 117 addendum cases, 12 installed CLI commands, 53 finite-oracle checks on four synthetic resampling examples, and 180 selected original-library Deepchecks comparisons with 320 original RECORD entries matching. These are software executions on one Windows host; seed variants and assertions are not independent biological samples. The initial failure inputs and old/new runtime hashes are retained in `validation/` and `provenance/`; post-discovery tests are described as regression checks. Historical receipt fields refer to the snapshot when recorded, rather than asserting that later public-candidate synchronization was already complete.
 
-Run `python validation/recheck_adversarial_domains.py` after installation for the 13 targeted corrected/control domains. Sanitized execution records are in `results/`. Final file indexing and public publication are separate pending steps.
+Run `python validation/recheck_adversarial_domains.py` after installation for the 13 targeted corrected/control domains. Sanitized execution records are in `results/`. The release file index is in `provenance/RELEASE_FILE_INDEX.json`; the public `v1.0.0` tag identifies this indexed source snapshot.
 
 ## Exact finite group-bootstrap reference
 

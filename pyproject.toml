@@ -13,6 +13,11 @@ authors = [{name = "Xin Li"}, {name = "Bojian Guo"}, {name = "Asel Kartanova"}]
 dependencies = ["numpy>=1.24,<3"]
 classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent", "Topic :: Scientific/Engineering"]
 
+[project.urls]
+Homepage = "https://github.com/hezejuyede/EpisodeAudit"
+Repository = "https://github.com/hezejuyede/EpisodeAudit"
+Issues = "https://github.com/hezejuyede/EpisodeAudit/issues"
+
 [project.scripts]
 episodeaudit = "episodeaudit.cli:main"
 

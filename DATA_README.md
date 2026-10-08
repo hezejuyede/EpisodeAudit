@@ -42,7 +42,7 @@ python scripts/replay_released_data.py --coil-raw local-coil20/images
 
 The download script checks the original archive fingerprint. It downloads only when explicitly run and does not grant a right to republish the images. Without a separately obtained raw directory, the COIL metadata/group checks run, while raw-content verification remains unknown.
 
-No default replay downloads data, fits a classifier, re-diagnoses disease, or supplies third-party certification. Image-unit intervals cannot be described as independent-plant or future-collection confidence intervals. Public immutable release and author/institutional release approval remain pending for this local candidate.
+No default replay downloads data, fits a classifier, re-diagnoses disease, or supplies third-party certification. Image-unit intervals cannot be described as independent-plant or future-collection confidence intervals. The public `v1.0.0` tag fixes the software and deposited derived-data snapshot; it does not add biological independence or third-party certification.
 
 ## Article figure replay
 

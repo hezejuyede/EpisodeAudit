@@ -1,4 +1,4 @@
-"""Verify the local candidate's file index; not a signed provenance authority."""
+"""Verify the public release file index; not a signed provenance authority."""
 import hashlib
 import json
 from pathlib import Path
@@ -26,7 +26,7 @@ def main():
     for path in sorted(observed-expected):
         failures.append({"path":path,"reason":"not_in_index"})
     print(json.dumps({"n_indexed_files":len(expected),"n_failures":len(failures),"failures":failures,
-                      "boundary":"Index consistency only; no digital signature, remote archive or third-party certification is asserted."},indent=2))
+                      "boundary":"Index consistency only; no digital signature, archival DOI or third-party certification is asserted."},indent=2))
     return int(bool(failures))
 
 if __name__=="__main__":

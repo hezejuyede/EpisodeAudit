@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use EpisodeAudit, please cite the software and the associated SoftwareX article."
+title: "EpisodeAudit: Evidence-aware auditing of grouped evaluation data"
+type: software
+version: 1.0.0
+date-released: 2026-10-08
+url: "https://github.com/hezejuyede/EpisodeAudit"
+repository-code: "https://github.com/hezejuyede/EpisodeAudit"
+license: MIT
+authors:
+  - family-names: Li
+    given-names: Xin
+    orcid: "https://orcid.org/0009-0005-0670-5006"
+  - family-names: Guo
+    given-names: Bojian
+    orcid: "https://orcid.org/0009-0005-8353-2436"
+  - family-names: Kartanova
+    given-names: Asel
+    orcid: "https://orcid.org/0000-0003-1479-0747"

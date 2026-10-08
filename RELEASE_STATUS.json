@@ -1,12 +1,16 @@
 {
   "software_name": "EpisodeAudit",
   "software_version": "1.0.0",
-  "status": "LOCAL_PUBLIC_RELEASE_CANDIDATE",
-  "public_repository_created": false,
-  "public_release_tag_created": false,
+  "status": "PUBLIC_VERSIONED_RELEASE",
+  "public_repository": "https://github.com/hezejuyede/EpisodeAudit",
+  "release_tag": "v1.0.0",
+  "versioned_source": "https://github.com/hezejuyede/EpisodeAudit/tree/v1.0.0",
+  "public_repository_created": true,
+  "public_release_tag_created": true,
   "archival_doi_created": false,
   "code_license": "MIT",
   "data_license_boundaries": "DATA_RIGHTS.md",
-  "required_final_action": "Author review and explicit user authorization before creating or pushing a remote release.",
+  "release_date": "2026-10-08",
+  "required_final_action": "None for the public GitHub requirement; an archival DOI may be added separately if one is later created.",
   "scientific_boundary": "Software checks and retrospective fixed-output replay; no independent pathology or prospective field validation is asserted."
 }
